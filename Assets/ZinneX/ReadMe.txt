@@ -12,7 +12,11 @@ TurretSO => scriptable object for turrets that contain base stats, projectilePre
 
 TurretSniperNest => extension of TurretSO that contains shooting logic (if something have to happen when SniperNest is shooting then do it here)
 
-SniperNestProjectile => assigning target to projectile, making it move to target and hitting it
+HomingProjectile => assigning target to projectile, making it move to target and hitting it
+
+TurretMortar => extension of TurretSO that contains shooting logic (if something have to happen when Mortar is shooting then do it here)
+
+ParabolicProjectile => calculating physics for projectile that travel in parabolic arc and hitting enemies in range
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 

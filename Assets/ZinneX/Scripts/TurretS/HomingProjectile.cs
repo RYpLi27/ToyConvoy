@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SniperNestProjectile : MonoBehaviour {
+public class HomingProjectile : MonoBehaviour {
     private Transform target;
     private float projectileSpeed;
     private float damage;

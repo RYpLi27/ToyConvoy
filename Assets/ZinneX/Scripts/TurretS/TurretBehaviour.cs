@@ -53,6 +53,7 @@ public class TurretBehaviour : MonoBehaviour {
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, turretSO.range);
+        if(turretSO != null)
+            Gizmos.DrawWireSphere(transform.position, turretSO.range);
     }
 }
