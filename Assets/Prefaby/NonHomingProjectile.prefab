@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3859789558412728669}
   - component: {fileID: 8970263445591423379}
   m_Layer: 0
-  m_Name: ParabolicProjectile
+  m_Name: NonHomingProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,10 +100,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4302d3718ebb0bc44b2652fdfde5a482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 64
+  heightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.7245286
+      outSlope: 2.7245286
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.065789476
+    - serializedVersion: 3
+      time: 0.49999994
+      value: 0.99999994
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -3.4905527
+      outSlope: -3.4905527
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.050000183
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  movementPredictDistance: 2
 --- !u!54 &8970263445591423379
 Rigidbody:
   m_ObjectHideFlags: 0

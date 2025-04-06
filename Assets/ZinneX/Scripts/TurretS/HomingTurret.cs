@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New TurretSniperNest", menuName = "Scriptable Objects/Turrets/Sniper Nest")]
-public class TurretSniperNest : TurretSO {
+public class HomingTurret : TurretSO {
     
     public override void Shoot(Transform firepoint, Transform target) {
         Instantiate(projectilePrefab, firepoint.position, Quaternion.identity).GetComponent<HomingProjectile>().SetupProjectile(projectileSpeed, target, damage);

@@ -6,6 +6,8 @@ public class EnemyBehaviour : MonoBehaviour {
     private int currentNodeIndex;
     private Transform currentNode;
     private Vector3 nodeOffset;
+
+    public Vector3 MoveDir => (currentNode.position + nodeOffset - transform.position).normalized;
     
     private void Start() {
         FirstNodeAndOffset();
@@ -27,7 +29,6 @@ public class EnemyBehaviour : MonoBehaviour {
     private void FirstNodeAndOffset() {
         currentNodeIndex = -1;
         FindNextNode();
-        // nodeOffset = currentNode.position - transform.position;
         nodeOffset = transform.position - currentNode.position;
     }
     
