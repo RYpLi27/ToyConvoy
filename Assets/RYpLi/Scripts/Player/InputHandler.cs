@@ -5,12 +5,15 @@ public class InputHandler : MonoBehaviour
 {
     public PlayerController CharacterController;
 
-    private InputAction _moveAction, _lookAction;
+    private InputAction _moveAction, _lookAction, _jumpAction;
 
     void Start ()
     {
         _moveAction = InputSystem.actions.FindAction("Move");
         _lookAction = InputSystem.actions.FindAction("Look");
+        _jumpAction = InputSystem.actions.FindAction("Jump");
+
+        _jumpAction.performed += OnJumpPerformed;
 
         Cursor.visible = false;
     }
@@ -22,6 +25,10 @@ public class InputHandler : MonoBehaviour
 
         Vector2 lookVector = _lookAction.ReadValue<Vector2>();
         CharacterController.Rotate(lookVector);
+    }
+    private void OnJumpPerformed(InputAction.CallbackContext context)
+    {
+        CharacterController.Jump();
     }
 
 
