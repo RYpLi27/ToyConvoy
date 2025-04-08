@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform FollowCharacter, LookCharacter;
+    public float FollowSpeed = 10.0f;
 
-    // Update is called once per frame
-    void Update()
+
+    private void LateUpdate()
     {
-        
+        Vector3 targetPosition = FollowCharacter.position;
+        transform.position = Vector3.Lerp(transform.position, targetPosition, FollowSpeed * Time.deltaTime);
+
+        transform.LookAt(LookCharacter);
     }
 }
