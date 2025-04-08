@@ -13,12 +13,5 @@ public class EnemyPathManager : MonoBehaviour {
 
     [SerializeField] private List<Transform> nodes = new();
 
-    public Transform GetNode(int i, GameObject obj) {
-        if (nodes.Count == i) { // IF ENEMY GETS TO FINAL NODE THEN DISABLE IT
-            obj.SetActive(false);
-            return null;
-        }
-        
-        return nodes[i];   
-    }
+    public Transform GetNode(int i) => nodes.Count == i ? null : nodes[i];
 }

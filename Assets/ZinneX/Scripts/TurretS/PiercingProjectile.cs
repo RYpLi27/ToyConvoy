@@ -1,37 +1,40 @@
+using System.Collections;
 using UnityEngine;
 
-public class NonHomingProjectile : MonoBehaviour {
+public class PiercingProjectile : MonoBehaviour
+{
     private Vector3 startPos;
     private Vector3 targetPos;
     private float distance;
     private float entireFlightLength;
     private float currentFlightLength;
-    private NonHomingTurret  turretSO;
+    private PiercingTurret  turretSO;
     
-    public void SetupProjectile(NonHomingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict) {
+    public void SetupProjectile(PiercingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict) {
         turretSO = newTurretSO;
         
         startPos = transform.position;
         targetPos = newTarget + movePredict * turretSO.movementPredictDistance;
+        targetPos += (targetPos - startPos).normalized * turretSO.overshootDistance; // APPLYING OVERSHOOT (MORE DETAILS IN PiercingTurret.cs)
         
         distance = Vector3.Distance(startPos, targetPos);
         entireFlightLength = distance / turretSO.projectileSpeed;
         
-        transform.rotation = Quaternion.LookRotation(targetPos);
+        transform.rotation = Quaternion.LookRotation(targetPos - transform.position);
         
         gameObject.SetActive(true);
     }
 
     private void Update() {
+        if (currentFlightLength >= entireFlightLength) { // REACHED TARGET
+            StartCoroutine(Finished());
+            return;
+        } 
+        
         CalculateNextStep();
     }
 
     private void CalculateNextStep() {
-        if (currentFlightLength >= entireFlightLength) { // REACHED TARGET
-            Hit();
-            gameObject.SetActive(false);
-        } 
-
         currentFlightLength += Time.deltaTime;
         float t = currentFlightLength / entireFlightLength; // CURRENT % OF FLIGHT
 
@@ -41,16 +44,20 @@ public class NonHomingProjectile : MonoBehaviour {
         newPosition.y += heightOffset;
         
         transform.position = newPosition;
+        transform.rotation = Quaternion.Euler(turretSO.maxRotation * t, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
     }
 
-    private void Hit() {
-        Collider[] enemiesInRadius = Physics.OverlapSphere(transform.position, turretSO.hitRadius, StaticVariables.whatIsEnemy);
-        if (enemiesInRadius.Length == 0) { return; }
+    private IEnumerator Finished() {
+        GetComponent<Collider>().enabled = false;
 
-        foreach (Collider other in enemiesInRadius) {
-            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage);
-        }
+        yield return new WaitForSeconds(turretSO.lifetimeAfterReachingEnd);
         
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Enemy")) {
+            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage);
+        }
     }
 }

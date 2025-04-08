@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New TurretSniperNest", menuName = "Scriptable Objects/Turrets/Sniper Nest")]
+[CreateAssetMenu(fileName = "New HominngTurret", menuName = "Scriptable Objects/Turrets/Homing Turret")]
 public class HomingTurret : TurretSO {
     
     public override void Shoot(Transform firepoint, Transform target) {

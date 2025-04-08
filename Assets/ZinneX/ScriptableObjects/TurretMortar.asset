@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49926197504c4d408ac40da40de7df0, type: 3}
   m_Name: TurretMortar
   m_EditorClassIdentifier: 
-  damage: 3
-  fireRate: 1
+  damage: 9
+  fireRate: 1.8
   range: 9
   projectileSpeed: 10
   projectilePrefab: {fileID: 3927782703365855098, guid: d54b027c458a31d4f9b26bf64983fd4c, type: 3}

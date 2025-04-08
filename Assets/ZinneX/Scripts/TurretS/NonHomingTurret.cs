@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Mortar", menuName = "Scriptable Objects/Turrets/Mortar")]
+[CreateAssetMenu(fileName = "New NonHomingTurret", menuName = "Scriptable Objects/Turrets/Non Homing Turret")]
 public class NonHomingTurret : TurretSO {
     public float arcHeight;
     public float hitRadius;

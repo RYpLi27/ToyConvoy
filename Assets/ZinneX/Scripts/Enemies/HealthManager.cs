@@ -1,7 +1,9 @@
+using System.Collections;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class HealthManager : MonoBehaviour {
-    private float health;
+    [SerializeField] [ReadOnly] private float health;
     [SerializeField] private EnemySO enemySO;
 
     private void Start() {
@@ -11,7 +13,21 @@ public class HealthManager : MonoBehaviour {
     public void TakeDamage(float damage) {
         health -= damage;
         if (health <= 0) {
-            gameObject.SetActive(false);
+            Death();
         }
+
     }
+    
+    public void Death() {
+        foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) {
+            turret.EnemyDeactivated(transform);
+        }
+
+        foreach (Spikes spikes in FindObjectsByType<Spikes>(FindObjectsSortMode.None)) {
+            spikes.EnemyDeactivated(GetComponent<Collider>());
+        }
+        
+        gameObject.SetActive(false);
+    }
+    
 }

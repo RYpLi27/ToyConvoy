@@ -19,7 +19,7 @@ public class HomingProjectile : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Enemy")) {
+        if (other.transform == target) {
             gameObject.SetActive(false);
             other.GetComponent<HealthManager>().TakeDamage(damage);
         }

@@ -7,7 +7,7 @@ public class TurretBehaviour : MonoBehaviour {
     [SerializeField] private Transform firepoint;
     private List<Transform> enemiesInRange = new();
     private float lastShootTime;
-    private Transform currentTarget;
+    [HideInInspector] public Transform currentTarget;
 
     private void Start() {
         GetComponent<CapsuleCollider>().radius = turretSO.range;
