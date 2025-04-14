@@ -16,6 +16,8 @@ public class EnemyBehaviour : MonoBehaviour {
 
     private void Update() {
         Move();
+
+        Rotate();
     }
 
     private void Move() {
@@ -41,5 +43,11 @@ public class EnemyBehaviour : MonoBehaviour {
     private void ReachPlayerBase() {
         // DEAL DAMAGE TO BASE
         GetComponent<HealthManager>().Death();
+    }
+
+    private void Rotate() {
+        if (currentNode == null) return;
+        
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentNode.position + nodeOffset - transform.position), .2f);
     }
 }
