@@ -8,19 +8,18 @@ public class HomingProjectile : MonoBehaviour {
     private void FixedUpdate() {
         transform.position = Vector3.MoveTowards(transform.position, target.position, Time.fixedDeltaTime * projectileSpeed);
         
-        if(target.gameObject.activeInHierarchy == false) {gameObject.SetActive(false);} // IF ENEMY DIES OR REACHES LAST NODE DISABLE THIS PROJECTILE
+        if(target.gameObject.activeInHierarchy == false) {ObjectPoolManager.ReturnObjectToPool(gameObject);} // IF ENEMY DIES OR REACHES LAST NODE DISABLE THIS PROJECTILE
     }
 
     public void SetupProjectile(float projSpeed, Transform newTarget, float newDamage) {
         target = newTarget;
         projectileSpeed = projSpeed;
         damage = newDamage;
-        gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.transform == target) {
-            gameObject.SetActive(false);
+            ObjectPoolManager.ReturnObjectToPool(gameObject);
             other.GetComponent<HealthManager>().TakeDamage(damage);
         }
     }
