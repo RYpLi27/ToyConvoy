@@ -11,7 +11,8 @@ public class PiercingTurret : TurretSO
     public float overshootDistance; // PROJECTILE WONT STOP RIGHT ON ENEMY FOOT BUT WILL PASS THROUGH HIM POSSIBLY HITTING ENEMIES BEHIND HIM
 
     public override void Shoot(Transform firepoint, Transform target) {
-        Instantiate(projectilePrefab, firepoint.position, Quaternion.identity).GetComponent<PiercingProjectile>().SetupProjectile(this, target.position, target.GetComponent<EnemyBehaviour>().MoveDir);
+        GameObject projectile = ObjectPoolManager.SpawnObject(projectilePrefab, firepoint.position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile);
+        projectile.GetComponent<PiercingProjectile>().SetupProjectile(this, target.position, target.GetComponent<EnemyBehaviour>().MoveDir);
         // BULLETS LOGIC LIKE TRAJECTORY AND LAUNCHING AT TARGET IS ALL MADE IN PROJECTILE SCRIPT
     }
 }
