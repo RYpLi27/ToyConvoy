@@ -18,8 +18,6 @@ public class NonHomingProjectile : MonoBehaviour {
         entireFlightLength = distance / turretSO.projectileSpeed;
         
         transform.rotation = Quaternion.LookRotation(targetPos);
-        
-        gameObject.SetActive(true);
     }
 
     private void Update() {
@@ -29,7 +27,7 @@ public class NonHomingProjectile : MonoBehaviour {
     private void CalculateNextStep() {
         if (currentFlightLength >= entireFlightLength) { // REACHED TARGET
             Hit();
-            gameObject.SetActive(false);
+            ObjectPoolManager.ReturnObjectToPool(gameObject);
         } 
 
         currentFlightLength += Time.deltaTime;
@@ -44,6 +42,7 @@ public class NonHomingProjectile : MonoBehaviour {
     }
 
     private void Hit() {
+        currentFlightLength = 0;
         Collider[] enemiesInRadius = Physics.OverlapSphere(transform.position, turretSO.hitRadius, StaticVariables.whatIsEnemy);
         if (enemiesInRadius.Length == 0) { return; }
 
@@ -51,6 +50,6 @@ public class NonHomingProjectile : MonoBehaviour {
             other.GetComponent<HealthManager>().TakeDamage(turretSO.damage);
         }
         
-        gameObject.SetActive(false);
+        ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
 }

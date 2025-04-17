@@ -27,7 +27,7 @@ public class HealthManager : MonoBehaviour {
             spikes.EnemyDeactivated(GetComponent<Collider>());
         }
         
-        gameObject.SetActive(false);
+        ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
     
 }
