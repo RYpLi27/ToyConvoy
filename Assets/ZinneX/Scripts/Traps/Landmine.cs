@@ -16,7 +16,7 @@ public class Landmine : MonoBehaviour {
             col.GetComponent<HealthManager>().TakeDamage(landmineSO.damage);
         }
         
-        gameObject.SetActive(false);
+        ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
 
     private void OnDrawGizmos() {

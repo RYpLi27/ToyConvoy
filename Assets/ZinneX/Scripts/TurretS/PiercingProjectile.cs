@@ -11,6 +11,7 @@ public class PiercingProjectile : MonoBehaviour
     private PiercingTurret  turretSO;
     
     public void SetupProjectile(PiercingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict) {
+        currentFlightLength = 0;
         turretSO = newTurretSO;
         
         startPos = transform.position;
@@ -21,8 +22,6 @@ public class PiercingProjectile : MonoBehaviour
         entireFlightLength = distance / turretSO.projectileSpeed;
         
         transform.rotation = Quaternion.LookRotation(targetPos - transform.position);
-        
-        gameObject.SetActive(true);
     }
 
     private void Update() {
@@ -52,7 +51,8 @@ public class PiercingProjectile : MonoBehaviour
 
         yield return new WaitForSeconds(turretSO.lifetimeAfterReachingEnd);
         
-        gameObject.SetActive(false);
+        currentFlightLength = 0;
+        ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
 
     private void OnTriggerEnter(Collider other) {
