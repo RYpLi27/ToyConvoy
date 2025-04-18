@@ -1,33 +1,33 @@
-using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class HealthManager : MonoBehaviour {
     [SerializeField] [ReadOnly] private float health;
     [SerializeField] private EnemySO enemySO;
+    [ReadOnly] public bool isAlive;
 
-    private void Start() {
+    private void OnEnable() {
         health = enemySO.maxHealth;
-    }
-
-    public void TakeDamage(float damage) {
-        health -= damage;
-        if (health <= 0) {
-            Death();
-        }
-
+        isAlive = true;
     }
     
-    public void Death() {
+    public void OnDisable() {
+        isAlive = false;
+        EnemySpawner.enemyCount--;
+        
         foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) {
             turret.EnemyDeactivated(transform);
         }
 
         foreach (Spikes spikes in FindObjectsByType<Spikes>(FindObjectsSortMode.None)) {
-            spikes.EnemyDeactivated(GetComponent<Collider>());
+            spikes.EnemyDeactivated(this);
         }
-        
-        ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
-    
+
+    public void TakeDamage(float damage) {
+        health -= damage;
+        if (health <= 0) {
+            ObjectPoolManager.ReturnObjectToPool(gameObject);
+        }
+    }
 }
