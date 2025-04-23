@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4554ac55559fd774f8661a7b64b61293, type: 3}
-  m_Name: BossMouse
+  m_Name: BasicEnemy
   m_EditorClassIdentifier: 
-  maxHealth: 175
-  moveSpeed: 5
+  maxHealth: 17
+  moveSpeed: 4
+  defense: 2

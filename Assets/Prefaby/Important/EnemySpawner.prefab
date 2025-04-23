@@ -47,33 +47,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 1504816260774053263}
+  spawnWaveButton: {fileID: 0}
   enemyWaves:
   - enemies:
     - enemyPrefab: {fileID: 5422365110199480103, guid: 09841e0c86fa8934b8932e424b28beb4, type: 3}
       amountToSpawn: 5
-      timeBetweenSpawns: 0.1
+      timeBetweenSpawns: 0.3
       firstSpawnDelay: 0
     isBossWave: 0
   - enemies:
     - enemyPrefab: {fileID: 4577675516639902352, guid: ad1b89d1fac7b0848a2f9f580cebf33e, type: 3}
       amountToSpawn: 5
-      timeBetweenSpawns: 0.1
+      timeBetweenSpawns: 0.3
       firstSpawnDelay: 0
     isBossWave: 0
   - enemies:
     - enemyPrefab: {fileID: 4577675516639902352, guid: ad1b89d1fac7b0848a2f9f580cebf33e, type: 3}
       amountToSpawn: 5
-      timeBetweenSpawns: 0.1
+      timeBetweenSpawns: 0.3
       firstSpawnDelay: 0
     - enemyPrefab: {fileID: 5422365110199480103, guid: 09841e0c86fa8934b8932e424b28beb4, type: 3}
       amountToSpawn: 5
-      timeBetweenSpawns: 0.1
-      firstSpawnDelay: 1
+      timeBetweenSpawns: 0.3
+      firstSpawnDelay: 1.5
     isBossWave: 0
   - enemies:
     - enemyPrefab: {fileID: 4577675516639902352, guid: ad1b89d1fac7b0848a2f9f580cebf33e, type: 3}
-      amountToSpawn: 10
-      timeBetweenSpawns: 0
+      amountToSpawn: 35
+      timeBetweenSpawns: 0.2
       firstSpawnDelay: 0
     isBossWave: 0
   - enemies:

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1045483776473119533}
   - component: {fileID: 6567002614197429235}
   - component: {fileID: 1638662256408082186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4537526907695422236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1688144372158391174}
   - component: {fileID: 7022864882460366307}
   - component: {fileID: 2089257026678609784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mortar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,3 +211,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretSO: {fileID: 11400000, guid: 9f5a232a4a864904ea8d667ff7e0d8bc, type: 2}
   firepoint: {fileID: 4537526907695422236}
+  currentTarget: {fileID: 0}

@@ -29,7 +29,7 @@ public class Spikes : MonoBehaviour {
                 
                 if (Time.time - enemiesInRange[enemy] < 1f / spikesSO.hitInstancesPerSecond) continue;
                 
-                enemy.TakeDamage(spikesSO.damagePerSecond / spikesSO.hitInstancesPerSecond);
+                enemy.TakeDamage(spikesSO.damagePerSecond / spikesSO.hitInstancesPerSecond, true);
                 enemiesInRange[enemy] = Time.time;
             }
         }

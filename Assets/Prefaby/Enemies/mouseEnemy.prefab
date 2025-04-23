@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150cfc1403a88c943800cc740b5a6ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySO: {fileID: 11400000, guid: b4c93b8b33ce4bf44a6184a7eec909ce, type: 2}
+  statsSO: {fileID: 11400000, guid: b4c93b8b33ce4bf44a6184a7eec909ce, type: 2}
 --- !u!114 &2561054303951061026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  enemySO: {fileID: 11400000, guid: b4c93b8b33ce4bf44a6184a7eec909ce, type: 2}
+  statsSO: {fileID: 11400000, guid: b4c93b8b33ce4bf44a6184a7eec909ce, type: 2}
   isAlive: 0
 --- !u!65 &3487010993359871178
 BoxCollider:

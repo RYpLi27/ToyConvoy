@@ -2,7 +2,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour {
-    [SerializeField] [InfoBox("To see values click on pen at the right side")] private EnemySO enemySO;
+    [SerializeField] [InfoBox("To see values click on pen at the right side")] private StatsSO statsSO;
     private int currentNodeIndex;
     private Transform currentNode;
     private Vector3 nodeOffset;
@@ -43,7 +43,7 @@ public class EnemyBehaviour : MonoBehaviour {
     private void Move() {
         if (currentNode == null) return;
         
-        transform.position = Vector3.MoveTowards(transform.position, currentNode.position + nodeOffset, Time.deltaTime * enemySO.moveSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, currentNode.position + nodeOffset, Time.deltaTime * statsSO.moveSpeed);
         
         if(Vector3.Distance(transform.position, currentNode.position + nodeOffset) <= 0f) FindNextNode();
     }
