@@ -3,18 +3,22 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour {
     [SerializeField] [ReadOnly] private float health;
-    [SerializeField] private EnemySO enemySO;
+    [SerializeField] private StatsSO statsSO;
     [ReadOnly] public bool isAlive;
 
     private void OnEnable() {
-        health = enemySO.maxHealth;
+        health = statsSO.maxHealth;
         isAlive = true;
     }
     
     public void OnDisable() {
         isAlive = false;
+
+        if (gameObject.CompareTag("Enemy") == false) return; // REST OF THIS METHOD IS ONLY FOR ENEMIES
+        
         EnemySpawner.enemyCount--;
         
+        //THOSE LOOPS LETS TURRETS AND TRAPS KNOW THAT IT IS DEAD
         foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) {
             turret.EnemyDeactivated(transform);
         }
@@ -24,7 +28,9 @@ public class HealthManager : MonoBehaviour {
         }
     }
 
-    public void TakeDamage(float damage) {
+    public void TakeDamage(float damage, bool isDOT = false) {
+        if (isDOT == true) damage = Mathf.Max(damage - statsSO.defense, 1);
+        
         health -= damage;
         if (health <= 0) {
             ObjectPoolManager.ReturnObjectToPool(gameObject);

@@ -52,7 +52,6 @@ public class EnemySpawner : MonoBehaviour {
             StartCoroutine(EnemySpawnDelay(enemyInstance));
         }
 
-        initialsingWave = false;
         currentWave++;
     }
     
@@ -63,7 +62,10 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     private IEnumerator SpawnEnemies(EnemyInstance enemyInstance, int enemiesSpawned) {
-        if (enemiesSpawned == enemyInstance.amountToSpawn) { yield break; }
+        if (enemiesSpawned == enemyInstance.amountToSpawn) {
+            initialsingWave = false;
+            yield break; 
+        }
         
         ObjectPoolManager.SpawnObject(enemyInstance.enemyPrefab, spawnPosition.position, Quaternion.identity, ObjectPoolManager.PoolingParent.Enemy);
         enemyCount++;
