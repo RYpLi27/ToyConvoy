@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbc58668d69a3241857590495481de0, type: 3}
   m_Name: SniperNest
   m_EditorClassIdentifier: 
-  damage: 4
+  damage: 17
   fireRate: 0.6
   range: 15
   projectileSpeed: 35

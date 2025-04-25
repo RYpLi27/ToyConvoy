@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea0669b2dbaa294589c9da369edb70e, type: 3}
   m_Name: Landmine
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 60
   explosionRange: 2

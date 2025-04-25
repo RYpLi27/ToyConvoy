@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4554ac55559fd774f8661a7b64b61293, type: 3}
   m_Name: BossMouse
   m_EditorClassIdentifier: 
-  maxHealth: 125
-  moveSpeed: 5
-  defense: 5
+  maxHealth: 550
+  defense: 4
+  moveSpeed: 4
