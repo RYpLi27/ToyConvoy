@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67acca5c630ecc44ba3f36bfb52e26b5, type: 3}
   m_Name: Spikes
   m_EditorClassIdentifier: 
-  damagePerSecond: 9
+  damagePerSecond: 30
   hitInstancesPerSecond: 12

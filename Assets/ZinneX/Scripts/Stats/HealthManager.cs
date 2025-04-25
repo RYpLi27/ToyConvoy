@@ -28,8 +28,8 @@ public class HealthManager : MonoBehaviour {
         }
     }
 
-    public void TakeDamage(float damage, bool isDOT = false) {
-        if (isDOT == true) damage = Mathf.Max(damage - statsSO.defense, 1);
+    public void TakeDamage(float damage) {
+        damage = Mathf.Max(damage - statsSO.defense, 1);
         
         health -= damage;
         if (health <= 0) {
