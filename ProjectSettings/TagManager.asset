@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Turret
+  - Explosive
+  - TrapDOT
   layers:
   - Default
   - TransparentFX

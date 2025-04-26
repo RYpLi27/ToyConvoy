@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour {
     [SerializeField] private SpikesSO spikesSO;
+    [SerializeField] private Collider triggerCol;
+    [SerializeField] private Collider normalCol;
+    
     private Dictionary<HealthManager, float> enemiesInRange = new(); //TARGET, LAST HIT TIME
     
     private void OnTriggerEnter(Collider other) {
@@ -39,5 +42,17 @@ public class Spikes : MonoBehaviour {
         if (enemiesInRange.ContainsKey(enemy)) {
             enemiesInRange.Remove(enemy);
         }
+    }
+
+    public bool EnableSpikes() {
+        if (GetComponent<PlacementCheck>().canPlace == false) return false;
+        
+        GetComponent<PlacementCheck>().enabled = false;
+        triggerCol.enabled = true;
+        normalCol.enabled = true;
+
+        transform.SetParent(GameObject.Find("Turrets").transform);
+        GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;
+        return true;
     }
 }

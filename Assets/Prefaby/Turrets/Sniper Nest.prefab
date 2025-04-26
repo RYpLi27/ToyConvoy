@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6958796138981346203}
   - component: {fileID: 2277079999810759484}
   - component: {fileID: 8456287181231080000}
-  - component: {fileID: 161725294541279036}
   m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
@@ -87,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &161725294541279036
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567887579948161695}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1815120587132847365
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,10 +96,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3956199992343713548}
   - component: {fileID: 4176470631403360959}
+  - component: {fileID: 4011319176559663673}
   - component: {fileID: 4627806967758282327}
+  - component: {fileID: 7878167918008813149}
   m_Layer: 9
   m_Name: Sniper Nest
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,12 +140,33 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &4011319176559663673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815120587132847365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4.5457, z: 1}
+  m_Center: {x: 0, y: 2.27285, z: 0}
 --- !u!114 &4627806967758282327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +182,22 @@ MonoBehaviour:
   turretSO: {fileID: 11400000, guid: 3941d4dbf6243c440b2424abf8e084bb, type: 2}
   firepoint: {fileID: 6110489237015824860}
   currentTarget: {fileID: 0}
+  triggerCol: {fileID: 4176470631403360959}
+  normalCol: {fileID: 4011319176559663673}
+--- !u!114 &7878167918008813149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815120587132847365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803a0ed3cadcc0f46afd3653adb1b4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canPlace: 0
+  mesh: {fileID: 8456287181231080000}
 --- !u!1 &5696674238485137770
 GameObject:
   m_ObjectHideFlags: 0

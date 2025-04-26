@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpikesSO : ScriptableObject {
     public float damagePerSecond;
     
-    [InfoBox("Preferably between 12-36 to avoid calling the method too often but still maintain smooth hp loss")] 
+    [Title("Preferably between 12-36")] 
     public float hitInstancesPerSecond;
+    
+    public Material objectMaterial;
 }

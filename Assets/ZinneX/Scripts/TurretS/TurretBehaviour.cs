@@ -9,8 +9,11 @@ public class TurretBehaviour : MonoBehaviour {
     private float lastShootTime;
     [HideInInspector] public Transform currentTarget;
 
+    [SerializeField] private CapsuleCollider triggerCol;
+    [SerializeField] private Collider normalCol;
+    
     private void Start() {
-        GetComponent<CapsuleCollider>().radius = turretSO.range;
+        triggerCol.radius = turretSO.range;
     }
 
     private void FixedUpdate() {
@@ -49,6 +52,20 @@ public class TurretBehaviour : MonoBehaviour {
     public void EnemyDeactivated(Transform obj) { // CALLED WHEN ENEMY DIES OR REACHES LAST NODE
         enemiesInRange.Remove(obj);
         UpdateTarget();
+    }
+    
+    public bool EnableTurret() {
+        if (GetComponent<PlacementCheck>().canPlace == false) return false;
+
+        GetComponent<PlacementCheck>().enabled = false;
+        if (TryGetComponent(out TurretRotateToTarget rotate)) rotate.enabled = true;
+        triggerCol.enabled = true;
+        normalCol.enabled = true;
+        
+        transform.SetParent(GameObject.Find("Turrets").transform);
+        GetComponentInChildren<MeshRenderer>().material = turretSO.objectMaterial;
+
+        return true;
     }
 
     private void OnDrawGizmos() {
