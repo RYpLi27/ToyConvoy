@@ -1,80 +1,44 @@
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour {
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private WeaponSO weaponSO;
-    [SerializeField] private LayerMask whatIsTarget;
-    [SerializeField] private Color enemyHitColor;
-    [SerializeField] private Color obstacleHitColor;
+    [SerializeField] private List<GameObject> weapons;
+    [SerializeField] private Transform gunHolder;
 
-    private float lastShootTime;
-    private bool isShooting;
+    private Weapon selectedWeapon;
 
-    private void Update() {
-        if(isShooting == true) Shoot();
+    private void Start() {
+        WeaponSwap(0);
     }
 
     public void ShootInput(InputAction.CallbackContext context) {
-        if (context.performed && Time.time - lastShootTime > 1f / weaponSO.fireRate) isShooting = true;
-
-        if (context.canceled) isShooting = false;
-    }
-
-    private void Shoot() {
-        if (Time.time - lastShootTime <= 1f / weaponSO.fireRate || Cursor.lockState != CursorLockMode.Locked) return;
+        if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Shooting) return;
         
-        lastShootTime = Time.time;
-        
-        Vector3 randomRecoil = Vector3.up * Random.Range(-weaponSO.verticalRecoil, weaponSO.verticalRecoil) + Vector3.right * Random.Range(-weaponSO.horizontalRecoil, weaponSO.horizontalRecoil);
-        
-        if(Physics.Raycast(firePoint.position, GetAimPosition() + randomRecoil - firePoint.position, out RaycastHit ray, weaponSO.weaponRange, whatIsTarget, QueryTriggerInteraction.Ignore)) {
-            //LOGIC
-            if (ray.transform.CompareTag("Enemy")) {
-                ray.transform.GetComponent<HealthManager>().TakeDamage(weaponSO.damage);
-            }
-            
-            //VISUALS
-            CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitColor : obstacleHitColor);
-            CreateBulletTrail(firePoint.position, ray.point);
-        } else {
-            CreateBulletTrail(firePoint.position,  GetAimPosition() + randomRecoil);
-        }
-    }
+        if (context.performed && selectedWeapon != null) selectedWeapon.isShooting = true;
 
-    private Vector3 GetAimPosition() {
-        Ray cameraRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-        Physics.Raycast(cameraRay, out RaycastHit hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Ignore);
-        
-        if(hit.transform != null) return hit.distance > 11 ? hit.point : cameraRay.origin + cameraRay.direction * 11;
-        return cameraRay.origin + cameraRay.direction * weaponSO.weaponRange;
-    }
-
-    private void CreateHitEffect(Vector3 position, Color color) {
-        ParticleSystem.MainModule hitEffect = ObjectPoolManager.SpawnObject(weaponSO.bulletHitPrefab, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<ParticleSystem>().main;
-        hitEffect.startColor = color;
+        if (context.canceled && selectedWeapon != null) selectedWeapon.isShooting = false;
     }
     
-    private void CreateBulletTrail(Vector3 start, Vector3 end) {
-        LineRenderer trail = ObjectPoolManager.SpawnObject(weaponSO.bulletTrialPrefab, start, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<LineRenderer>();
-        trail.SetPosition(0, start);
-        trail.SetPosition(1, end);
-
-        StartCoroutine(ReturnTrail(trail.gameObject, .03f));
+    public void WeaponSwapInput(InputAction.CallbackContext context) {
+        if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Shooting) return;
+        
+        if(context.performed) WeaponSwap(Mathf.RoundToInt(context.ReadValue<float>()));
     }
 
-    private IEnumerator ReturnTrail(GameObject obj, float t) {
-        yield return new WaitForSeconds(t);
+    private void WeaponSwap(int i) {
+        if (i >= weapons.Count) return;
         
-        ObjectPoolManager.ReturnObjectToPool(obj);
+        if(selectedWeapon != null) ObjectPoolManager.ReturnObjectToPool(selectedWeapon.gameObject);
+        Weapon weapon = ObjectPoolManager.SpawnObject(weapons[i].gameObject, gunHolder).GetComponent<Weapon>();
+        selectedWeapon = weapon;
     }
-    
-    private void OnDrawGizmos() {
-        if (firePoint == null) return;
-        
-        Gizmos.color = Color.red;
-        
-        Gizmos.DrawRay(firePoint.position, GetAimPosition() - firePoint.position);
+
+    public void HideWeapon() {
+        selectedWeapon.gameObject.SetActive(false);
+    }
+
+    public void ShowWeapon() {
+        selectedWeapon.gameObject.SetActive(true);
     }
 }

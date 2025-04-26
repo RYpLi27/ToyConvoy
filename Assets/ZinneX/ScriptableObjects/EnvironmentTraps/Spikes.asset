@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerSecond: 30
   hitInstancesPerSecond: 12
+  objectMaterial: {fileID: 2100000, guid: 29f30f19091fbbf4996cdc6dabe190ac, type: 2}

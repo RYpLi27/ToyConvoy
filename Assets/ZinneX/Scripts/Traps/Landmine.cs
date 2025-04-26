@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Landmine : MonoBehaviour {
     [SerializeField] private LandmineSO landmineSO;
+    [SerializeField] private Collider triggerCol;
+    [SerializeField] private Collider normalCol;
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
@@ -17,6 +19,23 @@ public class Landmine : MonoBehaviour {
         }
         
         ObjectPoolManager.ReturnObjectToPool(gameObject);
+
+        triggerCol.enabled = false;
+        normalCol.enabled = false;
+        GetComponent<PlacementCheck>().enabled = true;
+    }
+    
+    public bool EnableLandmine() {
+        if (GetComponent<PlacementCheck>().canPlace == false) return false;
+
+        GetComponent<PlacementCheck>().enabled = false;
+        GetComponent<Collider>().enabled = true;
+        triggerCol.enabled = true;
+        normalCol.enabled = true;
+        
+        transform.SetParent(GameObject.Find("Turrets").transform);
+        GetComponentInChildren<MeshRenderer>().material = landmineSO.objectMaterial;
+        return true;
     }
 
     private void OnDrawGizmos() {

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 60
   explosionRange: 2
+  objectMaterial: {fileID: 2100000, guid: a2fb9ff50c220904c8f22fa2c6615f45, type: 2}

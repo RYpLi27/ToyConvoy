@@ -17,6 +17,7 @@ MonoBehaviour:
   range: 9
   projectileSpeed: 10
   projectilePrefab: {fileID: 3927782703365855098, guid: d54b027c458a31d4f9b26bf64983fd4c, type: 3}
+  objectMaterial: {fileID: 2100000, guid: ed72a8327079e3b4c8d5b60432df5588, type: 2}
   arcHeight: 4
   hitRadius: 2
   heightCurve:

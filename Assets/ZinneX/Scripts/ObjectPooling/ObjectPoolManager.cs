@@ -9,11 +9,13 @@ public class ObjectPoolManager : MonoBehaviour {
     private static GameObject projectileEmpty;
     private static GameObject effectsEmpty;
     private static GameObject enemyEmpty;
+    private static GameObject turretEmpty;
 
     public enum PoolingParent {
         Projectile,
         Enemy,
         Effect,
+        Turret,
         none
     }
 
@@ -32,6 +34,9 @@ public class ObjectPoolManager : MonoBehaviour {
         
         effectsEmpty = new GameObject("Effects");
         effectsEmpty.transform.SetParent(objectPoolEmptyHolder.transform);
+        
+        turretEmpty = new GameObject("Turrets");
+        turretEmpty.transform.SetParent(objectPoolEmptyHolder.transform);
     }
     
     ///<summary>
@@ -62,7 +67,8 @@ public class ObjectPoolManager : MonoBehaviour {
     ///Parents object manually
     ///</summary>
     public static GameObject SpawnObject(GameObject obj, Transform parent) {
-        ObjectPool pool = objectPools.Find(p => p.objectName == obj.name) ?? CreatePool(obj.name);
+        string objectName = obj.name.Replace("(Clone)", "");
+        ObjectPool pool = objectPools.Find(p => p.objectName == objectName) ?? CreatePool(objectName);
 
         GameObject spawnableObj = pool.InactiveObjects.FirstOrDefault();
 
@@ -108,6 +114,9 @@ public class ObjectPoolManager : MonoBehaviour {
             
             case PoolingParent.Effect:
                 return effectsEmpty;
+            
+            case PoolingParent.Turret:
+                return turretEmpty;
             
             case PoolingParent.none:
             default:

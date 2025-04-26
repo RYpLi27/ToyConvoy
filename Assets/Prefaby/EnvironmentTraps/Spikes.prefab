@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5697509910256002653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 0.2, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -96,10 +96,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2545108663465040661}
   - component: {fileID: 8624576301749984368}
+  - component: {fileID: 8821729632389194369}
   - component: {fileID: 2862179278817080818}
+  - component: {fileID: 6153794314029622142}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: TrapDOT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 8437847481057689693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.08, y: 0, z: -12.51}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.5404, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -137,10 +139,31 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8821729632389194369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437847481057689693}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.2, z: 0.5}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!114 &2862179278817080818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,3 +177,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikesSO: {fileID: 11400000, guid: b0ac3a8456ab583429e8f6535b7fec18, type: 2}
+  triggerCol: {fileID: 8624576301749984368}
+  normalCol: {fileID: 8821729632389194369}
+--- !u!114 &6153794314029622142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437847481057689693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803a0ed3cadcc0f46afd3653adb1b4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canPlace: 0
+  mesh: {fileID: 4598805137271527471}
