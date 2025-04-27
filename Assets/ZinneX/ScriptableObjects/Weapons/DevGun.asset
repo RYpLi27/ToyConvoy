@@ -15,7 +15,8 @@ MonoBehaviour:
   fireRate: 30
   damage: 15
   weaponRange: 90
-  verticalRecoil: 0
-  horizontalRecoil: 0
+  verticalRecoil: 0.1
+  horizontalRecoil: 0.1
+  numberOfBullets: 4
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
   bulletHitPrefab: {fileID: 7464196065622715701, guid: f368a4cebfcadca4ea89fe02784ed2bd, type: 3}

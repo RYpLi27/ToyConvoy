@@ -26,7 +26,7 @@ public class Landmine : MonoBehaviour {
     }
     
     public bool EnableLandmine() {
-        if (GetComponent<PlacementCheck>().canPlace == false) return false;
+        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(landmineSO.turretCost) == false) return false;
 
         GetComponent<PlacementCheck>().enabled = false;
         GetComponent<Collider>().enabled = true;
@@ -38,6 +38,10 @@ public class Landmine : MonoBehaviour {
         return true;
     }
 
+    public bool PriceCheck() {
+        return GoldManager.instance.PriceCheck(landmineSO.turretCost);
+    }
+    
     private void OnDrawGizmos() {
         if (landmineSO == null) return;
         

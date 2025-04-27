@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: MachineGun
   m_EditorClassIdentifier: 
   fireRate: 10
-  damage: 1
+  damage: 3
   weaponRange: 35
   verticalRecoil: 0.2
   horizontalRecoil: 0.4
+  numberOfBullets: 1
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
   bulletHitPrefab: {fileID: 7464196065622715701, guid: f368a4cebfcadca4ea89fe02784ed2bd, type: 3}

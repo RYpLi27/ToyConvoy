@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 331663470769015201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.575, y: 0, z: 3.9999998}
+  m_LocalPosition: {x: 1.65, y: 0, z: 3.9999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,6 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   statsSO: {fileID: 11400000, guid: 867c50073406f5340bbe7a0e59377d9f, type: 2}
+  hpSlider: {fileID: 0}
+  hpText: {fileID: 0}
   isAlive: 0
 --- !u!114 &1929065531829826047
 MonoBehaviour:
@@ -233,9 +235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 2467116463142843505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
-  - {fileID: 686906847730569054, guid: 2338f7382c9ac3f4896a184a7b35f2d7, type: 3}
-  - {fileID: 7414232986398334037, guid: ef5978bdaea74cb49b05e4576b0db37c, type: 3}
-  - {fileID: 859458352506002483, guid: cb6b685b9d6dc474183b5b769e6ff8e4, type: 3}
+  - {fileID: 6667860102979916131, guid: b74e2d2580359a74a91e8b08780ccdbb, type: 3}
+  - {fileID: 8721469679135135017, guid: 756b3e1183ac5c1418f73755cf56ba2e, type: 3}
+  - {fileID: 7422966948414691067, guid: b7d2ed13abfde4d41a3a296978da9218, type: 3}
+  - {fileID: 3931173541006628117, guid: 1ef417d533ad6b34e8e1ed626b836ebc, type: 3}
   gunHolder: {fileID: 5125017712819149262}
 --- !u!114 &3091917397319788418
 MonoBehaviour:

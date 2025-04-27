@@ -27,18 +27,45 @@ public class PlacementCheck : MonoBehaviour {
     }
     
     private void FixedUpdate() {
+        MaterialChange();
+    }
+
+    private void MaterialChange() {
         colPos = transform.TransformPoint(col.center) + new Vector3(0f, .05f, 0f);
         colSize = Vector3.Scale(col.size, transform.lossyScale);
         
-        if (Physics.CheckBox(colPos, colSize/2, transform.rotation, ~0, QueryTriggerInteraction.Ignore)) {
-            mesh.material = PlayerBuilding.instance.wrongMaterial;
-            canPlace = false;
-        } else {
-            mesh.material = PlayerBuilding.instance.correctMaterial;
-            canPlace = true;
+        if (Physics.CheckBox(colPos, colSize/2, transform.rotation, ~0, QueryTriggerInteraction.Ignore) == false) {
+            switch (transform.tag) {
+                case "Turret":
+                    if (GetComponent<TurretBehaviour>().PriceCheck()) {
+                        mesh.material = PlayerBuilding.instance.correctMaterial;
+                        canPlace = true;
+                        return;
+                    }
+                    break;
+                
+                case "Explosive":
+                    if(GetComponent<Landmine>().PriceCheck()) {
+                        mesh.material = PlayerBuilding.instance.correctMaterial;
+                        canPlace = true;
+                        return;
+                    }
+                    break;
+                
+                case "TrapDOT":
+                    if(GetComponent<Spikes>().PriceCheck()) {
+                        mesh.material = PlayerBuilding.instance.correctMaterial;
+                        canPlace = true;
+                        return;
+                    }
+                    break;
+            }
         }
+        
+        mesh.material = PlayerBuilding.instance.wrongMaterial;
+        canPlace = false;
     }
-
+    
     private void OnDrawGizmos() {
         Gizmos.color = Color.blue;
 

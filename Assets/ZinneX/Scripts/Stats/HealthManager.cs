@@ -1,19 +1,23 @@
+using System;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour {
-    [SerializeField] [ReadOnly] private float health;
+    [SerializeField] [ReadOnly] private float currentHealth;
     [SerializeField] private StatsSO statsSO;
+    [SerializeField] private Slider hpSlider;
+    [SerializeField] private TMP_Text hpText;
     [ReadOnly] public bool isAlive;
-
+    
     private void OnEnable() {
-        health = statsSO.maxHealth;
+        currentHealth = statsSO.maxHealth;
+        UpdateUI();
         isAlive = true;
     }
     
     public void OnDisable() {
-        isAlive = false;
-
         if (gameObject.CompareTag("Enemy") == false) return; // REST OF THIS METHOD IS ONLY FOR ENEMIES
         
         EnemySpawner.enemyCount--;
@@ -28,12 +32,28 @@ public class HealthManager : MonoBehaviour {
         }
     }
 
-    public void TakeDamage(float damage) {
-        damage = Mathf.Max(damage - statsSO.defense, 1);
+    public float TakeDamage(float damage) {
+        damage = (float)Math.Round(Mathf.Max(damage - statsSO.defense, 1), 2);
         
-        health -= damage;
-        if (health <= 0) {
-            ObjectPoolManager.ReturnObjectToPool(gameObject);
+        currentHealth -= damage;
+        UpdateUI();
+        if (currentHealth <= 0) {
+            Death();
         }
+
+        return damage;
+    }
+
+    private void Death() {
+        if (isAlive == false) return;
+        isAlive = false;
+        
+        if(transform.CompareTag("Enemy")) GetComponent<DropGold>().AddGold();
+        ObjectPoolManager.ReturnObjectToPool(gameObject);
+    }
+    
+    private void UpdateUI() {
+        hpSlider.value = currentHealth / statsSO.maxHealth;
+        hpText.text = $"{currentHealth}/{statsSO.maxHealth}";
     }
 }

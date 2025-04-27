@@ -5,6 +5,7 @@ public class TurretSO : ScriptableObject {
     public float fireRate;
     public float range;
     public float projectileSpeed;
+    public int turretCost;
 
     public GameObject projectilePrefab;
 

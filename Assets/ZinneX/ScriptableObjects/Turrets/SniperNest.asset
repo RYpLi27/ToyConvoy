@@ -16,5 +16,6 @@ MonoBehaviour:
   fireRate: 0.6
   range: 15
   projectileSpeed: 35
+  turretCost: 150
   projectilePrefab: {fileID: 1561201658955599378, guid: 2824d62e4639f99409b00c8b8b1e88da, type: 3}
   objectMaterial: {fileID: 2100000, guid: e24ff6892cd32aa4b93aa9a5fefec8ad, type: 2}

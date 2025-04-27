@@ -1,5 +1,6 @@
 using System.Collections;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField] private LayerMask whatIsTarget;
     [SerializeField] private Material enemyHitMaterial;
     [SerializeField] private Material obstacleHitMaterial;
+    [SerializeField] private GameObject damageText;
 
     private float lastShootTime;
     [ReadOnly] public bool isShooting;
@@ -25,20 +27,21 @@ public class Weapon : MonoBehaviour {
         if (Time.time - lastShootTime <= 1f / weaponSO.fireRate || Cursor.lockState != CursorLockMode.Locked) return;
         
         lastShootTime = Time.time;
-        
-        Vector3 randomRecoil = Vector3.up * Random.Range(-weaponSO.verticalRecoil, weaponSO.verticalRecoil) + Vector3.right * Random.Range(-weaponSO.horizontalRecoil, weaponSO.horizontalRecoil);
-        
-        if(Physics.Raycast(firePoint.position, GetAimPosition() + randomRecoil - firePoint.position, out RaycastHit ray, weaponSO.weaponRange, whatIsTarget, QueryTriggerInteraction.Ignore)) {
-            //LOGIC
-            if (ray.transform.CompareTag("Enemy")) {
-                ray.transform.GetComponent<HealthManager>().TakeDamage(weaponSO.damage);
-            }
+
+        for (int i = 0; i < weaponSO.numberOfBullets; i++) {
+            Vector3 randomRecoil = Vector3.up * Random.Range(-weaponSO.verticalRecoil, weaponSO.verticalRecoil) + Vector3.right * Random.Range(-weaponSO.horizontalRecoil, weaponSO.horizontalRecoil);
             
-            //VISUALS
-            CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitMaterial : obstacleHitMaterial);
-            CreateBulletTrail(firePoint.position, ray.point);
-        } else {
-            CreateBulletTrail(firePoint.position,  GetAimPosition() + randomRecoil);
+            if(Physics.Raycast(firePoint.position, GetAimPosition() + randomRecoil - firePoint.position, out RaycastHit ray, weaponSO.weaponRange, whatIsTarget, QueryTriggerInteraction.Ignore)) {
+                if (ray.transform.CompareTag("Enemy")) {
+                    float damageDealt = ray.transform.GetComponent<HealthManager>().TakeDamage(weaponSO.damage);
+                    CreateDamageText(ray.point, damageDealt);
+                }
+                
+                CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitMaterial : obstacleHitMaterial);
+                CreateBulletTrail(firePoint.position, ray.point);
+            } else {
+                CreateBulletTrail(firePoint.position,  GetAimPosition() + randomRecoil);
+            }
         }
     }
     
@@ -50,6 +53,11 @@ public class Weapon : MonoBehaviour {
         return cameraRay.origin + cameraRay.direction * weaponSO.weaponRange;
     }
 
+    private void CreateDamageText(Vector3 position, float value) {
+        TMP_Text dmgText = ObjectPoolManager.SpawnObject(damageText, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Effect).GetComponentInChildren<TMP_Text>();
+        dmgText.text = value.ToString();
+    }
+    
     private void CreateHitEffect(Vector3 position, Material material) {
         ParticleSystemRenderer hitEffect = ObjectPoolManager.SpawnObject(weaponSO.bulletHitPrefab, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<ParticleSystemRenderer>();
         hitEffect.material = material;

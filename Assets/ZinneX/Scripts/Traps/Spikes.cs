@@ -45,7 +45,7 @@ public class Spikes : MonoBehaviour {
     }
 
     public bool EnableSpikes() {
-        if (GetComponent<PlacementCheck>().canPlace == false) return false;
+        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(spikesSO.turretCost) == false) return false;
         
         GetComponent<PlacementCheck>().enabled = false;
         triggerCol.enabled = true;
@@ -54,5 +54,9 @@ public class Spikes : MonoBehaviour {
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;
         return true;
+    }
+    
+    public bool PriceCheck() {
+        return GoldManager.instance.PriceCheck(spikesSO.turretCost);
     }
 }
