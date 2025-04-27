@@ -55,7 +55,7 @@ public class TurretBehaviour : MonoBehaviour {
     }
     
     public bool EnableTurret() {
-        if (GetComponent<PlacementCheck>().canPlace == false) return false;
+        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(turretSO.turretCost) == false) return false;
 
         GetComponent<PlacementCheck>().enabled = false;
         if (TryGetComponent(out TurretRotateToTarget rotate)) rotate.enabled = true;
@@ -68,6 +68,10 @@ public class TurretBehaviour : MonoBehaviour {
         return true;
     }
 
+    public bool PriceCheck() {
+        return GoldManager.instance.PriceCheck(turretSO.turretCost);
+    }
+    
     private void OnDrawGizmos() {
         Gizmos.color = Color.cyan;
         if(turretSO != null)

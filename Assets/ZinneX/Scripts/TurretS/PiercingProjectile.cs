@@ -8,7 +8,7 @@ public class PiercingProjectile : MonoBehaviour
     private float distance;
     private float entireFlightLength;
     private float currentFlightLength;
-    private PiercingTurret  turretSO;
+    private PiercingTurret turretSO;
     
     public void SetupProjectile(PiercingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict) {
         currentFlightLength = 0;
@@ -22,6 +22,7 @@ public class PiercingProjectile : MonoBehaviour
         entireFlightLength = distance / turretSO.projectileSpeed;
         
         transform.rotation = Quaternion.LookRotation(targetPos - transform.position);
+        GetComponent<Collider>().enabled = true;
     }
 
     private void Update() {

@@ -7,6 +7,8 @@ public class SpikesSO : ScriptableObject {
     
     [Title("Preferably between 12-36")] 
     public float hitInstancesPerSecond;
+
+    public int turretCost;
     
     public Material objectMaterial;
 }

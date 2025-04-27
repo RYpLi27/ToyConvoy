@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Sniper
   m_EditorClassIdentifier: 
   fireRate: 1
-  damage: 15
+  damage: 35
   weaponRange: 50
   verticalRecoil: 0.05
   horizontalRecoil: 0.05
+  numberOfBullets: 1
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
   bulletHitPrefab: {fileID: 7464196065622715701, guid: f368a4cebfcadca4ea89fe02784ed2bd, type: 3}
