@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49926197504c4d408ac40da40de7df0, type: 3}
   m_Name: TurretMortar
   m_EditorClassIdentifier: 
+  price: 200
   damage: 45
   fireRate: 1.8
   range: 9
   projectileSpeed: 10
-  turretCost: 175
   projectilePrefab: {fileID: 3927782703365855098, guid: d54b027c458a31d4f9b26bf64983fd4c, type: 3}
   objectMaterial: {fileID: 2100000, guid: ed72a8327079e3b4c8d5b60432df5588, type: 2}
   arcHeight: 4

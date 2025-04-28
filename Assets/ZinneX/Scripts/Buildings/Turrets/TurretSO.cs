@@ -1,11 +1,10 @@
 using UnityEngine;
 
-public class TurretSO : ScriptableObject {
+public class TurretSO : BuildingSO {
     public float damage;
     public float fireRate;
     public float range;
     public float projectileSpeed;
-    public int turretCost;
 
     public GameObject projectilePrefab;
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67acca5c630ecc44ba3f36bfb52e26b5, type: 3}
   m_Name: Spikes
   m_EditorClassIdentifier: 
+  price: 175
   damagePerSecond: 30
   hitInstancesPerSecond: 12
-  turretCost: 175
   objectMaterial: {fileID: 2100000, guid: 29f30f19091fbbf4996cdc6dabe190ac, type: 2}

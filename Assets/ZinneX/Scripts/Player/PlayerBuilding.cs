@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,7 @@ public class PlayerBuilding : MonoBehaviour {
 
     [SerializeField] private List<GameObject> turrets;
     [SerializeField] private Transform placePoint;
+    [SerializeField] private TMP_Text priceText;
 
     public Material wrongMaterial;
     public Material correctMaterial;
@@ -43,38 +45,30 @@ public class PlayerBuilding : MonoBehaviour {
         selectedTurret = ObjectPoolManager.SpawnObject(turrets[i], placePoint);
         
         selectedTurret.transform.localPosition = Vector3.zero;
+
+        UpdatePriceUI();
+    }
+
+    private void UpdatePriceUI() {
+        priceText.text = "Cost: " + selectedTurret.GetComponent<IBuilding>().GetPrice();
     }
 
     public void PlaceTurretInput(InputAction.CallbackContext context) {
         if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Building  || Cursor.lockState != CursorLockMode.Locked) return;
-        
-        if (context.performed) {
-            switch (selectedTurret.tag) {
-                case "Turret":
-                    if(selectedTurret.GetComponent<TurretBehaviour>().EnableTurret())
-                        SelectTurret(selectedIndex);
-                    break;
-                
-                case "Explosive":
-                    if(selectedTurret.GetComponent<Landmine>().EnableLandmine())
-                        SelectTurret(selectedIndex);
-                    break;
-                
-                case "TrapDOT":
-                    if(selectedTurret.GetComponent<Spikes>().EnableSpikes())
-                        SelectTurret(selectedIndex);
-                    break;
-            }
-        }
+
+        //IF PLAYER CAN AFFORD TO BUY BUILDING AND IT'S NOT COLLIDING WITH ANYTHING THEN PLACE BUILDING
+        if (context.performed && selectedTurret.GetComponent<IBuilding>().EnableBuilding()) { SelectTurret(selectedIndex); }
     }
     
     public void HideBuilding() {
         // ObjectPoolManager.ReturnObjectToPool(selectedTurret);
         selectedTurret.SetActive(false);
+        priceText.enabled = false;
     }
     
     public void ShowBuilding() {
         // selectedTurret = ObjectPoolManager.SpawnObject(selectedTurret, placePoint);
         selectedTurret.SetActive(true);
+        priceText.enabled = true;
     }
 }

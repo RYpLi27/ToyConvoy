@@ -21,7 +21,7 @@ public class GoldManager : MonoBehaviour {
 
     [SerializeField] private TMP_Text goldText;
 
-    private void UpdateUI() { goldText.text = $"Gold: {currentGold}"; }
+    private void UpdateUI() { goldText.text = currentGold.ToString(); }
 
     public void UpdateGoldAmount(int amount) {
         currentGold = Mathf.Clamp(currentGold + amount, 0, 9999);

@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour {
+public class Spikes : MonoBehaviour, IBuilding {
     [SerializeField] private SpikesSO spikesSO;
+    public int Price => spikesSO.price;
+    
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
     
@@ -44,8 +46,12 @@ public class Spikes : MonoBehaviour {
         }
     }
 
-    public bool EnableSpikes() {
-        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(spikesSO.turretCost) == false) return false;
+    public int GetPrice() {
+        return spikesSO.price;
+    }
+    
+    public bool EnableBuilding() {
+        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(spikesSO.price) == false) return false;
         
         GetComponent<PlacementCheck>().enabled = false;
         triggerCol.enabled = true;
@@ -57,6 +63,6 @@ public class Spikes : MonoBehaviour {
     }
     
     public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(spikesSO.turretCost);
+        return GoldManager.instance.PriceCheck(spikesSO.price);
     }
 }

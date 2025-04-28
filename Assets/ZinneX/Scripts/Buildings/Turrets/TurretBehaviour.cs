@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class TurretBehaviour : MonoBehaviour {
+public class TurretBehaviour : MonoBehaviour, IBuilding {
     [SerializeField] [InfoBox("To see values click on pen at the right side")] private TurretSO turretSO;
+    
     [SerializeField] private Transform firepoint;
     private List<Transform> enemiesInRange = new();
     private float lastShootTime;
@@ -53,9 +54,13 @@ public class TurretBehaviour : MonoBehaviour {
         enemiesInRange.Remove(obj);
         UpdateTarget();
     }
-    
-    public bool EnableTurret() {
-        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(turretSO.turretCost) == false) return false;
+
+    public int GetPrice() {
+        return turretSO.price;
+    }
+
+    public bool EnableBuilding() {
+        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(turretSO.price) == false) return false;
 
         GetComponent<PlacementCheck>().enabled = false;
         if (TryGetComponent(out TurretRotateToTarget rotate)) rotate.enabled = true;
@@ -69,7 +74,7 @@ public class TurretBehaviour : MonoBehaviour {
     }
 
     public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(turretSO.turretCost);
+        return GoldManager.instance.PriceCheck(turretSO.price);
     }
     
     private void OnDrawGizmos() {

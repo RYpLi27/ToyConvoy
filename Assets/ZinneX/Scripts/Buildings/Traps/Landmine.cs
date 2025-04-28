@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Landmine : MonoBehaviour {
+public class Landmine : MonoBehaviour, IBuilding {
     [SerializeField] private LandmineSO landmineSO;
+    public int Price => landmineSO.price;
+    
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
 
@@ -25,8 +27,12 @@ public class Landmine : MonoBehaviour {
         GetComponent<PlacementCheck>().enabled = true;
     }
     
-    public bool EnableLandmine() {
-        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(landmineSO.turretCost) == false) return false;
+    public int GetPrice() {
+        return landmineSO.price;
+    }
+    
+    public bool EnableBuilding() {
+        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(landmineSO.price) == false) return false;
 
         GetComponent<PlacementCheck>().enabled = false;
         GetComponent<Collider>().enabled = true;
@@ -39,7 +45,7 @@ public class Landmine : MonoBehaviour {
     }
 
     public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(landmineSO.turretCost);
+        return GoldManager.instance.PriceCheck(landmineSO.price);
     }
     
     private void OnDrawGizmos() {
