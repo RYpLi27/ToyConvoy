@@ -61,6 +61,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2534392574879722057, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534392574879722057, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534392574879722057, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534392574879722057, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3738983669607223564, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
       propertyPath: m_Name
       value: UI
@@ -140,6 +156,17 @@ MonoBehaviour:
 --- !u!114 &2939229838851914176 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 20883233391612886, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+  m_PrefabInstance: {fileID: 2918346609889552918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3653479833083028627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1888072891251625605, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
   m_PrefabInstance: {fileID: 2918346609889552918}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -443,6 +470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3091917397319788418, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
+      propertyPath: priceText
+      value: 
+      objectReference: {fileID: 3653479833083028627}
     - target: {fileID: 3112420122433896997, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.32

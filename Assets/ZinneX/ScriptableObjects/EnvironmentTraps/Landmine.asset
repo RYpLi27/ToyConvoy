@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea0669b2dbaa294589c9da369edb70e, type: 3}
   m_Name: Landmine
   m_EditorClassIdentifier: 
+  price: 75
   damage: 60
   explosionRange: 2
-  turretCost: 70
   objectMaterial: {fileID: 2100000, guid: a2fb9ff50c220904c8f22fa2c6615f45, type: 2}
