@@ -1,8 +1,5 @@
-using System.Collections;
 using Sirenix.OdinInspector;
-using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour {
     [SerializeField] private WeaponSO weaponSO;
@@ -33,8 +30,7 @@ public class Weapon : MonoBehaviour {
             
             if(Physics.Raycast(firePoint.position, GetAimPosition() + randomRecoil - firePoint.position, out RaycastHit ray, weaponSO.weaponRange, whatIsTarget, QueryTriggerInteraction.Ignore)) {
                 if (ray.transform.CompareTag("Enemy")) {
-                    float damageDealt = ray.transform.GetComponent<HealthManager>().TakeDamage(weaponSO.damage);
-                    CreateDamageText(ray.point, damageDealt);
+                    float damageDealt = ray.transform.GetComponent<HealthManager>().TakeDamage(weaponSO.damage, ray.point);
                 }
                 
                 CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitMaterial : obstacleHitMaterial);
@@ -51,11 +47,6 @@ public class Weapon : MonoBehaviour {
         
         if(hit.transform != null) return hit.distance > 11 ? hit.point : cameraRay.origin + cameraRay.direction * 11;
         return cameraRay.origin + cameraRay.direction * weaponSO.weaponRange;
-    }
-
-    private void CreateDamageText(Vector3 position, float value) {
-        TMP_Text dmgText = ObjectPoolManager.SpawnObject(damageText, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Effect).GetComponentInChildren<TMP_Text>();
-        dmgText.text = value.ToString();
     }
     
     private void CreateHitEffect(Vector3 position, Material material) {
