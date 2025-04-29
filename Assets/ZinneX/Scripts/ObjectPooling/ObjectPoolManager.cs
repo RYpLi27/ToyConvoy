@@ -1,19 +1,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+
 public class ObjectPoolManager : MonoBehaviour {
     public static List<ObjectPool> objectPools = new();
 
     private GameObject objectPoolEmptyHolder;
     private static GameObject projectileEmpty;
+    private static GameObject effectsEmpty;
     private static GameObject enemyEmpty;
+    private static GameObject turretEmpty;
 
     public enum PoolingParent {
         Projectile,
         Enemy,
+        Effect,
+        Turret,
         none
     }
-    public static PoolingParent poolingParent;
 
     private void Awake() {
         SetupEmpties();
@@ -27,6 +31,12 @@ public class ObjectPoolManager : MonoBehaviour {
         
         projectileEmpty = new GameObject("Projectiles");
         projectileEmpty.transform.SetParent(objectPoolEmptyHolder.transform);
+        
+        effectsEmpty = new GameObject("Effects");
+        effectsEmpty.transform.SetParent(objectPoolEmptyHolder.transform);
+        
+        turretEmpty = new GameObject("Turrets");
+        turretEmpty.transform.SetParent(objectPoolEmptyHolder.transform);
     }
     
     ///<summary>
@@ -57,7 +67,8 @@ public class ObjectPoolManager : MonoBehaviour {
     ///Parents object manually
     ///</summary>
     public static GameObject SpawnObject(GameObject obj, Transform parent) {
-        ObjectPool pool = objectPools.Find(p => p.objectName == obj.name) ?? CreatePool(obj.name);
+        string objectName = obj.name.Replace("(Clone)", "");
+        ObjectPool pool = objectPools.Find(p => p.objectName == objectName) ?? CreatePool(objectName);
 
         GameObject spawnableObj = pool.InactiveObjects.FirstOrDefault();
 
@@ -72,18 +83,16 @@ public class ObjectPoolManager : MonoBehaviour {
 
         return spawnableObj;
     }
-
-
-    public static void ReturnObjectToPool(GameObject obj) {
+    
+    public static void ReturnObjectToPool(GameObject obj, float t = 0) {
         string objectName = obj.name.Replace("(Clone)", "");
 
         ObjectPool pool = objectPools.Find(p => p.objectName == objectName);
 
+        obj.SetActive(false);
         if (pool == null) {
             // Debug.LogWarning($"Object: {obj} is not pooled.");
-            obj.SetActive(false);
         } else {
-            obj.SetActive(false);
             pool.InactiveObjects.Add(obj);
         }
     }
@@ -102,6 +111,12 @@ public class ObjectPoolManager : MonoBehaviour {
             
             case PoolingParent.Projectile:
                 return projectileEmpty;
+            
+            case PoolingParent.Effect:
+                return effectsEmpty;
+            
+            case PoolingParent.Turret:
+                return turretEmpty;
             
             case PoolingParent.none:
             default:

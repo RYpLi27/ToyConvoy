@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Turret
+  - Explosive
+  - TrapDOT
   layers:
   - Default
   - TransparentFX
@@ -15,8 +18,8 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
-  - 
+  - Ground
+  - Turret
   - 
   - 
   - 
@@ -42,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2911485475
     locked: 0
   m_RenderingLayers:
   - Default

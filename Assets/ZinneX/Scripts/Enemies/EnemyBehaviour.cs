@@ -1,31 +1,26 @@
-using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour {
-    [SerializeField] [InfoBox("To see values click on pen at the right side")] private EnemySO enemySO;
+    [SerializeField] [InfoBox("To see values click on pen at the right side")] private StatsSO statsSO;
     private int currentNodeIndex;
     private Transform currentNode;
     private Vector3 nodeOffset;
 
     public Vector3 MoveDir => (currentNode.position + nodeOffset - transform.position).normalized;
     
-    private void Start() {
+    private void OnEnable() {
         FirstNodeAndOffset();
+    }
+
+    private void OnDisable() {
+        currentNode = null;
     }
 
     private void Update() {
         Move();
 
         Rotate();
-    }
-
-    private void Move() {
-        if (currentNode == null) return;
-        
-        transform.position = Vector3.MoveTowards(transform.position, currentNode.position + nodeOffset, Time.deltaTime * enemySO.moveSpeed);
-        
-        if(Vector3.Distance(transform.position, currentNode.position + nodeOffset) <= .1f) FindNextNode();
     }
 
     private void FirstNodeAndOffset() {
@@ -42,12 +37,20 @@ public class EnemyBehaviour : MonoBehaviour {
 
     private void ReachPlayerBase() {
         // DEAL DAMAGE TO BASE
-        GetComponent<HealthManager>().Death();
+        ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
 
+    private void Move() {
+        if (currentNode == null) return;
+        
+        transform.position = Vector3.MoveTowards(transform.position, currentNode.position + nodeOffset, Time.deltaTime * statsSO.moveSpeed);
+        
+        if(Vector3.Distance(transform.position, currentNode.position + nodeOffset) <= 0f) FindNextNode();
+    }
+    
     private void Rotate() {
         if (currentNode == null) return;
         
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentNode.position + nodeOffset - transform.position), .2f);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentNode.position + nodeOffset - transform.position), .05f);
     }
 }
