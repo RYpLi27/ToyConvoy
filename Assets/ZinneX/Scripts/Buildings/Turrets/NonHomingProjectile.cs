@@ -47,7 +47,7 @@ public class NonHomingProjectile : MonoBehaviour {
         if (enemiesInRadius.Length == 0) { return; }
 
         foreach (Collider other in enemiesInRadius) {
-            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage);
+            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage, transform.position);
         }
         
         ObjectPoolManager.ReturnObjectToPool(gameObject);

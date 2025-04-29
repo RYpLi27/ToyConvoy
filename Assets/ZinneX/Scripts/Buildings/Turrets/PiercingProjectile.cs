@@ -58,7 +58,7 @@ public class PiercingProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
-            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage);
+            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage, transform.position);
         }
     }
 }

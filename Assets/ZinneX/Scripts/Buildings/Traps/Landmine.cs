@@ -17,7 +17,7 @@ public class Landmine : MonoBehaviour, IBuilding {
         Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, landmineSO.explosionRange, StaticVariables.whatIsEnemy);
 
         foreach (Collider col in enemiesInRange) {
-            col.GetComponent<HealthManager>().TakeDamage(landmineSO.damage);
+            col.GetComponent<HealthManager>().TakeDamage(landmineSO.damage, col.transform.position + Vector3.up);
         }
         
         ObjectPoolManager.ReturnObjectToPool(gameObject);

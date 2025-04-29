@@ -20,7 +20,7 @@ public class HomingProjectile : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.transform == target) {
             ObjectPoolManager.ReturnObjectToPool(gameObject);
-            other.GetComponent<HealthManager>().TakeDamage(damage);
+            other.GetComponent<HealthManager>().TakeDamage(damage, transform.position);
         }
     }
 }
