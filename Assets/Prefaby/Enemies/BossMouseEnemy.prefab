@@ -115,6 +115,7 @@ MonoBehaviour:
   statsSO: {fileID: 11400000, guid: e78a80ffd4da8764c99c40baa2dc8cbf, type: 2}
   hpSlider: {fileID: 1753981450606353788}
   hpText: {fileID: 7181824194173332102}
+  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
   isAlive: 0
 --- !u!114 &-5707355375030931661
 MonoBehaviour:

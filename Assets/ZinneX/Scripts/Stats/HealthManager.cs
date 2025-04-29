@@ -9,6 +9,7 @@ public class HealthManager : MonoBehaviour {
     [SerializeField] private StatsSO statsSO;
     [SerializeField] private Slider hpSlider;
     [SerializeField] private TMP_Text hpText;
+    [SerializeField] private GameObject damageText;
     [ReadOnly] public bool isAlive;
     
     private void OnEnable() {
@@ -32,11 +33,12 @@ public class HealthManager : MonoBehaviour {
         }
     }
 
-    public float TakeDamage(float damage) {
+    public float TakeDamage(float damage, Vector3 damageTextPosition) {
         damage = (float)Math.Round(Mathf.Max(damage - statsSO.defense, 1), 2);
         
         currentHealth -= damage;
         UpdateUI();
+        CreateDamageText(damageTextPosition, damage);
         if (currentHealth <= 0) {
             Death();
         }
@@ -44,6 +46,11 @@ public class HealthManager : MonoBehaviour {
         return damage;
     }
 
+    private void CreateDamageText(Vector3 position, float value) {
+        TMP_Text dmgText = ObjectPoolManager.SpawnObject(damageText, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Effect).GetComponentInChildren<TMP_Text>();
+        dmgText.text = value.ToString();
+    }
+    
     private void Death() {
         if (isAlive == false) return;
         isAlive = false;

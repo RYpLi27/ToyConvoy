@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5b4388639a1985d47a1746ee3624754d
+  - enabled: 1
     path: Assets/Scenes/Robik.unity
     guid: 54fac13bd8af0c144a12cb0f7176699c
   - enabled: 1

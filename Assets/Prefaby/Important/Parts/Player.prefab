@@ -172,6 +172,7 @@ MonoBehaviour:
   statsSO: {fileID: 11400000, guid: 867c50073406f5340bbe7a0e59377d9f, type: 2}
   hpSlider: {fileID: 0}
   hpText: {fileID: 0}
+  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
   isAlive: 0
 --- !u!114 &1929065531829826047
 MonoBehaviour:
@@ -259,6 +260,7 @@ MonoBehaviour:
   - {fileID: 8437847481057689693, guid: 4608a9ea47112ac419eec1cec9eb4a46, type: 3}
   - {fileID: 8409928585642096650, guid: 5571e342ffa47f64ea36070949212ae6, type: 3}
   placePoint: {fileID: 4972051390150796196}
+  priceText: {fileID: 0}
   wrongMaterial: {fileID: 2100000, guid: 4ce77ef6ea4620742bb059a9d380b157, type: 2}
   correctMaterial: {fileID: 2100000, guid: c5b4ecd0a4c7a9b40b75d269af29c62a, type: 2}
 --- !u!114 &6101150525996981476
