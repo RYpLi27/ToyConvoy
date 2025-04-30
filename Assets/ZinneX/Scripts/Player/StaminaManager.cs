@@ -20,6 +20,8 @@ public class StaminaManager : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+        
         HandleStamina();
     }
     

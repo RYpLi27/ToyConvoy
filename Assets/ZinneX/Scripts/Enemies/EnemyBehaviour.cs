@@ -18,6 +18,8 @@ public class EnemyBehaviour : MonoBehaviour {
     }
 
     private void Update() {
+        if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+        
         Move();
 
         Rotate();

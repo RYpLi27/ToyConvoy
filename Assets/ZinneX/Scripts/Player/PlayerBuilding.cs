@@ -30,7 +30,7 @@ public class PlayerBuilding : MonoBehaviour {
     }
 
     public void SelectTurretInput(InputAction.CallbackContext context) {
-        if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Building || Cursor.lockState != CursorLockMode.Locked) return;
+        if (CanMakeAction() == false) return;
 
         if (context.performed) {
             selectedIndex = Mathf.RoundToInt(context.ReadValue<float>());
@@ -54,7 +54,7 @@ public class PlayerBuilding : MonoBehaviour {
     }
 
     public void PlaceTurretInput(InputAction.CallbackContext context) {
-        if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Building  || Cursor.lockState != CursorLockMode.Locked) return;
+        if (CanMakeAction() == false) return;
 
         //IF PLAYER CAN AFFORD TO BUY BUILDING AND IT'S NOT COLLIDING WITH ANYTHING THEN PLACE BUILDING
         if (context.performed && selectedTurret.GetComponent<IBuilding>().EnableBuilding()) { SelectTurret(selectedIndex); }
@@ -70,5 +70,10 @@ public class PlayerBuilding : MonoBehaviour {
         // selectedTurret = ObjectPoolManager.SpawnObject(selectedTurret, placePoint);
         selectedTurret.SetActive(true);
         priceText.enabled = true;
+    }
+
+    private bool CanMakeAction() {
+        if (GameManager.gameState != GameManager.GameState.Ongoing) return false; // IF GAME IS PAUSED REFUSE
+        return ModeManager.instance.playerMode == ModeManager.PlayerMode.Building && Cursor.lockState == CursorLockMode.Locked; // ALLOWS WHEN IN BUILDING MODE
     }
 }

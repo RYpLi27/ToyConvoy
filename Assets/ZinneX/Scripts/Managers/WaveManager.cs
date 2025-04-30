@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour {
-    public static EnemySpawner instance;
+public class WaveManager : MonoBehaviour {
+    public static WaveManager instance;
 
     private void Awake() {
         if (instance == null) {
@@ -29,8 +29,7 @@ public class EnemySpawner : MonoBehaviour {
         spawnWaveButton.SetActive(enemyCount == 0 && initialsingWave == false);
         
         if (enemyCount == 0 && initialsingWave == false && currentWave == enemyWaves.Count) {
-            // END THE GAME HERE
-            Debug.Log("WIN");
+            WinGame();
         }
     }
 
@@ -73,6 +72,12 @@ public class EnemySpawner : MonoBehaviour {
         yield return new WaitForSeconds(enemyInstance.timeBetweenSpawns);
         
         StartCoroutine(SpawnEnemies(enemyInstance, enemiesSpawned + 1));
+    }
+
+    private void WinGame() {
+        Debug.Log("WIN");
+        enabled = false;
+        GameManager.instance.EndGame(GameManager.GameState.Win);
     }
 }
 
