@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b566c31bdcc3a1241ab3a95b464ea769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGold: 50
-  maxGold: 60
+  minGold: 10
+  maxGold: 15
 --- !u!1 &7358131002024204225
 GameObject:
   m_ObjectHideFlags: 0
