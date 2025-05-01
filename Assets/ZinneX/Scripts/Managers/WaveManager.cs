@@ -16,6 +16,7 @@ public class WaveManager : MonoBehaviour {
     
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private GameObject spawnWaveButton;
+    [SerializeField] private Animator bossAlert;
     
     [SerializeField] [ListDrawerSettings(NumberOfItemsPerPage = 10, ShowIndexLabels = true)]
     [InfoBox("Those numbers are indexes. Actual wave is number + 1")]
@@ -42,8 +43,7 @@ public class WaveManager : MonoBehaviour {
         initialsingWave = true;
         
         if (enemyWaves[currentWave].isBossWave == true) {
-            // DO SOME SORT OF WARNING THAT THE BOSS IS COMING
-            Debug.Log("Boss wave!");
+            BossAlert();
         }
         
         //SPAWN ENEMIES
@@ -74,6 +74,10 @@ public class WaveManager : MonoBehaviour {
         StartCoroutine(SpawnEnemies(enemyInstance, enemiesSpawned + 1));
     }
 
+    private void BossAlert() {
+        bossAlert.Play("BossAlert");
+    }
+    
     private void WinGame() {
         Debug.Log("WIN");
         enabled = false;
