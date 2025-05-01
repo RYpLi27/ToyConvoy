@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 1504816260774053263}
   spawnWaveButton: {fileID: 0}
+  bossAlert: {fileID: 0}
   enemyWaves:
   - enemies:
     - enemyPrefab: {fileID: 5422365110199480103, guid: 09841e0c86fa8934b8932e424b28beb4, type: 3}
