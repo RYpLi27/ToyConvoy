@@ -22,6 +22,8 @@ public class ModeManager : MonoBehaviour {
     }
 
     private void ChangeMode() {
+        if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+        
         switch (playerMode) {
             case PlayerMode.Building: // SWAPPING TO SHOOTING
                 playerMode = PlayerMode.Shooting;
