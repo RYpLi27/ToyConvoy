@@ -36,9 +36,9 @@ public class TurretBehaviour : MonoBehaviour, IBuilding {
     }
 
     private void Shoot() {
-        if (enemiesInRange.Count == 0) return; // IF NO ENEMIES IN RANGE DON'T SHOOT
+        if (enemiesInRange.Count == 0 || GameManager.gameState != GameManager.GameState.Ongoing) return; // IF NO ENEMIES IN RANGE DON'T SHOOT
 
-        if (Time.time - lastShootTime > turretSO.fireRate) { // FIRERATE LOGIC
+        if (Time.time - lastShootTime > 1/turretSO.fireRate) { // FIRERATE LOGIC
             lastShootTime = Time.time;
             turretSO.Shoot(firepoint, currentTarget);
         }

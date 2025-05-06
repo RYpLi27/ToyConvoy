@@ -1,7 +1,10 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class TurretSO : BuildingSO {
     public float damage;
+    
+    [LabelText("Firerate (Attacks per second)")]
     public float fireRate;
     public float range;
     public float projectileSpeed;

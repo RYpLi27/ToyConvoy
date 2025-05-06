@@ -21,7 +21,7 @@ public class HealthManager : MonoBehaviour {
     public void OnDisable() {
         if (gameObject.CompareTag("Enemy") == false) return; // REST OF THIS METHOD IS ONLY FOR ENEMIES
         
-        EnemySpawner.enemyCount--;
+        WaveManager.enemyCount--;
         
         //THOSE LOOPS LETS TURRETS AND TRAPS KNOW THAT IT IS DEAD
         foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) {
@@ -56,7 +56,9 @@ public class HealthManager : MonoBehaviour {
         isAlive = false;
         
         if(transform.CompareTag("Enemy")) GetComponent<DropGold>().AddGold();
-        ObjectPoolManager.ReturnObjectToPool(gameObject);
+        else if(transform.CompareTag("Player")) GameManager.instance.EndGame(GameManager.GameState.Lose);
+            
+        ObjectPoolManager.ReturnObjectToPool(gameObject); // LATER ADD DEATH ANIM
     }
     
     private void UpdateUI() {

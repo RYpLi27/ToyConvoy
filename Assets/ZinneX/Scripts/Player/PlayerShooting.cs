@@ -14,14 +14,17 @@ public class PlayerShooting : MonoBehaviour {
 
     public void ShootInput(InputAction.CallbackContext context) {
         if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Shooting) return;
-        
-        if (context.performed && selectedWeapon != null) selectedWeapon.isShooting = true;
+
+        if (context.performed && selectedWeapon != null) {
+            if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+            selectedWeapon.isShooting = true;
+        }
 
         if (context.canceled && selectedWeapon != null) selectedWeapon.isShooting = false;
     }
     
     public void WeaponSwapInput(InputAction.CallbackContext context) {
-        if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Shooting) return;
+        if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Shooting || GameManager.gameState != GameManager.GameState.Ongoing) return;
         
         if(context.performed) WeaponSwap(Mathf.RoundToInt(context.ReadValue<float>()));
     }

@@ -35,9 +35,17 @@ public class PlayerMovement : MonoBehaviour {
 
         canJump = true;
         isCursorLocked = true;
+
+        yRotation = transform.rotation.eulerAngles.y;
+        xRotation = transform.rotation.eulerAngles.x;
     }
 
     private void FixedUpdate() {
+        if (GameManager.gameState != GameManager.GameState.Ongoing) {
+            rb.linearVelocity = Vector3.zero;
+            return;
+        }
+        
         Move();
         ApplyGravity();
         
@@ -75,13 +83,15 @@ public class PlayerMovement : MonoBehaviour {
     
     #region Vertical Movement
     public void JumpInput(InputAction.CallbackContext context) {
+        if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+        
         if (context.performed) {
             lastJumpPressedTime = Time.time;
         }
 
-        if (context.canceled) {
-            JumpCut();
-        }
+        // if (context.canceled) {
+        //     JumpCut();
+        // }
     }
 
     private void Jump() {
@@ -97,11 +107,11 @@ public class PlayerMovement : MonoBehaviour {
         canJump = true;
     }
     
-    private void JumpCut() {
-        if (rb.linearVelocity.y <= 0) return;
-
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y * .4f, rb.linearVelocity.z);
-    }
+    // private void JumpCut() {
+    //     if (rb.linearVelocity.y <= 0) return;
+    //
+    //     rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y * .4f, rb.linearVelocity.z);
+    // }
 
     private void ApplyGravity() {
         if (GroundedCheck() == false) rb.AddForce(Physics.gravity * gravityScale, ForceMode.Acceleration);
@@ -122,7 +132,7 @@ public class PlayerMovement : MonoBehaviour {
 
     
     private void Rotate(float xRot, float yRot) {
-        if (isCursorLocked == false) return;
+        if (isCursorLocked == false || GameManager.gameState != GameManager.GameState.Ongoing) return;
         
         yRotation += xRot;
         xRotation -= yRot;
@@ -134,6 +144,8 @@ public class PlayerMovement : MonoBehaviour {
     #endregion
     
     public void LockCursorInput(InputAction.CallbackContext context) {
+        if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+        
         if (context.performed) {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;

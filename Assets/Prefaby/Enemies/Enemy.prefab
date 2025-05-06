@@ -240,8 +240,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5422365110199480103}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150cfc1403a88c943800cc740b5a6ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSO: {fileID: 11400000, guid: e0bf42dda29e9db42bb90a33071750f0, type: 2}
+  statsSO: {fileID: 0}
 --- !u!114 &3656575222536918070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  statsSO: {fileID: 11400000, guid: e0bf42dda29e9db42bb90a33071750f0, type: 2}
+  statsSO: {fileID: 0}
   hpSlider: {fileID: 303474058519602577}
   hpText: {fileID: 9208660398530531947}
   damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
@@ -302,8 +302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b566c31bdcc3a1241ab3a95b464ea769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGold: 75
-  maxGold: 100
+  minGold: 25
+  maxGold: 30
 --- !u!1001 &1701914638118625213
 PrefabInstance:
   m_ObjectHideFlags: 0
