@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150cfc1403a88c943800cc740b5a6ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSO: {fileID: 0}
+  statsSO: {fileID: 11400000, guid: e0bf42dda29e9db42bb90a33071750f0, type: 2}
 --- !u!114 &3656575222536918070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  statsSO: {fileID: 0}
+  statsSO: {fileID: 11400000, guid: e0bf42dda29e9db42bb90a33071750f0, type: 2}
   hpSlider: {fileID: 303474058519602577}
   hpText: {fileID: 9208660398530531947}
   damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}

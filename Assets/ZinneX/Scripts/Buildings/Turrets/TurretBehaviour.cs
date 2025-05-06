@@ -55,9 +55,9 @@ public class TurretBehaviour : MonoBehaviour, IBuilding {
         UpdateTarget();
     }
 
-    public int GetPrice() {
-        return turretSO.price;
-    }
+    // public int GetPrice() {
+    //     return turretSO.price;
+    // }
 
     public bool EnableBuilding() {
         if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(turretSO.price) == false) return false;
@@ -81,5 +81,14 @@ public class TurretBehaviour : MonoBehaviour, IBuilding {
         Gizmos.color = Color.cyan;
         if(turretSO != null)
             Gizmos.DrawWireSphere(transform.position, turretSO.range);
+    }
+
+    public string GetDescription() {
+        return $"{turretSO.buildingName}\n\n" +
+               $"Damage: {turretSO.damage}\n" +
+               $"Attacks per second: {turretSO.fireRate}\n" +
+               $"Range: {turretSO.range}\n" +
+               $"Cost: {turretSO.price}\n\n" +
+               $"{turretSO.description}";
     }
 }

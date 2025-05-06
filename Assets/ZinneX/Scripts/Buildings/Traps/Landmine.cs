@@ -27,9 +27,9 @@ public class Landmine : MonoBehaviour, IBuilding {
         GetComponent<PlacementCheck>().enabled = true;
     }
     
-    public int GetPrice() {
-        return landmineSO.price;
-    }
+    // public int GetPrice() {
+    //     return landmineSO.price;
+    // }
     
     public bool EnableBuilding() {
         if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(landmineSO.price) == false) return false;
@@ -46,6 +46,14 @@ public class Landmine : MonoBehaviour, IBuilding {
 
     public bool PriceCheck() {
         return GoldManager.instance.PriceCheck(landmineSO.price);
+    }
+    
+    public string GetDescription() {
+        return $"{landmineSO.buildingName}\n\n" +
+               $"Damage: {landmineSO.damage}\n" +
+               $"Range: {landmineSO.explosionRange}\n" +
+               $"Cost: {landmineSO.price}\n\n" +
+               $"{landmineSO.description}";
     }
     
     private void OnDrawGizmos() {

@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+[System.Serializable]
 public class TurretSO : BuildingSO {
     public float damage;
     

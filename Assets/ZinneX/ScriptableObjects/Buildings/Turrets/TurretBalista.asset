@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c024f847d83ce744896af6576239c25, type: 3}
   m_Name: TurretBalista
   m_EditorClassIdentifier: 
+  buildingName: Balista
+  description: Shoots piercing projectile
   price: 250
   damage: 18
   fireRate: 0.65

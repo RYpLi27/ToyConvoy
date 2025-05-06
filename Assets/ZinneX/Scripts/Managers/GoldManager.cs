@@ -13,13 +13,15 @@ public class GoldManager : MonoBehaviour {
         }
     }
 
-    private void OnEnable() {
-        UpdateUI();
+    private void Start() {
+        UpdateGoldAmount(startGold);
     }
 
     [SerializeField] [ReadOnly] private int currentGold;
+    [SerializeField] private int startGold;
 
     [SerializeField] private TMP_Text goldText;
+
 
     private void UpdateUI() { goldText.text = currentGold.ToString(); }
 

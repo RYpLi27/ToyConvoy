@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "New HominngTurret", menuName = "Scriptable Objects/Turrets/Homing Turret")]
 public class HomingTurret : TurretSO {
     
