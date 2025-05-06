@@ -531,8 +531,8 @@
     "m_ObjectId": "519a1e2fa89843e3ad7b66a54a11b411",
     "m_Title": "Make Scale Independant",
     "m_Position": {
-        "x": -1070.0001220703125,
-        "y": 61.999969482421878
+        "x": -1070.0,
+        "y": 62.000003814697269
     }
 }
 
@@ -664,7 +664,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_Space": 1
+    "m_Space": 0
 }
 
 {
@@ -1202,8 +1202,8 @@
     "m_ObjectId": "ae5b83ad23c84e938dae7ad905341a2a",
     "m_Title": "Make Object Bigger",
     "m_Position": {
-        "x": -604.0000610351563,
-        "y": -103.00001525878906
+        "x": -604.0,
+        "y": -102.99999237060547
     }
 }
 
