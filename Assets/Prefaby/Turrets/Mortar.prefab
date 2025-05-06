@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d015f33d14a8c34aa3fe6113032d547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretSO: {fileID: 11400000, guid: 9f5a232a4a864904ea8d667ff7e0d8bc, type: 2}
+  turretSO: {fileID: 0}
   firepoint: {fileID: 4537526907695422236}
   currentTarget: {fileID: 0}
   triggerCol: {fileID: 7022864882460366307}
