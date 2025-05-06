@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "New SpikesSO", menuName = "Scriptable Objects/Traps/Spikes")]
 public class SpikesSO : BuildingSO {
     public float damagePerSecond;

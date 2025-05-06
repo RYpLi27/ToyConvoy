@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "New PiercingTurret", menuName = "Scriptable Objects/Turrets/Piercing Turret")]
 public class PiercingTurret : TurretSO
 {

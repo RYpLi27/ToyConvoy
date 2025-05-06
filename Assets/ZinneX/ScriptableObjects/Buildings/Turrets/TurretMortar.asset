@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49926197504c4d408ac40da40de7df0, type: 3}
   m_Name: TurretMortar
   m_EditorClassIdentifier: 
+  buildingName: Mortar
+  description: Shoots explosive projectile that deals AOE damage
   price: 300
   damage: 21
   fireRate: 0.55

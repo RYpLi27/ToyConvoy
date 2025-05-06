@@ -46,9 +46,9 @@ public class Spikes : MonoBehaviour, IBuilding {
         }
     }
 
-    public int GetPrice() {
-        return spikesSO.price;
-    }
+    // public int GetPrice() {
+    //     return spikesSO.price;
+    // }
     
     public bool EnableBuilding() {
         if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(spikesSO.price) == false) return false;
@@ -64,5 +64,12 @@ public class Spikes : MonoBehaviour, IBuilding {
     
     public bool PriceCheck() {
         return GoldManager.instance.PriceCheck(spikesSO.price);
+    }
+    
+    public string GetDescription() {
+        return $"{spikesSO.buildingName}\n\n" +
+               $"Damage per second: {spikesSO.damagePerSecond}\n" +
+               $"Cost: {spikesSO.price}\n\n" +
+               $"{spikesSO.description}";
     }
 }

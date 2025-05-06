@@ -234,12 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f64af6fe98b60f49a14bb7dad75cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponSlots: {fileID: 0}
   weapons:
-  - {fileID: 2467116463142843505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
-  - {fileID: 6667860102979916131, guid: b74e2d2580359a74a91e8b08780ccdbb, type: 3}
-  - {fileID: 8721469679135135017, guid: 756b3e1183ac5c1418f73755cf56ba2e, type: 3}
-  - {fileID: 7422966948414691067, guid: b7d2ed13abfde4d41a3a296978da9218, type: 3}
-  - {fileID: 3931173541006628117, guid: 1ef417d533ad6b34e8e1ed626b836ebc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   gunHolder: {fileID: 5125017712819149262}
 --- !u!114 &3091917397319788418
 MonoBehaviour:
@@ -253,12 +254,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1389c10a4f1544540bb4c32a62664a94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretSlots: {fileID: 0}
   turrets:
-  - {fileID: 1815120587132847365, guid: adbd6a052d231394ab6aa7a48d20c092, type: 3}
-  - {fileID: 6642736227883800930, guid: 94fbf4c2e38d0a4448778f437341216a, type: 3}
-  - {fileID: 4477995524409587088, guid: 851ab3fe747ce9a4898c6299b1d6147e, type: 3}
-  - {fileID: 8437847481057689693, guid: 4608a9ea47112ac419eec1cec9eb4a46, type: 3}
-  - {fileID: 8409928585642096650, guid: 5571e342ffa47f64ea36070949212ae6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   placePoint: {fileID: 4972051390150796196}
   priceText: {fileID: 0}
   wrongMaterial: {fileID: 2100000, guid: 4ce77ef6ea4620742bb059a9d380b157, type: 2}

@@ -14,14 +14,17 @@ public class PlayerBuilding : MonoBehaviour {
         }
     }
 
-    [SerializeField] private List<GameObject> turrets;
+    [SerializeField] private GameObject buildingCanvas;
+    [SerializeField] private List<Slot> turrets;
     [SerializeField] private Transform placePoint;
-    [SerializeField] private TMP_Text priceText;
+    // [SerializeField] private TMP_Text priceText;
+    [SerializeField] private TMP_Text descriptionText;
 
     public Material wrongMaterial;
     public Material correctMaterial;
     
     private GameObject selectedTurret;
+    private Slot selectedSlot;
     private int selectedIndex;
     
     private void Start() {
@@ -40,17 +43,22 @@ public class PlayerBuilding : MonoBehaviour {
     
     private void SelectTurret(int i, bool returnToPool = false) {
         if (i >= turrets.Count) return;
-        
-        if(selectedTurret != null && returnToPool == true) ObjectPoolManager.ReturnObjectToPool(selectedTurret);
-        selectedTurret = ObjectPoolManager.SpawnObject(turrets[i], placePoint);
-        
+
+        if (selectedTurret != null && returnToPool == true) { // DISABLING PREVIOUS TURRET
+            selectedSlot.DeselectSlot();
+            ObjectPoolManager.ReturnObjectToPool(selectedTurret);
+        }
+
+        selectedSlot = turrets[i];
+        selectedTurret = ObjectPoolManager.SpawnObject(selectedSlot.SelectSlot(), placePoint);
         selectedTurret.transform.localPosition = Vector3.zero;
 
-        UpdatePriceUI();
+        UpdateUI();
     }
 
-    private void UpdatePriceUI() {
-        priceText.text = "Cost: " + selectedTurret.GetComponent<IBuilding>().GetPrice();
+    private void UpdateUI() {
+        // priceText.text = "Cost: " + selectedTurret.GetComponent<IBuilding>().GetPrice();
+        descriptionText.text = selectedTurret.GetComponent<IBuilding>().GetDescription();
     }
 
     public void PlaceTurretInput(InputAction.CallbackContext context) {
@@ -63,13 +71,13 @@ public class PlayerBuilding : MonoBehaviour {
     public void HideBuilding() {
         // ObjectPoolManager.ReturnObjectToPool(selectedTurret);
         selectedTurret.SetActive(false);
-        priceText.enabled = false;
+        buildingCanvas.SetActive(false);
     }
     
     public void ShowBuilding() {
         // selectedTurret = ObjectPoolManager.SpawnObject(selectedTurret, placePoint);
         selectedTurret.SetActive(true);
-        priceText.enabled = true;
+        buildingCanvas.SetActive(true);
     }
 
     private bool CanMakeAction() {
