@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "New NonHomingTurret", menuName = "Scriptable Objects/Turrets/Non Homing Turret")]
 public class NonHomingTurret : TurretSO {
     public float arcHeight;

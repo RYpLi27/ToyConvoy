@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbc58668d69a3241857590495481de0, type: 3}
   m_Name: SniperNest
   m_EditorClassIdentifier: 
+  buildingName: Sniper Nest
+  description: Shoots homing bullets at enemies
   price: 200
   damage: 7
   fireRate: 2.6
