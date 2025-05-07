@@ -7,9 +7,8 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour {
     [SerializeField] [ReadOnly] private float currentHealth;
     [SerializeField] private StatsSO statsSO;
-    [SerializeField] private Slider hpSlider;
-    [SerializeField] private TMP_Text hpText;
     [SerializeField] private GameObject damageText;
+    [SerializeField] private Bar hpBar;
     [ReadOnly] public bool isAlive;
     
     private void OnEnable() {
@@ -34,7 +33,7 @@ public class HealthManager : MonoBehaviour {
     }
 
     public float TakeDamage(float damage, Vector3 damageTextPosition) {
-        damage = (float)Math.Round(Mathf.Max(damage - statsSO.defense, 1), 2);
+        damage = Mathf.RoundToInt(Mathf.Max(damage - statsSO.defense, 1));
         
         currentHealth -= damage;
         UpdateUI();
@@ -62,7 +61,6 @@ public class HealthManager : MonoBehaviour {
     }
     
     private void UpdateUI() {
-        hpSlider.value = currentHealth / statsSO.maxHealth;
-        hpText.text = $"{currentHealth}/{statsSO.maxHealth}";
+        hpBar.UpdateUI(currentHealth, statsSO.maxHealth);
     }
 }
