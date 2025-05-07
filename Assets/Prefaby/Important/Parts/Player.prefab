@@ -171,9 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   statsSO: {fileID: 11400000, guid: 867c50073406f5340bbe7a0e59377d9f, type: 2}
-  hpSlider: {fileID: 0}
-  hpText: {fileID: 0}
   damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
+  hpBar: {fileID: 0}
   isAlive: 0
 --- !u!114 &1929065531829826047
 MonoBehaviour:
@@ -220,8 +219,8 @@ MonoBehaviour:
   staminaRecoveryTime: 1
   staminaBar: {fileID: 0}
   fillArea: {fileID: 0}
-  exhaustedBarColor: {r: 0.11992704, g: 0.46226418, b: 0.14685242, a: 1}
-  normalBarColor: {r: 0.07058824, g: 1, b: 0, a: 1}
+  exhaustedBarColor: {fileID: 2100000, guid: 43651cd5e925b4c4e94aee7211c60b38, type: 2}
+  normalBarColor: {fileID: 2100000, guid: eb0b65fc1702efe409fb43a2afd92248, type: 2}
   isExhausted: 0
 --- !u!114 &4078999759031152020
 MonoBehaviour:
@@ -727,8 +726,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc407cfe3f5f63a4d918c9546e5a7997, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7484519562905658750}
   m_SourcePrefab: {fileID: 100100000, guid: cc407cfe3f5f63a4d918c9546e5a7997, type: 3}
+--- !u!1 &460133713684128088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc407cfe3f5f63a4d918c9546e5a7997, type: 3}
+  m_PrefabInstance: {fileID: 766686148194982921}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7484519562905658750
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460133713684128088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 143f0e57327e66544a14c34cf4ddf89a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &948405195616992226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cc407cfe3f5f63a4d918c9546e5a7997, type: 3}

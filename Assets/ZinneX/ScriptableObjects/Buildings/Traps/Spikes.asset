@@ -16,5 +16,5 @@ MonoBehaviour:
   description: Deals damage over time when enemy stand on it
   price: 200
   damagePerSecond: 25
-  hitInstancesPerSecond: 12
+  hitInstancesPerSecond: 6
   objectMaterial: {fileID: 2100000, guid: 29f30f19091fbbf4996cdc6dabe190ac, type: 2}
