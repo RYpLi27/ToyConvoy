@@ -536,7 +536,7 @@
     "m_Title": "Make Scale Independant",
     "m_Position": {
         "x": -1070.0,
-        "y": 61.99999237060547
+        "y": 61.99997329711914
     }
 }
 
@@ -1188,7 +1188,7 @@
     "m_Title": "Make Object Bigger",
     "m_Position": {
         "x": -604.0,
-        "y": -103.0
+        "y": -103.00003051757813
     }
 }
 
