@@ -1,8 +1,6 @@
-using System;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour {
     [SerializeField] [ReadOnly] private float currentHealth;
@@ -62,5 +60,9 @@ public class HealthManager : MonoBehaviour {
     
     private void UpdateUI() {
         hpBar.UpdateUI(currentHealth, statsSO.maxHealth);
+    }
+
+    public void ShowBar(bool show) {
+        hpBar.gameObject.SetActive(show);
     }
 }
