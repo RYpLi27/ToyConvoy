@@ -80,7 +80,6 @@ public class PlacementCheck : MonoBehaviour {
         
         // CHECKS IF ITS ENTIRELY ON THE ROAD
         foreach (Vector3 corner in corners) { 
-            Debug.Log(corner);
             Collider[] roadHits = Physics.OverlapSphere(corner, .05f, StaticVariables.whatIsRoad);
             
             bool insideRoad = roadHits.Any(hitCol => hitCol.ClosestPoint(corner) == corner);
