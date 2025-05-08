@@ -80,11 +80,9 @@ public class PlacementCheck : MonoBehaviour {
         
         // CHECKS IF ITS ENTIRELY ON THE ROAD
         foreach (Vector3 corner in corners) { 
-            Collider[] roadHits = Physics.OverlapSphere(corner, .05f, StaticVariables.whatIsRoad);
+            bool insideRoad = Physics.Raycast(corner + Vector3.up, Vector3.down, out RaycastHit hit, 1, StaticVariables.whatIsRoad);
             
-            bool insideRoad = roadHits.Any(hitCol => hitCol.ClosestPoint(corner) == corner);
-            
-            if (insideRoad == false) { return false; }
+            if (insideRoad == false) return false;
         }
         
         // CHECKS FOR OTHER PLACED TRAPS
