@@ -13,7 +13,7 @@ public class PlayerShooting : MonoBehaviour {
     private void Start() {
         WeaponSwap(0);
     }
-
+    
     public void ShootInput(InputAction.CallbackContext context) {
         if (ModeManager.instance.playerMode != ModeManager.PlayerMode.Shooting) return;
 

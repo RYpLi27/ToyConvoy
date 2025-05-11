@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour {
     private bool isRunning, canJump;
     private float currentMoveSpeed;
 
-    [TabGroup("Camera")] [SerializeField] private float sensitivity;
-    [TabGroup("Camera")] [SerializeField] private Transform cameraFollowTransform;
+    // [TabGroup("Camera")] [SerializeField] private float sensitivity;
+    // [TabGroup("Camera")] [SerializeField] private Transform cameraFollowTransform;
     
     [TabGroup("Others")] [SerializeField] private Rigidbody rb;
     [TabGroup("Others")] [SerializeField] private Transform groundCheck;
@@ -25,19 +25,19 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 moveInputValues;
 
     private float lastJumpPressedTime, coyoteTimeCounter;
-    private float yRotation, xRotation;
-
-    private bool isCursorLocked;
+    // private float yRotation, xRotation;
+    //
+    // private bool isCursorLocked;
     
     private void Awake() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
         canJump = true;
-        isCursorLocked = true;
+        // isCursorLocked = true;
 
-        yRotation = transform.rotation.eulerAngles.y;
-        xRotation = transform.rotation.eulerAngles.x;
+        // yRotation = transform.rotation.eulerAngles.y;
+        // xRotation = transform.rotation.eulerAngles.x;
     }
 
     private void FixedUpdate() {
@@ -119,45 +119,45 @@ public class PlayerMovement : MonoBehaviour {
     #endregion
 
     #region Rotation
-    public void MousePositionInput(InputAction.CallbackContext context) {
-        if (context.performed) {
-            Vector2 mouseInput = context.ReadValue<Vector2>();
-
-            float mouseX = mouseInput.x * sensitivity;
-            float mouseY = mouseInput.y * sensitivity;
-            
-            Rotate(mouseX, mouseY);
-        }
-    }
-
-    
-    private void Rotate(float xRot, float yRot) {
-        if (isCursorLocked == false || GameManager.gameState != GameManager.GameState.Ongoing) return;
-        
-        yRotation += xRot;
-        xRotation -= yRot;
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
-
-        rb.MoveRotation(Quaternion.Euler(0f, yRotation, 0f)); // HORIZONTAL ROTATION
-        cameraFollowTransform.rotation = Quaternion.Euler(xRotation, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z); // VERTICAL ROTATION
-    }
+    // public void MousePositionInput(InputAction.CallbackContext context) {
+    //     if (context.performed) {
+    //         Vector2 mouseInput = context.ReadValue<Vector2>();
+    //
+    //         float mouseX = mouseInput.x * sensitivity;
+    //         float mouseY = mouseInput.y * sensitivity;
+    //         
+    //         Rotate(mouseX, mouseY);
+    //     }
+    // }
+    //
+    //
+    // private void Rotate(float xRot, float yRot) {
+    //     if (isCursorLocked == false || GameManager.gameState != GameManager.GameState.Ongoing) return;
+    //     
+    //     yRotation += xRot;
+    //     xRotation -= yRot;
+    //     xRotation = Mathf.Clamp(xRotation, -90, 90);
+    //
+    //     rb.MoveRotation(Quaternion.Euler(0f, yRotation, 0f)); // HORIZONTAL ROTATION
+    //     cameraFollowTransform.rotation = Quaternion.Euler(xRotation, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z); // VERTICAL ROTATION
+    // }
     #endregion
     
-    public void LockCursorInput(InputAction.CallbackContext context) {
-        if (GameManager.gameState != GameManager.GameState.Ongoing) return;
-        
-        if (context.performed) {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-            isCursorLocked = false;
-        }
-        
-        if (context.canceled) {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            isCursorLocked = true;
-        }
-    }
+    // public void LockCursorInput(InputAction.CallbackContext context) {
+    //     if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+    //     
+    //     if (context.performed) {
+    //         Cursor.lockState = CursorLockMode.Confined;
+    //         Cursor.visible = true;
+    //         isCursorLocked = false;
+    //     }
+    //     
+    //     if (context.canceled) {
+    //         Cursor.lockState = CursorLockMode.Locked;
+    //         Cursor.visible = false;
+    //         isCursorLocked = true;
+    //     }
+    // }
     
     private bool GroundedCheck() {
         if (Physics.CheckBox(groundCheck.position, new Vector3(.45f, .1f, .45f), Quaternion.identity, whatIsGround, QueryTriggerInteraction.Ignore)) {
