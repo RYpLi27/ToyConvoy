@@ -59,8 +59,8 @@ Material:
     - _Offset: -0.64
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _scrollspeed: -0.2
     m_Colors:
-    - _Emission: {r: 34.701454, g: 0, b: 0, a: 0}
+    - _Emission: {r: 16.525372, g: 0.6556002, b: 46.329166, a: 0}
+    - _Scrollspeed: {r: -0.2, g: -0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
