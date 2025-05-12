@@ -26,6 +26,9 @@
         },
         {
             "m_Id": "b84add4773714d6d948d10fd42591fd2"
+        },
+        {
+            "m_Id": "8101fe03277a46218a95d20b6789b5dc"
         }
     ],
     "m_Keywords": [],
@@ -155,6 +158,9 @@
         },
         {
             "m_Id": "db60c88162354fb690b06713a2ec6415"
+        },
+        {
+            "m_Id": "c206064a956a4f288f199029813a3145"
         }
     ],
     "m_GroupDatas": [
@@ -498,6 +504,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "c206064a956a4f288f199029813a3145"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "4ed43b8f38c5471a87a5095b31feb993"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "c43fbc306e564ac986dee78a2750d7e3"
                 },
                 "m_SlotId": 1
@@ -818,8 +838,8 @@
     "m_ObjectId": "053457483b3d4cb3aa9f32c02430ab00",
     "m_Title": "Motion",
     "m_Position": {
-        "x": -1916.9998779296875,
-        "y": 578.9999389648438
+        "x": -1917.0,
+        "y": 579.0
     }
 }
 
@@ -851,8 +871,8 @@
     "m_ObjectId": "077005d80df64dde9fc54f25ee1529bd",
     "m_Title": "FadeAnimation",
     "m_Position": {
-        "x": -2709.999755859375,
-        "y": -196.9999237060547
+        "x": -2710.0,
+        "y": -197.0
     }
 }
 
@@ -951,6 +971,9 @@
         },
         {
             "m_Id": "b84add4773714d6d948d10fd42591fd2"
+        },
+        {
+            "m_Id": "8101fe03277a46218a95d20b6789b5dc"
         }
     ]
 }
@@ -967,9 +990,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -391.0000305175781,
-            "y": 114.0,
-            "width": 208.00003051757813,
+            "x": -447.00006103515627,
+            "y": 9.000004768371582,
+            "width": 208.00001525878907,
             "height": 302.0
         }
     },
@@ -1574,7 +1597,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"130ac0515d25c0640a0301cda1fb8b6f\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"02a287eb5f3d0c44b9650fd7bb695abb\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -1959,7 +1982,7 @@
     "m_Title": "Fade",
     "m_Position": {
         "x": -1850.0,
-        "y": -305.9999694824219
+        "y": -306.0
     }
 }
 
@@ -2463,6 +2486,36 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "8101fe03277a46218a95d20b6789b5dc",
+    "m_Guid": {
+        "m_GuidSerialized": "1e8b238f-2af3-4bb1-8401-50f40b5c997d"
+    },
+    "m_Name": "TrailColor",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "TrailColor",
+    "m_DefaultReferenceName": "_TrailColor",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 1
 }
 
 {
@@ -3058,6 +3111,31 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "964a47a80db1471e92e4f902d9707dc2",
+    "m_Id": 0,
+    "m_DisplayName": "TrailColor",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -3762,6 +3840,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "c206064a956a4f288f199029813a3145",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -180.0,
+            "y": 411.0,
+            "width": 127.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "964a47a80db1471e92e4f902d9707dc2"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "8101fe03277a46218a95d20b6789b5dc"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.OneMinusNode",
     "m_ObjectId": "c43fbc306e564ac986dee78a2750d7e3",
     "m_Group": {
@@ -4066,8 +4180,8 @@
     "m_ShaderOutputName": "Emission",
     "m_StageCapability": 2,
     "m_Value": {
-        "x": 3.999999761581421,
-        "y": 2.331228017807007,
+        "x": 1.0,
+        "y": 0.0,
         "z": 0.0
     },
     "m_DefaultValue": {
@@ -4265,9 +4379,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -166.99998474121095,
-            "y": 531.0,
-            "width": 114.0,
+            "x": -205.0,
+            "y": 487.0,
+            "width": 125.0,
             "height": 34.0
         }
     },
