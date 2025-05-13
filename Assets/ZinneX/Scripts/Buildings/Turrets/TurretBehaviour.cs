@@ -12,9 +12,13 @@ public class TurretBehaviour : MonoBehaviour, IBuilding {
 
     [SerializeField] private CapsuleCollider triggerCol;
     [SerializeField] private Collider normalCol;
+    [SerializeField] private GameObject rangeBorder;
     
     private void Start() {
         triggerCol.radius = turretSO.range;
+
+        rangeBorder.GetComponent<SphereCollider>().radius = 1;
+        rangeBorder.transform.localScale = Vector3.one * turretSO.range * 2;
     }
 
     private void FixedUpdate() {
@@ -66,6 +70,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding {
         if (TryGetComponent(out TurretRotateToTarget rotate)) rotate.enabled = true;
         triggerCol.enabled = true;
         normalCol.enabled = true;
+        rangeBorder.SetActive(false);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = turretSO.objectMaterial;
