@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurretShader
-  m_Shader: {fileID: -6465566751694194690, guid: 069dd0b4fd60c6c46962838d3eff28c8, type: 3}
+  m_Name: BluFire
+  m_Shader: {fileID: -6465566751694194690, guid: ff64f0574dfea054486e40605e8b3d80, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -24,6 +24,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Pattern:
+        m_Texture: {fileID: 2800000, guid: 1966fef87a8a0284797d88f8b42ac00e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -38,14 +42,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Fresnel: 5
+    - _Offset: -10.03
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size: 0.054
     m_Colors:
-    - _Color: {r: 0, g: 0.54997826, b: 1, a: 0}
+    - _Emission: {r: 0, g: 0, b: 1, a: 0}
+    - _Scrollspeed: {r: -0.2, g: -0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &7173206124459244717
+--- !u!114 &4838757224712689030
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
