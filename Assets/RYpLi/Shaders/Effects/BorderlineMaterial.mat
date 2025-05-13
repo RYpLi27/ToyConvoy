@@ -70,7 +70,7 @@ Material:
     - _ZWriteControl: 0
     - _scrollspeed: -0.2
     m_Colors:
-    - _Emission: {r: 4.7150755, g: 8.496033, b: 0, a: 0}
+    - _Emission: {r: 11.342871, g: 11.342871, b: 0, a: 0}
     - _Scrollspeed: {r: 0.1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
