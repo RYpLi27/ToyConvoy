@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TrailMaterial
+  m_Name: TrailFire 1
   m_Shader: {fileID: -6465566751694194690, guid: 3c00a09f09cc18f489ae98fd8a97ba6c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _texture:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: 1966fef87a8a0284797d88f8b42ac00e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -55,13 +55,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissolveScale: 48
+    - _AlphaClip: 0.05
+    - _DissolveScale: 64
+    - _FireLenght: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color1: {r: 0, g: 0, b: 1, a: 1}
-    - _Color2: {r: 1, g: 0, b: 0, a: 1}
-    - _DissolveSpeed: {r: -0.5, g: 0, b: 0, a: 0}
-    - _MainTextureSpeed: {r: -0.1, g: 0, b: 0, a: 0}
+    - _Color1: {r: 766.9961, g: 447.04364, b: 0, a: 1}
+    - _Color2: {r: 1024, g: 632.73535, b: 0, a: 1}
+    - _DissolveSpeed: {r: 0.5, g: 0, b: 0, a: 0}
+    - _MainTextureSpeed: {r: -1, g: 0, b: 0, a: 0}
+    - _TrailColor: {r: 319.24707, g: 132.65814, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

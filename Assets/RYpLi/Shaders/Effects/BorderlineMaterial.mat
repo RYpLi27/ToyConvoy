@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Pattern:
-        m_Texture: {fileID: 2800000, guid: 22d870b291f32514ebd302474efcc2d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 02a287eb5f3d0c44b9650fd7bb695abb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
@@ -58,7 +58,7 @@ Material:
     - _DrawOrder: 0
     - _DstBlend: 10
     - _Fresnel: 0.03
-    - _Offset: 0.87
+    - _Offset: -0.8
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 0
@@ -71,7 +71,7 @@ Material:
     - _scrollspeed: -0.2
     m_Colors:
     - _Emission: {r: 4.7150755, g: 8.496033, b: 0, a: 0}
-    - _Scrollspeed: {r: -0.2, g: -0.2, b: 0, a: 0}
+    - _Scrollspeed: {r: 0.1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8846173926641939677
