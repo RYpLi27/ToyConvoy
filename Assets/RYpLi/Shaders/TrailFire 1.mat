@@ -55,16 +55,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0.1
+    - _AlphaClip: 0.05
     - _DissolveScale: 64
     - _FireLenght: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color1: {r: 0, g: 0.08510637, b: 1, a: 1}
-    - _Color2: {r: 0, g: 0, b: 1, a: 1}
+    - _Color1: {r: 766.9961, g: 447.04364, b: 0, a: 1}
+    - _Color2: {r: 1024, g: 632.73535, b: 0, a: 1}
     - _DissolveSpeed: {r: 0.5, g: 0, b: 0, a: 0}
     - _MainTextureSpeed: {r: -1, g: 0, b: 0, a: 0}
-    - _TrailColor: {r: 1.2470589, g: 0.51819587, b: 0, a: 1}
+    - _TrailColor: {r: 319.24707, g: 132.65814, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
