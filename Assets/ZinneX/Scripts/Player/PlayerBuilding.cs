@@ -20,6 +20,7 @@ public class PlayerBuilding : MonoBehaviour {
     // [SerializeField] private TMP_Text priceText;
     [SerializeField] private TMP_Text descriptionText;
 
+
     public Material wrongMaterial;
     public Material correctMaterial;
     
