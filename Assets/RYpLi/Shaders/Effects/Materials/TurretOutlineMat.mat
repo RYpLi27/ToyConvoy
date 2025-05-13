@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurretShader
+  m_Name: TurretOutlineMat
   m_Shader: {fileID: -6465566751694194690, guid: 069dd0b4fd60c6c46962838d3eff28c8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
