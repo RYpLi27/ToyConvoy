@@ -6856,22 +6856,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: NoiseModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: VelocityModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: VelocityModule.orbitalY.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: VelocityModule.orbitalZ.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
