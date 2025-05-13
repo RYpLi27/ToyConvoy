@@ -55,13 +55,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Dissolve: -1.5
+    - _Dissolve: -1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SpinSpeed: 0.0258
-    - _TwirlStrenght: 12.42
-    - _VopronoiDens: 15
-    - _VoronoiAngleOffset: 2
+    - _TwirlStrenght: 10
+    - _VopronoiDens: 25
+    - _VoronoiAngleOffset: 25
     m_Colors:
     - _Color: {r: 8.045056, g: 2.2588222, b: 47.937256, a: 1}
     - _SpinSpeed_1: {r: 0.1, g: 0.1, b: 0, a: 0}
