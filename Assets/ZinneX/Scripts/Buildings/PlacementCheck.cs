@@ -109,30 +109,33 @@ public class PlacementCheck : MonoBehaviour {
     
     private void OnDrawGizmos() {
         Gizmos.color = Color.blue;
-        
-        Vector3 center = col.center;
-        Vector3 size = col.size;
-        Vector3[] localOffsets = {
-            new (-.5f, -.5f, -.5f),
-            new (-.5f, -.5f, .5f),
-            new (.5f, -.5f, -.5f),
-            new (.5f, -.5f, .5f),
-            new (0f, -.5f, 0f)
-        };
 
-        Vector3[] corners = new Vector3[5];
-        for (int i = 0; i < corners.Length; i++)
-        {
-            Vector3 localCorner = Vector3.Scale(localOffsets[i], size);
-            Vector3 worldCorner = transform.TransformPoint(center + localCorner);
-            corners[i] = worldCorner;
+        if (col != null) {
+            Vector3 center = col.center;
+            Vector3 size = col.size;
+            Vector3[] localOffsets = {
+                new (-.5f, -.5f, -.5f),
+                new (-.5f, -.5f, .5f),
+                new (.5f, -.5f, -.5f),
+                new (.5f, -.5f, .5f),
+                new (0f, -.5f, 0f)
+            };
+
+            Vector3[] corners = new Vector3[5];
+            for (int i = 0; i < corners.Length; i++)
+            {
+                Vector3 localCorner = Vector3.Scale(localOffsets[i], size);
+                Vector3 worldCorner = transform.TransformPoint(center + localCorner);
+                corners[i] = worldCorner;
+            }
+            
+            Gizmos.color = Color.cyan;
+            foreach (var corner in corners)
+            {
+                Gizmos.DrawSphere(corner, 0.05f);
+            }
         }
 
-        Gizmos.color = Color.cyan;
-        foreach (var corner in corners)
-        {
-            Gizmos.DrawSphere(corner, 0.05f);
-        }
         
         Gizmos.matrix = Matrix4x4.TRS(colPos, transform.rotation, Vector3.one);
         Gizmos.DrawWireCube(Vector3.zero, colSize);
