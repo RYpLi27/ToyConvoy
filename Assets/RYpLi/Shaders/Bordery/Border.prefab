@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4593107831079069624, guid: 58f075535654fae408e3117fddebc8cb, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 5436086882280303576, guid: 58f075535654fae408e3117fddebc8cb, type: 3}
       propertyPath: m_Name
       value: Border
