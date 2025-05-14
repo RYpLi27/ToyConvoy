@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.3
@@ -103,7 +103,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.2
   smoothness:
     m_OverrideState: 1
     m_Value: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0.1
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: WarmProfile
+  m_Name: WarmProfileGlobal
   m_EditorClassIdentifier: 
   components:
   - {fileID: 849379129802519247}
