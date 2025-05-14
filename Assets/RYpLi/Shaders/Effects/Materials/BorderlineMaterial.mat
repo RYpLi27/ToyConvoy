@@ -57,8 +57,8 @@ Material:
     - _DecalMeshViewBias: 0
     - _DrawOrder: 0
     - _DstBlend: 10
-    - _Fresnel: 0.03
-    - _Offset: -0.8
+    - _Fresnel: 1
+    - _Offset: -4
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 0
@@ -71,7 +71,7 @@ Material:
     - _scrollspeed: -0.2
     m_Colors:
     - _Emission: {r: 11.342871, g: 11.342871, b: 0, a: 0}
-    - _Scrollspeed: {r: 0.1, g: 0, b: 0, a: 0}
+    - _Scrollspeed: {r: 0.2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8846173926641939677
