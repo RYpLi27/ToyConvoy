@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Value: 0.25
   scatter:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -62,7 +62,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.3
 --- !u!114 &-5126781992117813455
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -103,7 +103,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.23
+    m_Value: 0.4
   smoothness:
     m_OverrideState: 1
     m_Value: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.6
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -237,10 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
@@ -286,22 +286,22 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   bloomMip:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 5
   firstFlareIntensity:
-    m_OverrideState: 0
-    m_Value: 15
+    m_OverrideState: 1
+    m_Value: 5
   secondaryFlareIntensity:
-    m_OverrideState: 0
-    m_Value: 5
+    m_OverrideState: 1
+    m_Value: 0
   warpedFlareIntensity:
-    m_OverrideState: 0
-    m_Value: 5
+    m_OverrideState: 1
+    m_Value: 0
   warpedFlareScale:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1}
   samples:
     m_OverrideState: 0
-    m_Value: 3
+    m_Value: 2
   sampleDimmer:
     m_OverrideState: 0
     m_Value: 0.5
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_Value: 1
   streaksLength:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.462
   streaksOrientation:
     m_OverrideState: 1
     m_Value: 14

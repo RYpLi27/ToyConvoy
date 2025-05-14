@@ -55,7 +55,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0.05
+    - _AlphaClip: 0.001
     - _DissolveScale: 64
     - _FireLenght: 0.5
     - _QueueControl: 0
