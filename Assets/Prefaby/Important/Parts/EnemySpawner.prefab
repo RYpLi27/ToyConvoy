@@ -5188,7 +5188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1368363031011342952, guid: 4a6601e84cace7444b89c9f68111ae73, type: 3}
       propertyPath: blendDistance
-      value: 40
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3514454160783257373, guid: 4a6601e84cace7444b89c9f68111ae73, type: 3}
       propertyPath: m_Name
@@ -5396,7 +5396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
   priority: 0
-  blendDistance: 250
+  blendDistance: 300
   weight: 0.01
   sharedProfile: {fileID: 11400000, guid: 58ba759b718cbec4f9b6a8e862f132d9, type: 2}
 --- !u!4 &4173205018494376009 stripped
