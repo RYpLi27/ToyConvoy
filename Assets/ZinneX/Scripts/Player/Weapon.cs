@@ -51,6 +51,7 @@ public class Weapon : MonoBehaviour {
     
     private void CreateHitEffect(Vector3 position, Material material) {
         ParticleSystemRenderer hitEffect = ObjectPoolManager.SpawnObject(weaponSO.bulletHitPrefab, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<ParticleSystemRenderer>();
+        if (hitEffect == null) return;
         hitEffect.material = material;
     }
     

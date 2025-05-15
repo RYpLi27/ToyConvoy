@@ -51,7 +51,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150cfc1403a88c943800cc740b5a6ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSO: {fileID: 11400000, guid: e78a80ffd4da8764c99c40baa2dc8cbf, type: 2}
+  statsSO: {fileID: 11400000, guid: 1a445a6aa352d1b4b811dc72bba2e8e4, type: 2}
 --- !u!114 &2326234970246017720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  statsSO: {fileID: 11400000, guid: e78a80ffd4da8764c99c40baa2dc8cbf, type: 2}
+  statsSO: {fileID: 11400000, guid: 1a445a6aa352d1b4b811dc72bba2e8e4, type: 2}
   damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
   hpBar: {fileID: 2073636733092082191}
   isAlive: 0

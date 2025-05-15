@@ -351,9 +351,8 @@ GameObject:
   - component: {fileID: 3112420122433896997}
   - component: {fileID: 139347872168769735}
   - component: {fileID: 7172392146804957334}
-  - component: {fileID: 7857422435837113397}
   - component: {fileID: 1929065531829826047}
-  - component: {fileID: 4496688081036018224}
+  - component: {fileID: 6373328544389758099}
   - component: {fileID: 6808939221189396226}
   - component: {fileID: 4078999759031152020}
   - component: {fileID: 3091917397319788418}
@@ -436,23 +435,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 3
---- !u!114 &7857422435837113397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2956823172192926029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178cb2486b86f2c4cacb5b13d95eb1ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  statsSO: {fileID: 11400000, guid: 867c50073406f5340bbe7a0e59377d9f, type: 2}
-  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
-  hpBar: {fileID: 0}
-  isAlive: 0
 --- !u!114 &1929065531829826047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,19 +449,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 12
   jumpBufferTime: 0.05
+  jumpStaminaCost: 20
   coyoteTime: 0.05
   gravityScale: 6
-  runSpeedBonus: 4
-  jumpStaminaCost: 20
+  moveSpeed: 8
+  runSpeed: 13
+  exhaustedSpeed: 3
   runStaminaCost: 20
   rb: {fileID: 7172392146804957334}
   groundCheck: {fileID: 5888093183224201632}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 768
-  statsSO: {fileID: 11400000, guid: 867c50073406f5340bbe7a0e59377d9f, type: 2}
   staminaManager: {fileID: 6808939221189396226}
---- !u!114 &4496688081036018224
+--- !u!114 &6373328544389758099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -614,7 +597,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4496688081036018224}
+      - m_Target: {fileID: 6373328544389758099}
         m_TargetAssemblyTypeName: PlayerLook, Assembly-CSharp
         m_MethodName: MousePositionInput
         m_Mode: 0
@@ -758,7 +741,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4496688081036018224}
+      - m_Target: {fileID: 6373328544389758099}
         m_TargetAssemblyTypeName: PlayerLook, Assembly-CSharp
         m_MethodName: LockCursorInput
         m_Mode: 0
@@ -1012,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc407cfe3f5f63a4d918c9546e5a7997, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -20,7 +20,7 @@ public class Bar : MonoBehaviour {
         sequence.Append(trailBar.DOFillAmount(ratio, .3f)).SetEase(Ease.InOutSine);
         
         sequence.Play();
-
+        
         if (valueText == null) return;
             valueText.text = $"{curValue}/{maxValue}";
     }
