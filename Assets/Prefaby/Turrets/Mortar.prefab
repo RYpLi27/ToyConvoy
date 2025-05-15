@@ -216,6 +216,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   triggerCol: {fileID: 7022864882460366307}
   normalCol: {fileID: 6270080389123293807}
+  rangeBorder: {fileID: 4066880935014689361}
 --- !u!114 &4703976167009314807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +300,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a67c3a2d7c908894daddbd505ef44652, type: 3}
+--- !u!1 &4066880935014689361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8446099532763722410, guid: a67c3a2d7c908894daddbd505ef44652, type: 3}
+  m_PrefabInstance: {fileID: 5568389156035533051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6920135552884839850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3265011811633728849, guid: a67c3a2d7c908894daddbd505ef44652, type: 3}

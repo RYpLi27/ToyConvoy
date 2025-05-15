@@ -24,8 +24,8 @@ TagManager:
   - Outline
   - Big Enemy
   - Road
-  - 
-  - 
+  - LayerMask
+  - SeeThrough
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 2911485475
+    locked: 0
+  - name: IDK
+    uniqueID: 1225646887
     locked: 0
   m_RenderingLayers:
   - Default

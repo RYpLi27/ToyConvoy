@@ -2,7 +2,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour {
-    [SerializeField] [InfoBox("To see values click on pen at the right side")] private StatsSO statsSO;
+    [SerializeField] [InfoBox("To see values click on pen at the right side")] private EnemyStatsSO statsSO;
     private Node currentNode;
     private Vector3 nodeOffset;
 
@@ -20,7 +20,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
     private void Update() {
         if (GameManager.gameState != GameManager.GameState.Ongoing) return;
-
+        
         if (isRoundabout == false) { MoveStraight(); }
         else { MoveInCircle(); }
         
@@ -43,7 +43,8 @@ public class EnemyBehaviour : MonoBehaviour {
     }
     
     private void ReachPlayerBase() {
-        // DEAL DAMAGE TO BASE
+        GameManager.instance.DealDamageToBase(1);
+        WaveManager.enemyCount--;
         ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
 

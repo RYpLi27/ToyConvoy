@@ -20,10 +20,12 @@ public class GoldManager : MonoBehaviour {
     [SerializeField] [ReadOnly] private int currentGold;
     [SerializeField] private int startGold;
 
-    [SerializeField] private TMP_Text goldText;
+    [SerializeField] private TMP_Text currentGoldText;
+    [SerializeField] private GameObject goldPopupPrefab;
+    [SerializeField] private Transform goldPopupHolder;
 
 
-    private void UpdateUI() { goldText.text = currentGold.ToString(); }
+    private void UpdateUI() { currentGoldText.text = currentGold.ToString(); }
 
     public void UpdateGoldAmount(int amount) {
         currentGold = Mathf.Clamp(currentGold + amount, 0, 9999);
@@ -39,6 +41,11 @@ public class GoldManager : MonoBehaviour {
         return true;
     }
 
+    public void CollectedGoldPopup(int amount) {
+        TMP_Text popupText = ObjectPoolManager.SpawnObject(goldPopupPrefab, goldPopupHolder).GetComponent<TMP_Text>();
+        popupText.text = $"+ {amount} <sprite name=\"gold\">";
+    }
+    
     public bool PriceCheck(int amount) {
         return !(amount > currentGold);
     }

@@ -33,16 +33,13 @@ public class PlayerLook : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, StaticVariables.whatIsEnemy))
         {
             HealthManager enemy = hit.collider.GetComponent<HealthManager>();
-            if (enemy != null)
+            if (enemy != null && currentTarget != enemy)
             {
-                if (currentTarget != enemy)
-                {
-                    if (currentTarget != null)
-                        currentTarget.ShowBar(false);
+                if (currentTarget != null)
+                    currentTarget.ShowBar(false);
 
-                    currentTarget = enemy;
-                    currentTarget.ShowBar(true);
-                }
+                currentTarget = enemy;
+                currentTarget.ShowBar(true);
             }
         }
         else if (currentTarget != null)

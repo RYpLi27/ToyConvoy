@@ -179,6 +179,7 @@ MonoBehaviour:
   spikesSO: {fileID: 11400000, guid: b0ac3a8456ab583429e8f6535b7fec18, type: 2}
   triggerCol: {fileID: 8624576301749984368}
   normalCol: {fileID: 8821729632389194369}
+  rangeBorder: {fileID: 0}
 --- !u!114 &6153794314029622142
 MonoBehaviour:
   m_ObjectHideFlags: 0
