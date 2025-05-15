@@ -11,7 +11,7 @@ public class UIButtons : MonoBehaviour
         Application.Quit();
     }
 
-    public void ResetScaleAndGameState() {
+    public void ResetTimeScaleAndGameState() {
         Time.timeScale = 1;
         if (GameManager.instance != null) { GameManager.gameState = GameManager.GameState.Ongoing;}
     }

@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4768029952299553660}
+  - component: {fileID: 3487010993359871178}
   - component: {fileID: 5179204239356583622}
   - component: {fileID: 5928656896219143017}
   - component: {fileID: 2561054303951061026}
-  - component: {fileID: 3487010993359871178}
   - component: {fileID: -1392419460755524147}
   m_Layer: 6
   m_Name: mouseEnemy
@@ -38,6 +38,27 @@ Transform:
   - {fileID: 1724288007121536653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3487010993359871178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4577675516639902352}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.909726, y: 1.1195996, z: 1.8527164}
+  m_Center: {x: -0.0604679, y: 0.05979991, z: -0.30033207}
 --- !u!54 &5179204239356583622
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150cfc1403a88c943800cc740b5a6ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSO: {fileID: 11400000, guid: b4c93b8b33ce4bf44a6184a7eec909ce, type: 2}
+  statsSO: {fileID: 11400000, guid: 4e8e86e25aed8f942b57f01ba6e1de06, type: 2}
 --- !u!114 &2561054303951061026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,31 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  statsSO: {fileID: 11400000, guid: b4c93b8b33ce4bf44a6184a7eec909ce, type: 2}
+  statsSO: {fileID: 11400000, guid: 4e8e86e25aed8f942b57f01ba6e1de06, type: 2}
   damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
   hpBar: {fileID: 3032670288618769186}
   isAlive: 0
---- !u!65 &3487010993359871178
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4577675516639902352}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.909726, y: 1.1195996, z: 1.8527164}
-  m_Center: {x: -0.0604679, y: 0.05979991, z: -0.30033207}
 --- !u!114 &-1392419460755524147
 MonoBehaviour:
   m_ObjectHideFlags: 0
