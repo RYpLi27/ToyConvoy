@@ -52,7 +52,7 @@ MonoBehaviour:
   bossAlert: {fileID: 0}
   enemyWaves:
   - enemies:
-    - enemyPrefab: {fileID: 5422365110199480103, guid: 09841e0c86fa8934b8932e424b28beb4, type: 3}
+    - enemyPrefab: {fileID: 0}
       amountToSpawn: 8
       timeBetweenSpawns: 0.3
       firstSpawnDelay: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
       amountToSpawn: 10
       timeBetweenSpawns: 0.3
       firstSpawnDelay: 0
-    - enemyPrefab: {fileID: 5422365110199480103, guid: 09841e0c86fa8934b8932e424b28beb4, type: 3}
+    - enemyPrefab: {fileID: 0}
       amountToSpawn: 6
       timeBetweenSpawns: 0.3
       firstSpawnDelay: 1.5
