@@ -7089,10 +7089,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1768524566667806035, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: blendDistance
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 4625565083716694933, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: bossAlert
       value: 
@@ -7101,10 +7097,6 @@ PrefabInstance:
       propertyPath: spawnWaveButton
       value: 
       objectReference: {fileID: 1590553172}
-    - target: {fileID: 5445785986356747967, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: blendDistance
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 6489337113596418189, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.334518
