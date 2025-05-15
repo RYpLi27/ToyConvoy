@@ -15,6 +15,17 @@ MonoBehaviour:
   projectRules:
   - Enabled: 1
     EnabledOverridden: 1
+    Type: Sirenix.OdinValidator.Editor.Validators.ShaderCompilerErrorsValidator,
+      Sirenix.OdinValidator.Editor
+    Override: "{\r\n    \"$id\": 0,\r\n    \"$type\": \"0|Sirenix.OdinValidator.Editor.Validators.ShaderCompilerErrorsValidator,
+      Sirenix.OdinValidator.Editor\",\r\n    \"ErrorSeverity\": 0,\r\n    \"WarningSeverity\":
+      1,\r\n    \"IgnoredShaders\": {\r\n        \"$id\": 1,\r\n        \"$type\":
+      \"1|UnityEngine.Shader[], UnityEngine.CoreModule\",\r\n        \"$rlength\":
+      1,\r\n        \"$rcontent\": [\r\n            $fstrref:\"{\\\"guid\\\":\\\"01212a9b8947d8a4cb42c07d619db0c7\\\",\\\"IsBroken\\\":false,\\\"Type\\\":1,\\\"AssetPath\\\":\\\"Assets/RYpLi/Shaders/Crack/GlowCrackWalls.shadergraph\\\",\\\"SubAsset\\\":{\\\"AssetType\\\":{\\\"TypeName\\\":\\\"\\\"},\\\"InstanceID\\\":0,\\\"Index\\\":0},\\\"Hierarchy\\\":{\\\"SubNames\\\":[],\\\"SubIndices\\\":[]},\\\"Component\\\":{\\\"ComponentIndex\\\":0,\\\"ComponentType\\\":{\\\"TypeName\\\":\\\"\\\"}},\\\"Name\\\":\\\"Shader
+      Graphs/GlowCrackWalls\\\",\\\"ObjectType\\\":{\\\"TypeName\\\":\\\"UnityEngine.Shader,
+      UnityEngine.CoreModule\\\"}}\"\r\n        ]\r\n    }\r\n}"
+  - Enabled: 1
+    EnabledOverridden: 1
     Type: Sirenix.OdinValidator.Editor.Validators.DuplicateComponentsValidator, Sirenix.OdinValidator.Editor
     Override: "{\r\n    \"$id\": 0,\r\n    \"$type\": \"0|Sirenix.OdinValidator.Editor.Validators.DuplicateComponentsValidator,
       Sirenix.OdinValidator.Editor\",\r\n    \"Severity\": 1,\r\n    \"TypeExceptions\":
