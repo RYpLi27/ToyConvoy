@@ -5396,8 +5396,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
   priority: 0
-  blendDistance: 50
-  weight: 0.02
+  blendDistance: 250
+  weight: 0.01
   sharedProfile: {fileID: 11400000, guid: 58ba759b718cbec4f9b6a8e862f132d9, type: 2}
 --- !u!4 &4173205018494376009 stripped
 Transform:

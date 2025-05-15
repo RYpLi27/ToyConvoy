@@ -7097,14 +7097,6 @@ PrefabInstance:
       propertyPath: spawnWaveButton
       value: 
       objectReference: {fileID: 1590553172}
-    - target: {fileID: 5445785986356747967, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: weight
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5445785986356747967, guid: 23abd108f088be24e813752fea61a84a, type: 3}
-      propertyPath: blendDistance
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 6489337113596418189, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.334518
