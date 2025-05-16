@@ -45,4 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGold: 0
-  goldText: {fileID: 0}
+  startGold: 200
+  currentGoldText: {fileID: 0}
+  goldPopupPrefab: {fileID: 4935012082418489557, guid: 71d82c8bc126d364b8e7d29331fa38a1, type: 3}
+  goldPopupHolder: {fileID: 0}
