@@ -996,6 +996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarmVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 3514454160783257373, guid: 4a6601e84cace7444b89c9f68111ae73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9063082532579123273, guid: 4a6601e84cace7444b89c9f68111ae73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6824,9 +6828,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1519946866489944618, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1787137031941157901, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229918144621006886, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4625565083716694933, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: bossAlert
