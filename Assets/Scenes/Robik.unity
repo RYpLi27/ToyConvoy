@@ -7670,6 +7670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4229918144621006886, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4625565083716694933, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: bossAlert
       value: 
@@ -11468,7 +11472,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3181002534859776153, guid: 209a6957720ef0c41b79fa109337c9e7, type: 3}
       propertyPath: m_Name
-      value: EnemyPathNodes
+      value: EnemyPathManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217056813852381200, guid: 209a6957720ef0c41b79fa109337c9e7, type: 3}
+      propertyPath: m_Size.x
+      value: 9.041926
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217056813852381200, guid: 209a6957720ef0c41b79fa109337c9e7, type: 3}
+      propertyPath: m_Center.x
+      value: 0.5209632
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478156877599695637, guid: 209a6957720ef0c41b79fa109337c9e7, type: 3}
+      propertyPath: m_Size.x
+      value: 8.935097
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478156877599695637, guid: 209a6957720ef0c41b79fa109337c9e7, type: 3}
+      propertyPath: m_Center.x
+      value: -0.46754837
       objectReference: {fileID: 0}
     - target: {fileID: 6570738402039380087, guid: 209a6957720ef0c41b79fa109337c9e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12693,6 +12713,7 @@ SceneRoots:
   - {fileID: 8633398314907760819}
   - {fileID: 1298479566276252036}
   - {fileID: 3354774569705190148}
+  - {fileID: 7521745698503164427}
   - {fileID: 2113270124}
   - {fileID: 3261933497797087628}
   - {fileID: 7365593265807824648}
@@ -12706,7 +12727,6 @@ SceneRoots:
   - {fileID: 5713960235541637281}
   - {fileID: 1789289201}
   - {fileID: 7670597869947089541}
-  - {fileID: 7521745698503164427}
   - {fileID: 1957425245}
   - {fileID: 1555337992}
   - {fileID: 2039692821}

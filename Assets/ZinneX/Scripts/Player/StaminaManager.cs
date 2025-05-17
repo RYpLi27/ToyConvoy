@@ -37,18 +37,21 @@ public class StaminaManager : MonoBehaviour
             UpdateUI(false, true);
         }
 
-        if (currentStamina == 0) isExhausted = true;
+        if (currentStamina == 0) {
+            isExhausted = true;
+        }
         
         if (currentStamina == stamina) isExhausted = false;
     }
 
-    public void DrainStamina(float staminaCost) {
+    public bool DrainStamina(float staminaCost) {
         currentStamina = Mathf.Max(currentStamina - staminaCost, 0);
         lastStaminaUse = Time.time;
 
         trailCatchUp = true;
         
         UpdateUI(true);
+        return currentStamina == 0;
     }
 
     private void UpdateUI(bool instant, bool withTrail = false) {
