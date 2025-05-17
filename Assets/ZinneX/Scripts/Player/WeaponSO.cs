@@ -1,9 +1,10 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "WeaponSO", menuName = "Scriptable Objects/Weapon SO")]
 public class WeaponSO : ScriptableObject
 {
-    public float fireRate;
+    [LabelText("FireRate (Attacks per second)")] public float fireRate;
     public float damage;
     public float weaponRange;
     public float verticalRecoil;

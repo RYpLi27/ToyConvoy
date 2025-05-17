@@ -51,7 +51,7 @@ public class HealthManager : MonoBehaviour {
         
         if (gameObject.CompareTag("Enemy") == true) {
             ObjectPoolManager.ReturnObjectToPool(gameObject); // LATER ADD DEATH ANIM
-            WaveManager.enemyCount--;
+            WaveManager.instance.EnemyCount--;
             GetComponent<DropGold>().AddGold();
 
             //THOSE LOOPS LETS TURRETS AND TRAPS KNOW THAT IT IS DEAD
