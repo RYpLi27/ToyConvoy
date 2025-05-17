@@ -44,7 +44,7 @@ public class EnemyBehaviour : MonoBehaviour {
     
     private void ReachPlayerBase() {
         GameManager.instance.DealDamageToBase(1);
-        WaveManager.enemyCount--;
+        WaveManager.instance.EnemyCount--;
         ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
 

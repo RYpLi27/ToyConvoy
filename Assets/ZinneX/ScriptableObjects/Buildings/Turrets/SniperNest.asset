@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Shoots homing bullets at enemies
   price: 200
   damage: 7
-  fireRate: 2.6
+  fireRate: 2.3
   range: 15
   projectileSpeed: 35
   projectilePrefab: {fileID: 1561201658955599378, guid: 2824d62e4639f99409b00c8b8b1e88da, type: 3}
