@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Turret
+  - Explosive
+  - TrapDOT
+  - Road
   layers:
   - Default
   - TransparentFX
@@ -15,13 +19,13 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Turret
+  - Outline
+  - Big Enemy
+  - Road
+  - LayerMask
+  - SeeThrough
   - 
   - 
   - 
@@ -42,6 +46,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2911485475
+    locked: 0
+  - name: IDK
+    uniqueID: 1225646887
     locked: 0
   m_RenderingLayers:
   - Default
