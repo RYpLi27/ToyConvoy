@@ -58,7 +58,7 @@ Material:
     - _DrawOrder: 0
     - _DstBlend: 10
     - _Fresnel: 1
-    - _Offset: -4
+    - _Offset: -1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 0
