@@ -38,7 +38,7 @@
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -108,6 +108,15 @@
                     "name": "SwapMode",
                     "type": "Button",
                     "id": "2f1ab4e9-5e31-469f-9a5c-d99d4f2cb957",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AddGoldTesting",
+                    "type": "Button",
+                    "id": "8400c193-1586-4df7-bc57-5951fe379c75",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -576,6 +585,39 @@
                     "action": "SwapMode",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "One Modifier",
+                    "id": "eaaa297a-2756-495e-b139-4e6af8c91ba3",
+                    "path": "OneModifier(modifiersOrder=1)",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AddGoldTesting",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "e3698086-de53-4d62-8556-12d899292f3f",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AddGoldTesting",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "5145dc14-fb49-4db8-ad75-22fdecb5a96f",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AddGoldTesting",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

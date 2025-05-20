@@ -8,6 +8,6 @@ public class DropGold : MonoBehaviour {
     public void AddGold() {
         int amount = Random.Range(minGold, maxGold);
         GoldManager.instance.UpdateGoldAmount(amount);
-        GoldManager.instance.CollectedGoldPopup(amount);
+        GoldManager.instance.AddPopupToQueue(amount);
     }
 }
