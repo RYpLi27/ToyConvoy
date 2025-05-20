@@ -8,9 +8,9 @@ public class NonHomingTurret : TurretSO {
     public AnimationCurve heightCurve;
     public float movementPredictDistance;
 
-    public override void Shoot(Transform firepoint, Transform target) {
+    public override void Shoot(Transform firepoint, Transform target, TurretStats stats) {
         GameObject projectile = ObjectPoolManager.SpawnObject(projectilePrefab, firepoint.position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile);
-        projectile.GetComponent<NonHomingProjectile>().SetupProjectile(this, target.position, target.GetComponent<EnemyBehaviour>().MoveDir);
+        projectile.GetComponent<NonHomingProjectile>().SetupProjectile(this, target.position, target.GetComponent<EnemyBehaviour>().MoveDir, stats);
         // BULLETS LOGIC LIKE TRAJECTORY AND LAUNCHING AT TARGET IS ALL MADE IN PROJECTILE SCRIPT
     }
 }
