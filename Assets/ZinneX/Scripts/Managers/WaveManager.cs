@@ -23,24 +23,36 @@ public class WaveManager : MonoBehaviour {
     private List<EnemyWave> enemyWaves;
 
     private int currentWave;
-    private bool initialsingWave;
-    public static int enemyCount;
+
+    private int enemyCount;
+    public int EnemyCount {
+        get => enemyCount;
+        set {
+            Debug.Log(enemyCount + " " + value);
+            enemyCount = value;
+            if (enemyCount == 0) RestoreLandMines();
+        }
+    }
 
     private void Update() {
-        spawnWaveButton.SetActive(enemyCount == 0 && initialsingWave == false);
+        spawnWaveButton.SetActive(enemyCount == 0);
         
-        if (enemyCount == 0 && initialsingWave == false && currentWave == enemyWaves.Count) {
+        Debug.Log(enemyCount);
+        
+        if (enemyCount == 0 && currentWave == enemyWaves.Count) {
             WinGame();
         }
     }
 
+    private void RestoreLandMines() {
+        foreach (Landmine landmine in FindObjectsByType<Landmine>(FindObjectsSortMode.None)) { landmine.RestoreLandmine(); }
+    }
+    
     public void SpawnWave() {
-        if (enemyCount > 0 || initialsingWave == true) {
+        if (enemyCount > 0) {
             Debug.Log("There are enemies still alive. Can't spawn next wave.");
             return;
         }
-
-        initialsingWave = true;
         
         if (enemyWaves[currentWave].isBossWave == true) {
             BossAlert();
@@ -48,6 +60,7 @@ public class WaveManager : MonoBehaviour {
         
         //SPAWN ENEMIES
         foreach (EnemyInstance enemyInstance in enemyWaves[currentWave].enemies) {
+            enemyCount += enemyInstance.amountToSpawn;
             StartCoroutine(EnemySpawnDelay(enemyInstance));
         }
 
@@ -61,14 +74,10 @@ public class WaveManager : MonoBehaviour {
     }
 
     private IEnumerator SpawnEnemies(EnemyInstance enemyInstance, int enemiesSpawned) {
-        if (enemiesSpawned == enemyInstance.amountToSpawn) {
-            initialsingWave = false;
-            yield break; 
-        }
+        if (enemiesSpawned == enemyInstance.amountToSpawn) yield break;
         
         ObjectPoolManager.SpawnObject(enemyInstance.enemyPrefab, spawnPosition.position, Quaternion.identity, ObjectPoolManager.PoolingParent.Enemy);
-        enemyCount++;
-
+        
         yield return new WaitForSeconds(enemyInstance.timeBetweenSpawns);
         
         StartCoroutine(SpawnEnemies(enemyInstance, enemiesSpawned + 1));

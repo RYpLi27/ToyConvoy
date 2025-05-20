@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour {
     [TabGroup("Others")] [SerializeField] private Transform groundCheck;
     [TabGroup("Others")] [SerializeField] private LayerMask whatIsGround;
     [TabGroup("Others")] [SerializeField] private StaminaManager staminaManager;
+    [TabGroup("Others")] [SerializeField] private RunTrail runTrail;
     
     private Vector2 moveInputValues;
 
@@ -51,11 +52,20 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void RunInput(InputAction.CallbackContext context) {
-        if (context.performed) isRunning = true;
+        if (context.performed && staminaManager.isExhausted == false) {
+            isRunning = true;
+            runTrail.EnableTrail();
+        }
         
-        if (context.canceled) isRunning = false;
+        if (context.canceled) {
+            isRunning = false;
+            runTrail.DisableTrail();
+        }
 
-        if (staminaManager.isExhausted == true) isRunning = false;
+        if (staminaManager.isExhausted == true) {
+            isRunning = false;
+            runTrail.DisableTrail();
+        }
     }
     
     private void Move() {
@@ -70,7 +80,7 @@ public class PlayerMovement : MonoBehaviour {
         rb.linearVelocity = new Vector3(dir.x * currentMoveSpeed, rb.linearVelocity.y, dir.z * currentMoveSpeed);
 
         if (isRunning == true && Mathf.Abs(rb.linearVelocity.magnitude) >= .1f && staminaManager.isExhausted == false)
-            staminaManager.DrainStamina(runStaminaCost * Time.deltaTime);
+            if(staminaManager.DrainStamina(runStaminaCost * Time.deltaTime) == true) runTrail.DisableTrail();
     }
     #endregion
     
