@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GoldManager : MonoBehaviour {
     public static GoldManager instance;
@@ -13,9 +15,9 @@ public class GoldManager : MonoBehaviour {
         }
     }
 
-    private void Start() {
-        UpdateGoldAmount(startGold);
-    }
+    private List<int> queuedUpGoldPopups = new();
+    private int playedPopups;
+    
 
     [SerializeField] [ReadOnly] private int currentGold;
     [SerializeField] private int startGold;
@@ -24,6 +26,9 @@ public class GoldManager : MonoBehaviour {
     [SerializeField] private GameObject goldPopupPrefab;
     [SerializeField] private Transform goldPopupHolder;
 
+    private void Start() {
+        UpdateGoldAmount(startGold);
+    }
 
     private void UpdateUI() { currentGoldText.text = currentGold.ToString(); }
 
@@ -32,21 +37,38 @@ public class GoldManager : MonoBehaviour {
         UpdateUI();
     }
 
-    public bool BuyTurret(int amount) {
-        if (PriceCheck(amount) == false) return false;
+    public bool PriceCheck(int amount, bool useGold) {
+        if (useGold == false) return !(amount > currentGold);
+        
+        if (amount > currentGold) return false;
         
         UpdateGoldAmount(-amount);
-        UpdateUI();
         
         return true;
     }
 
-    public void CollectedGoldPopup(int amount) {
+    public void AddPopupToQueue(int amount) {
+        queuedUpGoldPopups.Add(amount);
+        PopupSpawn();
+    }
+
+    private void PopupSpawn() {
+        if (playedPopups >= 4 || queuedUpGoldPopups.Count == 0) return;
+        
+        playedPopups++;
         TMP_Text popupText = ObjectPoolManager.SpawnObject(goldPopupPrefab, goldPopupHolder).GetComponent<TMP_Text>();
-        popupText.text = $"+ {amount} <sprite name=\"gold\">";
+        popupText.text = $"+ {queuedUpGoldPopups[0]} <sprite name=\"gold\">";
+        queuedUpGoldPopups.RemoveAt(0);
+    }
+
+    public void PopupFinish() {
+        playedPopups--;
+        PopupSpawn();
     }
     
-    public bool PriceCheck(int amount) {
-        return !(amount > currentGold);
+#if UNITY_EDITOR
+    public void AddGoldTesting(InputAction.CallbackContext context) {
+        if(context.performed) UpdateGoldAmount(5000);
     }
+#endif
 }
