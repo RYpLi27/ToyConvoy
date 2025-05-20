@@ -181,6 +181,7 @@ MonoBehaviour:
   triggerCol: {fileID: 7899637824276236990}
   normalCol: {fileID: 5921651352802895316}
   rangeBorder: {fileID: 5510472201183429158}
+  objectModel: {fileID: 6874076330704505100}
 --- !u!114 &3366927628110917603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +259,10 @@ PrefabInstance:
     - target: {fileID: 7418859308142058417, guid: a67c3a2d7c908894daddbd505ef44652, type: 3}
       propertyPath: m_Radius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418859308142058417, guid: a67c3a2d7c908894daddbd505ef44652, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8446099532763722410, guid: a67c3a2d7c908894daddbd505ef44652, type: 3}
       propertyPath: m_Name

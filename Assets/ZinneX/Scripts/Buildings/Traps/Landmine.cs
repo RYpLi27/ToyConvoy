@@ -7,6 +7,7 @@ public class Landmine : MonoBehaviour, IBuilding {
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
     [SerializeField] private GameObject rangeBorder;
+    [SerializeField] private MeshRenderer objectModel;
 
     private void Start() {
         rangeBorder.GetComponent<SphereCollider>().radius = 1;
@@ -26,11 +27,19 @@ public class Landmine : MonoBehaviour, IBuilding {
             col.GetComponent<HealthManager>().TakeDamage(landmineSO.damage, col.transform.position + Vector3.up);
         }
         
-        ObjectPoolManager.ReturnObjectToPool(gameObject);
-
+        // ObjectPoolManager.ReturnObjectToPool(gameObject);
+        
+        // IS ONLY DISABLED FOR ONE WAVE
+        objectModel.material = landmineSO.usedMat;
         triggerCol.enabled = false;
         normalCol.enabled = false;
-        GetComponent<PlacementCheck>().enabled = true;
+        // GetComponent<PlacementCheck>().enabled = true;
+    }
+
+    public void RestoreLandmine() {
+        objectModel.material = landmineSO.objectMaterial;
+        triggerCol.enabled = true;
+        normalCol.enabled = true;
     }
     
     // public int GetPrice() {

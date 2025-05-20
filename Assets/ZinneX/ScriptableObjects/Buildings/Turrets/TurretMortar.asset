@@ -18,11 +18,11 @@ MonoBehaviour:
   damage: 21
   fireRate: 0.55
   range: 9
-  projectileSpeed: 10
+  projectileSpeed: 12
   projectilePrefab: {fileID: 3927782703365855098, guid: d54b027c458a31d4f9b26bf64983fd4c, type: 3}
   objectMaterial: {fileID: 2100000, guid: ed72a8327079e3b4c8d5b60432df5588, type: 2}
   arcHeight: 4
-  hitRadius: 2
+  hitRadius: 3.5
   heightCurve:
     serializedVersion: 2
     m_Curve:
