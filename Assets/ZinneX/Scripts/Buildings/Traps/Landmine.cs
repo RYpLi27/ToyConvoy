@@ -6,13 +6,20 @@ public class Landmine : MonoBehaviour, IBuilding {
     
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
+    [SerializeField] private GameObject rangeBorder;
+    [SerializeField] private MeshRenderer objectModel;
+
+    private void Start() {
+        rangeBorder.GetComponent<SphereCollider>().radius = 1;
+        rangeBorder.transform.localScale = Vector3.one * landmineSO.explosionRange * 2;
+    }
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
             Explode();
         }
     }
-
+    
     private void Explode() {
         Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, landmineSO.explosionRange, StaticVariables.whatIsEnemy);
 
@@ -20,11 +27,19 @@ public class Landmine : MonoBehaviour, IBuilding {
             col.GetComponent<HealthManager>().TakeDamage(landmineSO.damage, col.transform.position + Vector3.up);
         }
         
-        ObjectPoolManager.ReturnObjectToPool(gameObject);
-
+        // ObjectPoolManager.ReturnObjectToPool(gameObject);
+        
+        // IS ONLY DISABLED FOR ONE WAVE
+        objectModel.material = landmineSO.usedMat;
         triggerCol.enabled = false;
         normalCol.enabled = false;
-        GetComponent<PlacementCheck>().enabled = true;
+        // GetComponent<PlacementCheck>().enabled = true;
+    }
+
+    public void RestoreLandmine() {
+        objectModel.material = landmineSO.objectMaterial;
+        triggerCol.enabled = true;
+        normalCol.enabled = true;
     }
     
     // public int GetPrice() {
@@ -38,6 +53,7 @@ public class Landmine : MonoBehaviour, IBuilding {
         GetComponent<Collider>().enabled = true;
         triggerCol.enabled = true;
         normalCol.enabled = true;
+        rangeBorder.SetActive(false);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = landmineSO.objectMaterial;

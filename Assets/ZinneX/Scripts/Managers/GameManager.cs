@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject loseScreen;
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject ongoingUI;
+    [SerializeField] private HealthManager baseHP;
 
     public void EndGame(GameState state) {
         Cursor.visible = true;
@@ -63,5 +64,9 @@ public class GameManager : MonoBehaviour {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+
+    public void DealDamageToBase(int i) {
+        baseHP.TakeDamage(i);
     }
 }

@@ -6,6 +6,8 @@ public class DropGold : MonoBehaviour {
     [SerializeField] [HorizontalGroup("Gold")] private int maxGold;
 
     public void AddGold() {
-        GoldManager.instance.UpdateGoldAmount(Random.Range(minGold, maxGold));
+        int amount = Random.Range(minGold, maxGold);
+        GoldManager.instance.UpdateGoldAmount(amount);
+        GoldManager.instance.CollectedGoldPopup(amount);
     }
 }

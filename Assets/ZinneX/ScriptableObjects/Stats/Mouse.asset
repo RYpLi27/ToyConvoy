@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4554ac55559fd774f8661a7b64b61293, type: 3}
+  m_Script: {fileID: 11500000, guid: 4466f4ebdd8b8fa4780c6ae7d4ecc20d, type: 3}
   m_Name: Mouse
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 40
   defense: 0
-  moveSpeed: 8
+  moveSpeed: 14
+  damageToBase: 1
