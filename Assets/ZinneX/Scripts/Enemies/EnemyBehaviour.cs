@@ -12,14 +12,16 @@ public class EnemyBehaviour : MonoBehaviour {
     
     private void OnEnable() {
         FirstNodeAndOffset();
+        EnemyManager.instance.AddEnemy(this);
     }
 
     private void OnDisable() {
         currentNode = null;
+        EnemyManager.instance.RemoveEnemy(this);
     }
 
-    private void Update() {
-        if (GameManager.gameState != GameManager.GameState.Ongoing) return;
+    public void CustomUpdate() {
+        // if (GameManager.gameState != GameManager.GameState.Ongoing) return; IT'S IN THE ENEMYMANAGER
         
         if (isRoundabout == false) { MoveStraight(); }
         else { MoveInCircle(); }
@@ -51,9 +53,9 @@ public class EnemyBehaviour : MonoBehaviour {
     private void MoveStraight() {
         if (currentNode == null) return;
         
-        transform.position = Vector3.MoveTowards(transform.position, currentNode.transform.position + nodeOffset, Time.deltaTime * statsSO.moveSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, currentNode.transform.position + nodeOffset, Time.fixedDeltaTime * statsSO.moveSpeed);
         
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentNode.transform.position + nodeOffset - transform.position), .05f);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentNode.transform.position + nodeOffset - transform.position), .15f);
         
         if(Vector3.Distance(transform.position, currentNode.transform.position + nodeOffset) <= 0f) FindNextNode();
     }
@@ -65,10 +67,10 @@ public class EnemyBehaviour : MonoBehaviour {
         float degreesPerSecond = (statsSO.moveSpeed / circumference) * 360f;
 
         Vector3 previousPos = transform.position;
-        transform.RotateAround(currentNode.roundaboutCenter.position, Vector3.up, -degreesPerSecond * Time.deltaTime);
+        transform.RotateAround(currentNode.roundaboutCenter.position, Vector3.up, -degreesPerSecond * Time.fixedDeltaTime);
         Vector3 afterPos = transform.position;
         
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(afterPos - previousPos), .05f);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(afterPos - previousPos), .15f);
         // FINDING NEXT NODE IS HANDLED IN SCRIPT RoundaboutNode.cs by collision
     }
 }
