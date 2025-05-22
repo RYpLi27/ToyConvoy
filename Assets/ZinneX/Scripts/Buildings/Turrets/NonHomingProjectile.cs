@@ -7,15 +7,17 @@ public class NonHomingProjectile : MonoBehaviour {
     private float entireFlightLength;
     private float currentFlightLength;
     private NonHomingTurret  turretSO;
+    private TurretSO.TurretStats stats;
     
-    public void SetupProjectile(NonHomingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict) {
+    public void SetupProjectile(NonHomingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict, TurretSO.TurretStats newStats) {
         turretSO = newTurretSO;
+        stats = newStats;
         
         startPos = transform.position;
         targetPos = newTarget + movePredict * turretSO.movementPredictDistance;
         
         distance = Vector3.Distance(startPos, targetPos);
-        entireFlightLength = distance / turretSO.projectileSpeed;
+        entireFlightLength = distance / stats.projectileSpeed;
         
         transform.rotation = Quaternion.LookRotation(targetPos);
     }
@@ -47,7 +49,7 @@ public class NonHomingProjectile : MonoBehaviour {
         if (enemiesInRadius.Length == 0) { return; }
 
         foreach (Collider other in enemiesInRadius) {
-            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage, transform.position);
+            other.GetComponent<HealthManager>().TakeDamage(stats.damage, transform.position);
         }
         
         ObjectPoolManager.ReturnObjectToPool(gameObject);

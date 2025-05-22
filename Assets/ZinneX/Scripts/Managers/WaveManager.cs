@@ -28,7 +28,6 @@ public class WaveManager : MonoBehaviour {
     public int EnemyCount {
         get => enemyCount;
         set {
-            Debug.Log(enemyCount + " " + value);
             enemyCount = value;
             if (enemyCount == 0) RestoreLandMines();
         }
@@ -36,8 +35,6 @@ public class WaveManager : MonoBehaviour {
 
     private void Update() {
         spawnWaveButton.SetActive(enemyCount == 0);
-        
-        Debug.Log(enemyCount);
         
         if (enemyCount == 0 && currentWave == enemyWaves.Count) {
             WinGame();

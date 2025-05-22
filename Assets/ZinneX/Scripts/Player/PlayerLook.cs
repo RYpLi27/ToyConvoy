@@ -13,6 +13,7 @@ public class PlayerLook : MonoBehaviour
     private Rigidbody rb;
 
     private HealthManager currentTarget;
+    private IInteractable currentBuilding;
     
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -24,15 +25,36 @@ public class PlayerLook : MonoBehaviour
     }
 
     private void Update() {
-        IsLookingAtEnemy();
+        HandleLook();
     }
 
-    private void IsLookingAtEnemy() {
+    private void HandleLook() {
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, StaticVariables.whatIsEnemy))
-        {
-            HealthManager enemy = hit.collider.GetComponent<HealthManager>();
+        if (BuildingLook(ray) == true) return;
+        EnemyLook(ray);
+    }
+
+    private bool BuildingLook(Ray ray) {
+        if (Physics.Raycast(ray, out RaycastHit buildingHit, 15f, StaticVariables.whatIsBuilding, QueryTriggerInteraction.Ignore)) {
+            IInteractable building = buildingHit.collider.GetComponent<IInteractable>();
+            if (building != null && currentBuilding != building) {
+                currentBuilding?.ShowPrompt(false);
+                currentBuilding = building;
+                currentBuilding.ShowPrompt(true);
+                return true;
+            }
+        } else {
+            currentBuilding?.ShowPrompt(false);
+            currentBuilding = null;
+        }
+
+        return false;
+    }
+
+    private void EnemyLook(Ray ray) {
+        if (Physics.Raycast(ray, out RaycastHit enemyHit, Mathf.Infinity, StaticVariables.whatIsEnemy, QueryTriggerInteraction.Ignore)) {
+            HealthManager enemy = enemyHit.collider.GetComponent<HealthManager>();
             if (enemy != null && currentTarget != enemy)
             {
                 if (currentTarget != null)
@@ -41,9 +63,7 @@ public class PlayerLook : MonoBehaviour
                 currentTarget = enemy;
                 currentTarget.ShowBar(true);
             }
-        }
-        else if (currentTarget != null)
-        {
+        } else if (currentTarget != null) {
             currentTarget.ShowBar(false);
             currentTarget = null;
         }
@@ -86,5 +106,9 @@ public class PlayerLook : MonoBehaviour
             Cursor.visible = false;
             isCursorLocked = true;
         }
+    }
+
+    public void UpgradeTurret(InputAction.CallbackContext context) {
+        if (context.performed && currentBuilding != null) currentBuilding.Interact();
     }
 }

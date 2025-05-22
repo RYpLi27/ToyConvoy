@@ -18,7 +18,15 @@ MonoBehaviour:
     (Works only once per
     wave)'
   price: 125
-  damage: 55
-  explosionRange: 2
+  turretStats:
+  - damage: 30
+    explosionRange: 3
+    upgradePrice: 200
+  - damage: 40
+    explosionRange: 3
+    upgradePrice: 250
+  - damage: 50
+    explosionRange: 4
+    upgradePrice: 0
   objectMaterial: {fileID: 2100000, guid: a2fb9ff50c220904c8f22fa2c6615f45, type: 2}
   usedMat: {fileID: 2100000, guid: 79fd36ad941a363449947531740060d5, type: 2}
