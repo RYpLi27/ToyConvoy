@@ -4951,8 +4951,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5081833673598490147, guid: c1fa9bfe932429d4a919b16928bd858f, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081833673598490147, guid: c1fa9bfe932429d4a919b16928bd858f, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083648133973077331, guid: c1fa9bfe932429d4a919b16928bd858f, type: 3}
+      propertyPath: lengthInSec
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6083648133973077331, guid: c1fa9bfe932429d4a919b16928bd858f, type: 3}
       propertyPath: ShapeModule.radius.value

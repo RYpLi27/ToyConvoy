@@ -60,7 +60,7 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
         GetComponent<PlacementCheck>().enabled = false;
         triggerCol.enabled = true;
         normalCol.enabled = true;
-        
+        gameObject.layer = LayerMask.NameToLayer("Turret");
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;
         return true;
