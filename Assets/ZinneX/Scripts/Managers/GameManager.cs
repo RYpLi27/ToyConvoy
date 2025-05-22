@@ -26,8 +26,12 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject ongoingUI;
     [SerializeField] private HealthManager baseHP;
-
+    
     public void EndGame(GameState state) {
+        if (gameState != GameState.Ongoing) return;
+        
+        Time.timeScale = 0;
+        
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
 

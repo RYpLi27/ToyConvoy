@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6489337113596418189}
   - component: {fileID: 4625565083716694933}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8059944176766472556}
   - component: {fileID: 5046471772670676029}
   - component: {fileID: 4113596556079458234}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 2112
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 2465637088382356829}
   - component: {fileID: 6820216802278515138}
   - component: {fileID: 8160758377674393617}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ Transform:
   m_GameObject: {fileID: 4911899343948877200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.23}
   m_LocalScale: {x: 1.5, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1520,7 +1520,7 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 16384
-        atime2: 39321
+        atime2: 45875
         atime3: 65535
         atime4: 0
         atime5: 0
@@ -1795,7 +1795,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -10
+      scalar: -5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1954,7 +1954,7 @@ ParticleSystem:
     orbitalZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5040,7 +5040,7 @@ GameObject:
   - component: {fileID: 4741713417343983102}
   - component: {fileID: 4405500443030580375}
   - component: {fileID: 7661611545219314050}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5148,7 +5148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1504816260774053263}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5195,8 +5195,12 @@ PrefabInstance:
       value: WarmVolume
       objectReference: {fileID: 0}
     - target: {fileID: 3514454160783257373, guid: 4a6601e84cace7444b89c9f68111ae73, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514454160783257373, guid: 4a6601e84cace7444b89c9f68111ae73, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9063082532579123273, guid: 4a6601e84cace7444b89c9f68111ae73, type: 3}
       propertyPath: m_LocalScale.x
@@ -5300,6 +5304,10 @@ PrefabInstance:
     - target: {fileID: 277070025005388486, guid: 817d3527aaa179f4f977baca4660ab82, type: 3}
       propertyPath: m_Name
       value: PortalVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 277070025005388486, guid: 817d3527aaa179f4f977baca4660ab82, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 277070025005388486, guid: 817d3527aaa179f4f977baca4660ab82, type: 3}
       propertyPath: m_IsActive

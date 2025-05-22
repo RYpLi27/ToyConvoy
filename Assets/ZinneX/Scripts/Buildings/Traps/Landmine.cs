@@ -54,6 +54,7 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
         GetComponent<PlacementCheck>().enabled = false;
         GetComponent<Collider>().enabled = true;
         triggerCol.enabled = true;
+        gameObject.layer = LayerMask.NameToLayer("Turret");
         normalCol.enabled = true;
         rangeBorder.SetActive(false);
         
