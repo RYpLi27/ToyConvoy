@@ -7942,6 +7942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1787137031941157901, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2465637088382356829, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.23
