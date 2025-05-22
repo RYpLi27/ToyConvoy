@@ -62,7 +62,7 @@ Material:
     - _TwirlStrenght: 18.22
     - _VopronoiDens: 5
     - _VoronoiAngleOffset: 25
-    - _time2: 0.31
+    - _time2: 0.1
     m_Colors:
     - _Color: {r: 1.3403145, g: 0.25130892, b: 7.9999995, a: 1}
     - _SpinSpeed_1: {r: 0.1, g: 0.1, b: 0, a: 0}
