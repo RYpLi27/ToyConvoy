@@ -58,9 +58,9 @@ Material:
     - _Dissolve: -1.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SpinSpeed: 0.0258
-    - _TwirlStrenght: 10
-    - _VopronoiDens: 25
+    - _SpinSpeed: 0.001
+    - _TwirlStrenght: 18.22
+    - _VopronoiDens: 5
     - _VoronoiAngleOffset: 25
     - _time2: 0.1
     m_Colors:

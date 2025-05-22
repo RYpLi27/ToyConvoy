@@ -7942,6 +7942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2465637088382356829, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.23
+      objectReference: {fileID: 0}
     - target: {fileID: 4229918144621006886, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7996,11 +8000,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: VelocityModule.orbitalX.scalar
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: VelocityModule.orbitalZ.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 16384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820216802278515138, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime2
+      value: 45875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
