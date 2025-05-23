@@ -4,5 +4,5 @@ using UnityEngine;
 public class EnemyStatsSO : StatsSO
 {
     public float moveSpeed;
-    public float damageToBase;
+    public int damageToBase;
 }
