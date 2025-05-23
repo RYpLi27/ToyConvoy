@@ -64,7 +64,7 @@ Material:
     - _VoronoiAngleOffset: 25
     - _time2: 0.1
     m_Colors:
-    - _Color: {r: 2.007844, g: 0.37647066, b: 11.984314, a: 1}
+    - _Color: {r: 1.003922, g: 0.18823533, b: 5.992157, a: 1}
     - _SpinSpeed_1: {r: 0.1, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
