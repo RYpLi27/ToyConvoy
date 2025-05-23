@@ -19,4 +19,4 @@ MonoBehaviour:
   horizontalRecoil: 0.05
   numberOfBullets: 1
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
-  bulletHitPrefab: {fileID: 1777328636036230051, guid: 0786c48a9c3fff7449f28f77d8ee371c, type: 3}
+  bulletHitPrefab: {fileID: 833078818548240088, guid: 86acfcdbc6e4ee442bb039d7b3263cac, type: 3}

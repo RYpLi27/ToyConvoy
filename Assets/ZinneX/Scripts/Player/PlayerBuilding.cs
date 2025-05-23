@@ -35,7 +35,7 @@ public class PlayerBuilding : MonoBehaviour {
         HideBuilding();
     }
 
-    private void Update() {
+    private void LateUpdate() {
         MoveTurretPlacePoint();
         RotateTurretPlacePoint();
     }
