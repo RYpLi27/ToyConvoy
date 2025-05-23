@@ -13,7 +13,7 @@ public class PlayerLook : MonoBehaviour
     private Rigidbody rb;
 
     private HealthManager currentTarget;
-    private IInteractable currentBuilding;
+    private InteractTrigger currentBuilding;
     
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -24,7 +24,7 @@ public class PlayerLook : MonoBehaviour
         xRotation = transform.rotation.eulerAngles.x;
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         HandleLook();
     }
 
@@ -36,8 +36,8 @@ public class PlayerLook : MonoBehaviour
     }
 
     private bool BuildingLook(Ray ray) {
-        if (Physics.Raycast(ray, out RaycastHit buildingHit, 15f, StaticVariables.whatIsBuilding, QueryTriggerInteraction.Ignore)) {
-            IInteractable building = buildingHit.collider.GetComponent<IInteractable>();
+        if (Physics.Raycast(ray, out RaycastHit buildingHit, 15f, StaticVariables.whatIsInteractable, QueryTriggerInteraction.Collide)) {
+            InteractTrigger building = buildingHit.collider.GetComponent<InteractTrigger>();
             if (building != null && currentBuilding != building) {
                 currentBuilding?.ShowPrompt(false);
                 currentBuilding = building;
