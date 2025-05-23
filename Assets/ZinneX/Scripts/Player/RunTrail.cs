@@ -19,10 +19,12 @@ public class RunTrail : MonoBehaviour {
     }
 
     public void DisableTrail() {
+        if (DOTween.IsTweening("DisableTrail")) return;
+        
         DOTween.Kill("EnableTrail");
         foreach (TrailRenderer trail in trails) {
             Sequence sequence = DOTween.Sequence().SetId("DisableTrail");
-            sequence.Append(trail.DOTime(walkTrailTime, .5f)).SetEase(Ease.InOutSine);
+            sequence.Append(trail.DOTime( walkTrailTime, .5f)).SetEase(Ease.InOutSine);
             sequence.AppendCallback(() => { trail.enabled = false; });
             sequence.Play();
         }
