@@ -8,6 +8,7 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private Collider normalCol;
     [SerializeField] private GameObject rangeBorder;
     [SerializeField] private TurretPrompt upgradePrompt;
+    [SerializeField] private InteractTrigger interactTrigger;
     [SerializeField] private MeshRenderer objectModel;
     private int currentLevel;
     
@@ -54,8 +55,10 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
         GetComponent<PlacementCheck>().enabled = false;
         GetComponent<Collider>().enabled = true;
         triggerCol.enabled = true;
+        gameObject.layer = LayerMask.NameToLayer("EnvironmentalTrap");
         normalCol.enabled = true;
         rangeBorder.SetActive(false);
+        interactTrigger.gameObject.SetActive(true);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = landmineSO.objectMaterial;

@@ -9,6 +9,7 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
     [SerializeField] private TurretPrompt upgradePrompt;
+    [SerializeField] private InteractTrigger interactTrigger;
 
     private int currentLevel;
     
@@ -60,6 +61,8 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
         GetComponent<PlacementCheck>().enabled = false;
         triggerCol.enabled = true;
         normalCol.enabled = true;
+        gameObject.layer = LayerMask.NameToLayer("Turret");
+        interactTrigger.gameObject.SetActive(true);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;

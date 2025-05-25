@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: DevGun
   m_EditorClassIdentifier: 
   fireRate: 30
-  damage: 50
+  damage: 200
   weaponRange: 90
   verticalRecoil: 0.1
   horizontalRecoil: 0.1
-  numberOfBullets: 10
+  numberOfBullets: 1
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
-  bulletHitPrefab: {fileID: 7464196065622715701, guid: f368a4cebfcadca4ea89fe02784ed2bd, type: 3}
+  bulletHitPrefab: {fileID: 833078818548240088, guid: 86acfcdbc6e4ee442bb039d7b3263cac, type: 3}

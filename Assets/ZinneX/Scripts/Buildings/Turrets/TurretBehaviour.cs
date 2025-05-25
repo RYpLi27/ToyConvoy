@@ -14,6 +14,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private Collider normalCol;
     [SerializeField] private GameObject rangeBorder;
     [SerializeField] private TurretPrompt upgradePrompt;
+    [SerializeField] private InteractTrigger interactTrigger;
 
     private int currentLevel;
     
@@ -74,6 +75,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         triggerCol.enabled = true;
         normalCol.enabled = true;
         rangeBorder.SetActive(false);
+        interactTrigger.gameObject.SetActive(true);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = turretSO.objectMaterial;
