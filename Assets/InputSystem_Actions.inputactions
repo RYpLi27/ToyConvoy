@@ -38,11 +38,11 @@
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Crouch",
+                    "name": "SpawnWave",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
                     "expectedControlType": "",
@@ -63,7 +63,7 @@
                     "name": "Previous",
                     "type": "Button",
                     "id": "2776c80d-3c14-4091-8c56-d04ced07a2b0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -112,6 +112,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AddGoldTesting",
+                    "type": "Button",
+                    "id": "8400c193-1586-4df7-bc57-5951fe379c75",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TurretRotation",
+                    "type": "Value",
+                    "id": "64fa0a23-f21d-4de9-8757-9a46b6ab653a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -485,7 +503,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Crouch",
+                    "action": "SpawnWave",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -496,7 +514,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Crouch",
+                    "action": "SpawnWave",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -574,6 +592,61 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "SwapMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "One Modifier",
+                    "id": "eaaa297a-2756-495e-b139-4e6af8c91ba3",
+                    "path": "OneModifier(modifiersOrder=1)",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AddGoldTesting",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "e3698086-de53-4d62-8556-12d899292f3f",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AddGoldTesting",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "5145dc14-fb49-4db8-ad75-22fdecb5a96f",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AddGoldTesting",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2eb8ece8-59ff-4c9e-ba10-4670572b9b05",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "Scale(factor=-1)",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "TurretRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "533b4876-08d4-44ec-b8a0-2f158ff9072c",
+                    "path": "<Mouse>/scroll/up",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "TurretRotation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -15,6 +15,12 @@ MonoBehaviour:
   buildingName: Spikes
   description: Deals damage over time when enemy stand on it
   price: 200
-  damagePerSecond: 18
-  hitInstancesPerSecond: 6
+  turretStats:
+  - damagePerSecond: 35
+    upgradePrice: 250
+  - damagePerSecond: 45
+    upgradePrice: 400
+  - damagePerSecond: 60
+    upgradePrice: 0
+  hitInstancesPerSecond: 12
   objectMaterial: {fileID: 2100000, guid: 29f30f19091fbbf4996cdc6dabe190ac, type: 2}

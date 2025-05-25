@@ -9,17 +9,19 @@ public class PiercingProjectile : MonoBehaviour
     private float entireFlightLength;
     private float currentFlightLength;
     private PiercingTurret turretSO;
+    private TurretSO.TurretStats stats;
     
-    public void SetupProjectile(PiercingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict) {
+    public void SetupProjectile(PiercingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict, TurretSO.TurretStats newStats) {
         currentFlightLength = 0;
         turretSO = newTurretSO;
+        stats = newStats;
         
         startPos = transform.position;
         targetPos = newTarget + movePredict * turretSO.movementPredictDistance;
         targetPos += (targetPos - startPos).normalized * turretSO.overshootDistance; // APPLYING OVERSHOOT (MORE DETAILS IN PiercingTurret.cs)
         
         distance = Vector3.Distance(startPos, targetPos);
-        entireFlightLength = distance / turretSO.projectileSpeed;
+        entireFlightLength = distance / stats.projectileSpeed;
         
         transform.rotation = Quaternion.LookRotation(targetPos - transform.position);
         GetComponent<Collider>().enabled = true;
@@ -58,7 +60,7 @@ public class PiercingProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
-            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage, transform.position);
+            other.GetComponent<HealthManager>().TakeDamage(stats.damage, transform.position);
         }
     }
 }

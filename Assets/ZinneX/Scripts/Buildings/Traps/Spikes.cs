@@ -1,12 +1,17 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour, IBuilding {
+public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private SpikesSO spikesSO;
     public int Price => spikesSO.price;
     
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
+    [SerializeField] private TurretPrompt upgradePrompt;
+    [SerializeField] private InteractTrigger interactTrigger;
+
+    private int currentLevel;
     
     private Dictionary<HealthManager, float> enemiesInRange = new(); //TARGET, LAST HIT TIME
     
@@ -34,7 +39,7 @@ public class Spikes : MonoBehaviour, IBuilding {
                 
                 if (Time.time - enemiesInRange[enemy] < 1f / spikesSO.hitInstancesPerSecond) continue;
                 
-                enemy.TakeDamage(spikesSO.damagePerSecond / spikesSO.hitInstancesPerSecond, enemy.transform.position + Vector3.up);
+                enemy.TakeDamage(spikesSO.turretStats[currentLevel].damagePerSecond / spikesSO.hitInstancesPerSecond, enemy.transform.position + Vector3.up);
                 enemiesInRange[enemy] = Time.time;
             }
         }
@@ -51,11 +56,13 @@ public class Spikes : MonoBehaviour, IBuilding {
     // }
     
     public bool EnableBuilding() {
-        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.BuyTurret(spikesSO.price) == false) return false;
+        if (GetComponent<PlacementCheck>().canPlace == false || GoldManager.instance.PriceCheck(spikesSO.price, true) == false) return false;
         
         GetComponent<PlacementCheck>().enabled = false;
         triggerCol.enabled = true;
         normalCol.enabled = true;
+        gameObject.layer = LayerMask.NameToLayer("Turret");
+        interactTrigger.gameObject.SetActive(true);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;
@@ -63,13 +70,25 @@ public class Spikes : MonoBehaviour, IBuilding {
     }
     
     public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(spikesSO.price);
+        return GoldManager.instance.PriceCheck(spikesSO.price, false);
     }
     
     public string GetDescription() {
         return $"{spikesSO.buildingName}\n\n" +
-               $"Damage per second: {spikesSO.damagePerSecond}\n" +
+               $"Damage per second: {spikesSO.turretStats[0].damagePerSecond}\n" +
                $"Cost: {spikesSO.price}\n\n" +
                $"{spikesSO.description}";
+    }
+    
+    public void ShowPrompt(bool value) {
+        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.gameObject.SetActive(value);
+    }
+    
+    public void Interact() {
+        if (spikesSO.turretStats.Count - 1 == currentLevel || GoldManager.instance.PriceCheck(spikesSO.turretStats[currentLevel].upgradePrice, true) == false) return;
+
+        currentLevel++;
+        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel);
     }
 }
