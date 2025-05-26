@@ -4,11 +4,13 @@ using UnityEngine;
 public class TurretPrompt : MonoBehaviour {
     [SerializeField] private TMP_Text costText;
     [SerializeField] private TMP_Text levelText;
+    [SerializeField] private TMP_Text statsText;
     [SerializeField] private GameObject inputImage;
 
-    public void UpdatePromptUI(int cost, int level) {
+    public void UpdatePromptUI(int cost, int level, string stats) {
         UpdateCost(cost);
         UpdateLevel(level + 1);
+        UpdateStats(stats);
     }
     
     private void UpdateCost(int value) {
@@ -28,5 +30,9 @@ public class TurretPrompt : MonoBehaviour {
         }
         
         levelText.text = newLevelText;
+    }
+
+    private void UpdateStats(string stats) {
+        statsText.text = stats;
     }
 }
