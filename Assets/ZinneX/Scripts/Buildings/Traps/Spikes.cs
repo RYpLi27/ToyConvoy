@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using TMPro;
+using System;
 using UnityEngine;
 
 public class Spikes : MonoBehaviour, IBuilding, IInteractable {
@@ -69,26 +69,28 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
         return true;
     }
     
-    public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(spikesSO.price, false);
-    }
-    
-    public string GetDescription() {
-        return $"{spikesSO.buildingName}\n\n" +
-               $"Damage per second: {spikesSO.turretStats[0].damagePerSecond}\n" +
-               $"Cost: {spikesSO.price}\n\n" +
-               $"{spikesSO.description}";
-    }
-    
+    public bool PriceCheck() => GoldManager.instance.PriceCheck(spikesSO.price, false);
+
+    public string GetDescription() =>
+        $"{spikesSO.buildingName}\n\n" +
+        $"<sprite name=\"damage\"> {spikesSO.turretStats[0].damagePerSecond}\n" +
+        $"<sprite name=\"gold\"> {spikesSO.price}\n\n" +
+        $"{spikesSO.description}";
+
     public void ShowPrompt(bool value) {
-        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
         upgradePrompt.gameObject.SetActive(value);
     }
+
+    private string GetStatsText() => currentLevel < spikesSO.turretStats.Count - 1
+        ? $"<sprite name=\"damage\"> {spikesSO.turretStats[currentLevel].damagePerSecond}<color=green>(+{Math.Round(spikesSO.turretStats[currentLevel + 1].damagePerSecond - spikesSO.turretStats[currentLevel].damagePerSecond, 2)})</color>\n"
+        
+        : $"<sprite name=\"damage\"> {spikesSO.turretStats[currentLevel].damagePerSecond}\n";
     
     public void Interact() {
         if (spikesSO.turretStats.Count - 1 == currentLevel || GoldManager.instance.PriceCheck(spikesSO.turretStats[currentLevel].upgradePrice, true) == false) return;
 
         currentLevel++;
-        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
     }
 }

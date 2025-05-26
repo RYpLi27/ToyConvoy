@@ -19,13 +19,13 @@ MonoBehaviour:
     wave)'
   price: 125
   turretStats:
-  - damage: 30
-    explosionRange: 3
-    upgradePrice: 200
-  - damage: 40
+  - damage: 50
     explosionRange: 3
     upgradePrice: 250
-  - damage: 50
+  - damage: 80
+    explosionRange: 3
+    upgradePrice: 450
+  - damage: 125
     explosionRange: 4
     upgradePrice: 0
   objectMaterial: {fileID: 2100000, guid: a2fb9ff50c220904c8f22fa2c6615f45, type: 2}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class Landmine : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private LandmineSO landmineSO;
@@ -65,28 +66,32 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
         return true;
     }
 
-    public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(landmineSO.price, false);
-    }
-    
-    public string GetDescription() {
-        return $"{landmineSO.buildingName}\n\n" +
-               $"Damage: {landmineSO.turretStats[0].damage}\n" +
-               $"Range: {landmineSO.turretStats[0].explosionRange}\n" +
-               $"Cost: {landmineSO.price}\n\n" +
-               $"{landmineSO.description}";
-    }
+    public bool PriceCheck() => GoldManager.instance.PriceCheck(landmineSO.price, false);
+
+    public string GetDescription() =>
+        $"{landmineSO.buildingName}\n\n" +
+        $"<sprite name=\"damage\"> {landmineSO.turretStats[0].damage}\n" +
+        $"<sprite name=\"range\"> {landmineSO.turretStats[0].explosionRange}\n" +
+        $"<sprite name=\"gold\"> {landmineSO.price}\n\n" +
+        $"{landmineSO.description}";
 
     public void ShowPrompt(bool value) {
-        upgradePrompt.UpdatePromptUI(landmineSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(landmineSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
         upgradePrompt.gameObject.SetActive(value);
     }
 
+    private string GetStatsText() => currentLevel < landmineSO.turretStats.Count - 1
+        ? $"<sprite name=\"damage\"> {landmineSO.turretStats[currentLevel].damage}<color=green>(+{Math.Round(landmineSO.turretStats[currentLevel + 1].damage - landmineSO.turretStats[currentLevel].damage, 2)})</color>\n" +
+          $"<sprite name=\"range\"> {landmineSO.turretStats[currentLevel].explosionRange}<color=green>(+{Math.Round(landmineSO.turretStats[currentLevel + 1].explosionRange - landmineSO.turretStats[currentLevel].explosionRange, 2)})</color>\n"
+          
+        : $"<sprite name=\"damage\"> {landmineSO.turretStats[currentLevel].damage}\n" +
+          $"<sprite name=\"range\"> {landmineSO.turretStats[currentLevel].explosionRange}\n";
+    
     public void Interact() {
         if (landmineSO.turretStats.Count - 1 == currentLevel || GoldManager.instance.PriceCheck(landmineSO.turretStats[currentLevel].upgradePrice, true) == false) return;
 
         currentLevel++;
-        upgradePrompt.UpdatePromptUI(landmineSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(landmineSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
     }
     
     private void OnDrawGizmos() {

@@ -21,13 +21,13 @@ MonoBehaviour:
     range: 10
     projectileSpeed: 25
     upgradePrice: 350
-  - damage: 26
+  - damage: 36
     fireRate: 1.35
     range: 10
     projectileSpeed: 25
-    upgradePrice: 400
-  - damage: 30
-    fireRate: 1.5
+    upgradePrice: 500
+  - damage: 55
+    fireRate: 1.45
     range: 12
     projectileSpeed: 30
     upgradePrice: 0
