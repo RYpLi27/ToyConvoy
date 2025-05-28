@@ -37,6 +37,9 @@ public class GoldManager : MonoBehaviour {
         UpdateUI();
     }
 
+    /// <summary>
+    /// Returns true when you can afford the purchase
+    /// </summary>
     public bool PriceCheck(int amount, bool useGold) {
         if (useGold == false) return !(amount > currentGold);
         
