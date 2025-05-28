@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 public class Landmine : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private LandmineSO landmineSO;
@@ -27,8 +28,11 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
     private void Explode() {
         Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, landmineSO.turretStats[0].explosionRange, StaticVariables.whatIsEnemy);
 
+        List<Transform> enemiesHit = new();
         foreach (Collider col in enemiesInRange) {
-            col.GetComponent<HealthManager>().TakeDamage(landmineSO.turretStats[0].damage, col.transform.position + Vector3.up);
+            if (enemiesHit.Contains(col.transform.parent)) continue;
+            enemiesHit.Add(col.transform.parent);
+            col.GetComponentInParent<HealthManager>().TakeDamage(landmineSO.turretStats[0].damage, col.transform.position + Vector3.up);
         }
         
         // ObjectPoolManager.ReturnObjectToPool(gameObject);

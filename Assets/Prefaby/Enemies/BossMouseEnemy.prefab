@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4383663652265737999}
   - component: {fileID: 2168511631882758696}
   - component: {fileID: 7379180005686809375}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: BodyCollider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 37120
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -80,9 +80,9 @@ GameObject:
   - component: {fileID: 8758805315516537863}
   - component: {fileID: 631758815218872417}
   - component: {fileID: 6321873827358712375}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: HeadCollider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 37120
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -145,7 +145,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4357919155560816583}
-  - component: {fileID: 8921427345267157978}
   - component: {fileID: 4142041342264047455}
   - component: {fileID: 3294363414632374468}
   - component: {fileID: 2326234970246017720}
@@ -176,27 +175,6 @@ Transform:
   - {fileID: 4383663652265737999}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8921427345267157978
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5571514956933692922}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.909726, y: 0.69, z: 1.6248226}
-  m_Center: {x: -0.06046788, y: 0.259709, z: -0.15072982}
 --- !u!54 &4142041342264047455
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -30,7 +30,6 @@ public class Weapon : MonoBehaviour {
             
             if(Physics.Raycast(firePoint.position, GetAimPosition() + randomRecoil - firePoint.position, out RaycastHit ray, weaponSO.weaponRange, whatIsTarget, QueryTriggerInteraction.Ignore)) {
                 if (ray.collider.CompareTag("Enemy")) {
-                    Debug.Log(ray.collider);
                     float damageDealt = ray.collider.GetComponent<Hitbox>().Hit(weaponSO.damage, ray.point);
                 }
                 Debug.Log(ray.transform);

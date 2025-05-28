@@ -17,13 +17,13 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
-            enemiesInRange.Add(other.GetComponent<HealthManager>(), 0);
+            enemiesInRange.Add(other.GetComponentInParent<HealthManager>(), 0);
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Enemy")) {
-            if(enemiesInRange.ContainsKey(other.GetComponent<HealthManager>())) enemiesInRange.Remove(other.GetComponent<HealthManager>());
+            if(enemiesInRange.ContainsKey(other.GetComponentInParent<HealthManager>())) enemiesInRange.Remove(other.GetComponentInParent<HealthManager>());
         }
     }
 
