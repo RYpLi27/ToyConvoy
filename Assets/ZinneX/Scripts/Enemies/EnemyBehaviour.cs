@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour {
     [SerializeField] [InfoBox("To see values click on pen at the right side")] private EnemyStatsSO statsSO;
-    private Node currentNode;
+    private Node currentNode, previousNode;
     private Vector3 nodeOffset;
 
     public Vector3 MoveDir => (currentNode.transform.position + nodeOffset - transform.position).normalized;
 
     private bool isRoundabout;
+    public bool backtrack;
     
     private void OnEnable() {
         FirstNodeAndOffset();
@@ -23,7 +24,11 @@ public class EnemyBehaviour : MonoBehaviour {
     public void CustomUpdate() {
         // if (GameManager.gameState != GameManager.GameState.Ongoing) return; IT'S IN THE ENEMYMANAGER
         
-        if (isRoundabout == false) { MoveStraight(); }
+        if(backtrack == true && currentNode != previousNode) FindPreviousNode();
+
+        if (isRoundabout == false) {
+            MoveStraight();
+        }
         else { MoveInCircle(); }
         
     }
@@ -31,17 +36,27 @@ public class EnemyBehaviour : MonoBehaviour {
     private void FirstNodeAndOffset() {
         currentNode = EnemyPathManager.instance.startingNode;
         if (currentNode != null) { isRoundabout = currentNode.isRoundabout; } 
-        nodeOffset = new Vector3(Random.Range(-3f, 3f), 0, Random.Range(-3f, 3f));
+        nodeOffset = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
     }
     
     private void FindNextNode() {
-        currentNode = currentNode.GetNextNode();
-        if (currentNode != null) { isRoundabout = currentNode.isRoundabout; } 
+        previousNode = currentNode;
+        if (backtrack == false) {
+            currentNode = currentNode.GetNextNode();
+        } else {
+            currentNode = currentNode.GetBacktrackNode();
+            backtrack = false;
+        }
+        if (backtrack == true || currentNode != null) { isRoundabout = currentNode.isRoundabout; } 
         else { ReachPlayerBase(); }
     }
 
+    private void FindPreviousNode() {
+        currentNode = previousNode;
+    }
+    
     public void TryFindNode(Node node) {
-        if(node == currentNode) FindNextNode();
+        if(node == currentNode && backtrack == false) FindNextNode();
     }
     
     private void ReachPlayerBase() {
@@ -73,4 +88,5 @@ public class EnemyBehaviour : MonoBehaviour {
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(afterPos - previousPos), .15f);
         // FINDING NEXT NODE IS HANDLED IN SCRIPT RoundaboutNode.cs by collision
     }
+    
 }
