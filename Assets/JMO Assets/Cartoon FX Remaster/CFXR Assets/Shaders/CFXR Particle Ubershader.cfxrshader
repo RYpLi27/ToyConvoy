@@ -174,7 +174,8 @@ Shader "Cartoon FX/Remaster/Particle Ubershader"
 		}
 
 		Blend [_SrcBlend] [_DstBlend], One One
-		ZWrite [_ZWrite]
+		ZWrite Off
+		ZTest Always
 		Cull  Off
 
 /*** URP ***/

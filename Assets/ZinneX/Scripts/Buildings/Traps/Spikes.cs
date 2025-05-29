@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using TMPro;
+using System;
 using UnityEngine;
 
 public class Spikes : MonoBehaviour, IBuilding, IInteractable {
@@ -9,6 +9,7 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
     [SerializeField] private TurretPrompt upgradePrompt;
+    [SerializeField] private InteractTrigger interactTrigger;
 
     private int currentLevel;
     
@@ -16,13 +17,13 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
-            enemiesInRange.Add(other.GetComponent<HealthManager>(), 0);
+            enemiesInRange.Add(other.GetComponentInParent<HealthManager>(), 0);
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Enemy")) {
-            if(enemiesInRange.ContainsKey(other.GetComponent<HealthManager>())) enemiesInRange.Remove(other.GetComponent<HealthManager>());
+            if(enemiesInRange.ContainsKey(other.GetComponentInParent<HealthManager>())) enemiesInRange.Remove(other.GetComponentInParent<HealthManager>());
         }
     }
 
@@ -61,31 +62,35 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
         triggerCol.enabled = true;
         normalCol.enabled = true;
         gameObject.layer = LayerMask.NameToLayer("Turret");
+        interactTrigger.gameObject.SetActive(true);
+        
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;
         return true;
     }
     
-    public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(spikesSO.price, false);
-    }
-    
-    public string GetDescription() {
-        return $"{spikesSO.buildingName}\n\n" +
-               $"Damage per second: {spikesSO.turretStats[0].damagePerSecond}\n" +
-               $"Cost: {spikesSO.price}\n\n" +
-               $"{spikesSO.description}";
-    }
-    
+    public bool PriceCheck() => GoldManager.instance.PriceCheck(spikesSO.price, false);
+
+    public string GetDescription() =>
+        $"{spikesSO.buildingName}\n\n" +
+        $"<sprite name=\"damage\"> {spikesSO.turretStats[0].damagePerSecond}\n" +
+        $"<sprite name=\"gold\"> {spikesSO.price}\n\n" +
+        $"{spikesSO.description}";
+
     public void ShowPrompt(bool value) {
-        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
         upgradePrompt.gameObject.SetActive(value);
     }
+
+    private string GetStatsText() => currentLevel < spikesSO.turretStats.Count - 1
+        ? $"<sprite name=\"damage\"> {spikesSO.turretStats[currentLevel].damagePerSecond}<color=green>(+{Math.Round(spikesSO.turretStats[currentLevel + 1].damagePerSecond - spikesSO.turretStats[currentLevel].damagePerSecond, 2)})</color>\n"
+        
+        : $"<sprite name=\"damage\"> {spikesSO.turretStats[currentLevel].damagePerSecond}\n";
     
     public void Interact() {
         if (spikesSO.turretStats.Count - 1 == currentLevel || GoldManager.instance.PriceCheck(spikesSO.turretStats[currentLevel].upgradePrice, true) == false) return;
 
         currentLevel++;
-        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(spikesSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
     }
 }

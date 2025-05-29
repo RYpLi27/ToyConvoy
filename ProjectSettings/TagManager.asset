@@ -10,6 +10,7 @@ TagManager:
   - Explosive
   - TrapDOT
   - Road
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -27,9 +28,9 @@ TagManager:
   - LayerMask
   - SeeThrough
   - Wall
-  - 
-  - 
-  - 
+  - EnvironmentalTrap
+  - InteractTrigger
+  - Node
   - 
   - 
   - 

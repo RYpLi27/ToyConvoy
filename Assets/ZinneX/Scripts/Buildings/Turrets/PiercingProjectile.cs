@@ -60,7 +60,7 @@ public class PiercingProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
-            other.GetComponent<HealthManager>().TakeDamage(stats.damage, transform.position);
+            other.GetComponentInParent<HealthManager>().TakeDamage(stats.damage, transform.position);
         }
     }
 }

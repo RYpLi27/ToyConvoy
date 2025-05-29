@@ -5,8 +5,8 @@ public class Weapon : MonoBehaviour {
     [SerializeField] private WeaponSO weaponSO;
     [SerializeField] private Transform firePoint;
     [SerializeField] private LayerMask whatIsTarget;
-    [SerializeField] private Material enemyHitMaterial;
-    [SerializeField] private Material obstacleHitMaterial;
+    // [SerializeField] private Material enemyHitMaterial;
+    // [SerializeField] private Material obstacleHitMaterial;
     [SerializeField] private GameObject damageText;
 
     private float lastShootTime;
@@ -29,11 +29,12 @@ public class Weapon : MonoBehaviour {
             Vector3 randomRecoil = Vector3.up * Random.Range(-weaponSO.verticalRecoil, weaponSO.verticalRecoil) + Vector3.right * Random.Range(-weaponSO.horizontalRecoil, weaponSO.horizontalRecoil);
             
             if(Physics.Raycast(firePoint.position, GetAimPosition() + randomRecoil - firePoint.position, out RaycastHit ray, weaponSO.weaponRange, whatIsTarget, QueryTriggerInteraction.Ignore)) {
-                if (ray.transform.CompareTag("Enemy")) {
-                    float damageDealt = ray.transform.GetComponent<HealthManager>().TakeDamage(weaponSO.damage, ray.point);
+                if (ray.collider.CompareTag("Enemy")) {
+                    float damageDealt = ray.collider.GetComponent<Hitbox>().Hit(weaponSO.damage, ray.point);
                 }
-                
-                CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitMaterial : obstacleHitMaterial);
+                Debug.Log(ray.transform);
+                // CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitMaterial : obstacleHitMaterial);
+                CreateHitEffect(ray.point);
                 CreateBulletTrail(firePoint.position, ray.point);
             } else {
                 CreateBulletTrail(firePoint.position,  GetAimPosition() + randomRecoil);
@@ -49,10 +50,15 @@ public class Weapon : MonoBehaviour {
         return cameraRay.origin + cameraRay.direction * weaponSO.weaponRange;
     }
     
-    private void CreateHitEffect(Vector3 position, Material material) {
-        ParticleSystemRenderer hitEffect = ObjectPoolManager.SpawnObject(weaponSO.bulletHitPrefab, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<ParticleSystemRenderer>();
-        if (hitEffect == null) return;
-        hitEffect.material = material;
+    // USE THIS WHEN DIFFERENT MATERIAL IS NEEDED WHEN HITTING ENEMY AND OBSTACLE
+    // private void CreateHitEffect(Vector3 position, Material material) { 
+    //     ParticleSystemRenderer hitEffect = ObjectPoolManager.SpawnObject(weaponSO.bulletHitPrefab, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<ParticleSystemRenderer>();
+    //     if (hitEffect == null) return;
+    //     hitEffect.material = material;
+    // }
+    
+    private void CreateHitEffect(Vector3 position) {
+        ObjectPoolManager.SpawnObject(weaponSO.bulletHitPrefab, position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<ParticleSystemRenderer>();
     }
     
     private void CreateBulletTrail(Vector3 start, Vector3 end) {

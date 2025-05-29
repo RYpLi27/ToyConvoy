@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private Collider normalCol;
     [SerializeField] private GameObject rangeBorder;
     [SerializeField] private TurretPrompt upgradePrompt;
+    [SerializeField] private InteractTrigger interactTrigger;
 
     private int currentLevel;
     
@@ -74,6 +76,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         triggerCol.enabled = true;
         normalCol.enabled = true;
         rangeBorder.SetActive(false);
+        interactTrigger.gameObject.SetActive(true);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = turretSO.objectMaterial;
@@ -81,33 +84,40 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         return true;
     }
 
-    public bool PriceCheck() {
-        return GoldManager.instance.PriceCheck(turretSO.price, false);
-    }
-    
+    public bool PriceCheck() => GoldManager.instance.PriceCheck(turretSO.price, false);
+
     private void OnDrawGizmos() {
         Gizmos.color = Color.cyan;
         if(turretSO != null)
             Gizmos.DrawWireSphere(transform.position, turretSO.turretStats[currentLevel].range);
     }
 
-    public string GetDescription() {
-        return $"{turretSO.buildingName}\n\n" +
-               $"Damage: {turretSO.turretStats[0].damage}\n" +
-               $"Attacks per second: {turretSO.turretStats[0].fireRate}\n" +
-               $"Range: {turretSO.turretStats[0].range}\n" +
-               $"Cost: {turretSO.price}\n\n" +
-               $"{turretSO.description}";
-    }
+    public string GetDescription() =>
+        $"{turretSO.buildingName}\n\n" +
+        $"<sprite name=\"damage\"> {turretSO.turretStats[0].damage}\n" +
+        $"<sprite name=\"attackSpeed\"> {turretSO.turretStats[0].fireRate}\n" +
+        $"<sprite name=\"range\"> {turretSO.turretStats[0].range}\n" +
+        $"<sprite name=\"gold\"> {turretSO.price}\n\n" +
+        $"{turretSO.description}";
+
     public void ShowPrompt(bool value) {
-        upgradePrompt.UpdatePromptUI(turretSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(turretSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
         upgradePrompt.gameObject.SetActive(value);
     }
-    
+
+    private string GetStatsText() => currentLevel < turretSO.turretStats.Count - 1
+        ? $"<sprite name=\"damage\"> {turretSO.turretStats[currentLevel].damage}<color=green>(+{Math.Round(turretSO.turretStats[currentLevel + 1].damage - turretSO.turretStats[currentLevel].damage, 2)})</color>\n" +
+          $"<sprite name=\"attackSpeed\"> {turretSO.turretStats[currentLevel].fireRate}<color=green>(+{Math.Round(turretSO.turretStats[currentLevel + 1].fireRate - turretSO.turretStats[currentLevel].fireRate, 2)})</color>\n" +
+          $"<sprite name=\"range\"> {turretSO.turretStats[currentLevel].range}<color=green>(+{Math.Round(turretSO.turretStats[currentLevel + 1].range - turretSO.turretStats[currentLevel].range, 2)})</color>\n"
+          
+        : $"<sprite name=\"damage\"> {turretSO.turretStats[currentLevel].damage}\n" +
+          $"<sprite name=\"attackSpeed\"> {turretSO.turretStats[currentLevel].fireRate}\n" +
+          $"<sprite name=\"range\"> {turretSO.turretStats[currentLevel].range}\n";
+
     public void Interact() {
         if (turretSO.turretStats.Count - 1 == currentLevel || GoldManager.instance.PriceCheck(turretSO.turretStats[currentLevel].upgradePrice, true) == false) return;
 
         currentLevel++;
-        upgradePrompt.UpdatePromptUI(turretSO.turretStats[currentLevel].upgradePrice, currentLevel);
+        upgradePrompt.UpdatePromptUI(turretSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
     }
 }
