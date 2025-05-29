@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PiercingProjectile : MonoBehaviour
@@ -11,10 +12,13 @@ public class PiercingProjectile : MonoBehaviour
     private PiercingTurret turretSO;
     private TurretSO.TurretStats stats;
     
+    private List<Transform> enemiesHit = new();
+    
     public void SetupProjectile(PiercingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict, TurretSO.TurretStats newStats) {
         currentFlightLength = 0;
         turretSO = newTurretSO;
         stats = newStats;
+        enemiesHit.Clear();
         
         startPos = transform.position;
         targetPos = newTarget + movePredict * turretSO.movementPredictDistance;
@@ -59,7 +63,8 @@ public class PiercingProjectile : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Enemy")) {
+        if (other.CompareTag("Enemy") && enemiesHit.Contains(other.transform.parent) == false) {
+            enemiesHit.Add(other.transform.parent);
             other.GetComponentInParent<HealthManager>().TakeDamage(stats.damage, transform.position);
         }
     }
