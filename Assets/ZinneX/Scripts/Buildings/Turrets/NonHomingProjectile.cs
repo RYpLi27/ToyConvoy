@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NonHomingProjectile : MonoBehaviour {
@@ -48,8 +49,11 @@ public class NonHomingProjectile : MonoBehaviour {
         Collider[] enemiesInRadius = Physics.OverlapSphere(transform.position, turretSO.hitRadius, StaticVariables.whatIsEnemy);
         if (enemiesInRadius.Length == 0) { return; }
 
+        List<Transform> enemiesHit = new();
+        
         foreach (Collider other in enemiesInRadius) {
-            if (other.gameObject.activeInHierarchy == false) continue;
+            if (other.gameObject.activeInHierarchy == false || enemiesHit.Contains(other.transform.parent)) continue;
+            enemiesHit.Add(other.transform.parent);
             other.GetComponentInParent<HealthManager>().TakeDamage(stats.damage, transform.position);
         }
         
