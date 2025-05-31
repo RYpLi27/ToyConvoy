@@ -29,8 +29,8 @@ public class Weapon : MonoBehaviour {
             Vector3 randomRecoil = Vector3.up * Random.Range(-weaponSO.verticalRecoil, weaponSO.verticalRecoil) + Vector3.right * Random.Range(-weaponSO.horizontalRecoil, weaponSO.horizontalRecoil);
             
             if(Physics.Raycast(firePoint.position, GetAimPosition() + randomRecoil - firePoint.position, out RaycastHit ray, weaponSO.weaponRange, whatIsTarget, QueryTriggerInteraction.Ignore)) {
-                if (ray.transform.CompareTag("Enemy")) {
-                    float damageDealt = ray.transform.GetComponent<HealthManager>().TakeDamage(weaponSO.damage, ray.point);
+                if (ray.collider.CompareTag("Enemy")) {
+                    float damageDealt = ray.collider.GetComponent<Hitbox>().Hit(weaponSO.damage, ray.point);
                 }
                 
                 // CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitMaterial : obstacleHitMaterial);

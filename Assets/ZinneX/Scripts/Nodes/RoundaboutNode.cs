@@ -4,7 +4,7 @@ public class RoundaboutNode : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Enemy")) {
-            other.GetComponent<EnemyBehaviour>().TryFindNode(GetComponent<Node>());
+            other.GetComponentInParent<EnemyBehaviour>().TryFindNode(GetComponent<Node>());
         }
     }
 }
