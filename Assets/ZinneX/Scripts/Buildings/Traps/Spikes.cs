@@ -16,7 +16,7 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     private Dictionary<HealthManager, float> enemiesInRange = new(); //TARGET, LAST HIT TIME
     
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Enemy")) {
+        if (other.CompareTag("Enemy") && enemiesInRange.ContainsKey(other.GetComponentInParent<HealthManager>()) == false) {
             enemiesInRange.Add(other.GetComponentInParent<HealthManager>(), 0);
         }
     }
@@ -30,6 +30,7 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     private void Update() {
         if(enemiesInRange.Count > 0) {
             List<HealthManager> enemies = new(enemiesInRange.Keys);
+            List<Transform> enemiesHit = new();
             
             foreach(HealthManager enemy in enemies) {
                 if (enemy.isAlive == false) {
@@ -37,8 +38,9 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
                     continue;
                 }
                 
-                if (Time.time - enemiesInRange[enemy] < 1f / spikesSO.hitInstancesPerSecond) continue;
+                if (Time.time - enemiesInRange[enemy] < 1f / spikesSO.hitInstancesPerSecond || enemiesHit.Contains(enemy.transform)) continue;
                 
+                enemiesHit.Add(enemy.transform);
                 enemy.TakeDamage(spikesSO.turretStats[currentLevel].damagePerSecond / spikesSO.hitInstancesPerSecond, enemy.transform.position + Vector3.up);
                 enemiesInRange[enemy] = Time.time;
             }

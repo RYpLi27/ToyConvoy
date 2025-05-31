@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour {
                 if (ray.collider.CompareTag("Enemy")) {
                     float damageDealt = ray.collider.GetComponent<Hitbox>().Hit(weaponSO.damage, ray.point);
                 }
-                Debug.Log(ray.transform);
+                
                 // CreateHitEffect(ray.point, ray.transform.CompareTag("Enemy") ? enemyHitMaterial : obstacleHitMaterial);
                 CreateHitEffect(ray.point);
                 CreateBulletTrail(firePoint.position, ray.point);
