@@ -29,10 +29,13 @@ public class PlayerBuilding : MonoBehaviour {
     [SerializeField] private Transform placePoint;
     [SerializeField] private float placePointRotationStep;
     private float placePointRotation;
+
+    private LayerMask turretPlacePointMask;
     
     private void Start() {
         SelectTurret(0);
         HideBuilding();
+        turretPlacePointMask = LayerMask.GetMask("Ground", "Wall");
     }
 
     private void LateUpdate() {
@@ -41,9 +44,12 @@ public class PlayerBuilding : MonoBehaviour {
     }
 
     private void MoveTurretPlacePoint() {
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit,  15f, StaticVariables.whatIsGround, QueryTriggerInteraction.Ignore)) {
-            placePoint.position = hit.point;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit,  15f, turretPlacePointMask, QueryTriggerInteraction.Ignore)) {
+            placePoint.position = new Vector3(hit.point.x, 0f, hit.point.z);
+            // return;
         }
+
+        // placePoint.localPosition = new Vector3(placePoint.localPosition.x, placePoint.localPosition.y, 8f);
     }
 
     private void RotateTurretPlacePoint() {

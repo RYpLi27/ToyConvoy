@@ -6,6 +6,7 @@ public class PlayerShooting : MonoBehaviour {
     [SerializeField] private GameObject shootingCanvas;
     [SerializeField] private List<Slot> weapons;
     [SerializeField] private Transform gunHolder;
+    public RectTransform reticle;
 
     private Slot selectedSlot;
     private Weapon selectedWeapon;
@@ -42,6 +43,7 @@ public class PlayerShooting : MonoBehaviour {
         //ENABLES SELECTED WEAPON
         selectedSlot = weapons[i];
         selectedWeapon = ObjectPoolManager.SpawnObject(selectedSlot.SelectSlot(), gunHolder).GetComponent<Weapon>();
+        selectedWeapon.SetReticle(reticle);
     }
 
     public void HideWeapon() {

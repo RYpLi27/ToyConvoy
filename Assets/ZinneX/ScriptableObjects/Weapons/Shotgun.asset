@@ -17,6 +17,9 @@ MonoBehaviour:
   weaponRange: 20
   verticalRecoil: 0.35
   horizontalRecoil: 0.3
+  cameraVerticalRecoil: 35
+  cameraHorizontalRecoil: 10
   numberOfBullets: 6
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
   bulletHitPrefab: {fileID: 833078818548240088, guid: 86acfcdbc6e4ee442bb039d7b3263cac, type: 3}
+  muzzleFlashPrefab: {fileID: 8429590732139229810, guid: 9a75395734a965145ad8d67f33179c7e, type: 3}

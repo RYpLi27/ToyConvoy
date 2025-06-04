@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HomingProjectile : MonoBehaviour {
@@ -5,6 +6,8 @@ public class HomingProjectile : MonoBehaviour {
     private float projectileSpeed;
     private float damage;
 
+    private List<Transform> enemiesHit  = new();
+    
     private void FixedUpdate() {
         transform.position = Vector3.MoveTowards(transform.position, target.position, Time.fixedDeltaTime * projectileSpeed);
         
@@ -15,12 +18,14 @@ public class HomingProjectile : MonoBehaviour {
         target = newTarget;
         projectileSpeed = projSpeed;
         damage = newDamage;
+        enemiesHit.Clear();
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.transform == target) {
+        if (other.transform == target && enemiesHit.Contains(other.transform.parent) == false) {
+            enemiesHit.Add(other.transform.parent);
             ObjectPoolManager.ReturnObjectToPool(gameObject);
-            other.GetComponent<HealthManager>().TakeDamage(damage, transform.position);
+            other.GetComponentInParent<HealthManager>().TakeDamage(damage, transform.position);
         }
     }
 }

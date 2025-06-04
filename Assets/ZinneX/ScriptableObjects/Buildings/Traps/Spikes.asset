@@ -18,9 +18,9 @@ MonoBehaviour:
   turretStats:
   - damagePerSecond: 35
     upgradePrice: 250
-  - damagePerSecond: 45
-    upgradePrice: 400
-  - damagePerSecond: 60
+  - damagePerSecond: 55
+    upgradePrice: 450
+  - damagePerSecond: 80
     upgradePrice: 0
   hitInstancesPerSecond: 12
   objectMaterial: {fileID: 2100000, guid: 29f30f19091fbbf4996cdc6dabe190ac, type: 2}
