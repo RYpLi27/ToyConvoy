@@ -9,7 +9,10 @@ public class WeaponSO : ScriptableObject
     public float weaponRange;
     public float verticalRecoil;
     public float horizontalRecoil;
+    public float cameraVerticalRecoil;
+    public float cameraHorizontalRecoil;
     public int numberOfBullets = 1;
     public GameObject bulletTrialPrefab;
     public GameObject bulletHitPrefab;
+    public GameObject muzzleFlashPrefab;
 }
