@@ -9571,7 +9571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6129048557653452869}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000005811453}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0.0000005811453}
   m_LocalPosition: {x: -1.3700062, y: 1.99, z: 15.084999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12193,10 +12193,6 @@ PrefabInstance:
       propertyPath: 'weapons.Array.data[4]'
       value: 
       objectReference: {fileID: 1228778925}
-    - target: {fileID: 6373328544389758099, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
-      propertyPath: cameraFollowTransform
-      value: 
-      objectReference: {fileID: 7670597869947089545}
     - target: {fileID: 6446168381550515258, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12220,37 +12216,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5532926828625762969, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7670597869947089544}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
 --- !u!4 &7670597869947089542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5125017712819149262, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
-  m_PrefabInstance: {fileID: 7670597869947089541}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7670597869947089543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5532926828625762969, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
-  m_PrefabInstance: {fileID: 7670597869947089541}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7670597869947089544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7670597869947089543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 542a344e30db39c429a4539ef63afe0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recoilReturnSpeed: 0.07
---- !u!4 &7670597869947089545 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 212300044822359804, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
   m_PrefabInstance: {fileID: 7670597869947089541}
   m_PrefabAsset: {fileID: 0}
 --- !u!81 &7738933421789582891

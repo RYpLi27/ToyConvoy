@@ -475,7 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 0.2
-  cameraFollowTransform: {fileID: 5125017712819149262}
+  zoomSensitivityMult: 0.35
+  cameraFollowTransform: {fileID: 212300044822359804}
 --- !u!114 &6808939221189396226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +858,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 64fa0a23-f21d-4de9-8757-9a46b6ab653a
     m_ActionName: Player/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 30c4cf0d-5556-4a41-bafe-5f3a68e33071
+    m_ActionName: 'Player/ZoomInput[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -871,6 +876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1974564220964898051}
+  - component: {fileID: 8069901265101187832}
   m_Layer: 7
   m_Name: RecoilPivot
   m_TagString: Untagged
@@ -894,6 +900,19 @@ Transform:
   - {fileID: 5125017712819149262}
   m_Father: {fileID: 212300044822359804}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8069901265101187832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5532926828625762969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542a344e30db39c429a4539ef63afe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoilReturnSpeed: 0.07
 --- !u!1 &5877101499339922987
 GameObject:
   m_ObjectHideFlags: 0
