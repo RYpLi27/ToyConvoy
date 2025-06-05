@@ -6,12 +6,12 @@ using UnityEngine;
 public class LandmineSO : BuildingSO {
     public List<TurretStats> turretStats;
     public Material objectMaterial;
-    public Material usedMat;
 
     [System.Serializable]
     public class TurretStats {
         public float damage;
         public float explosionRange; // THIS IS RANGE OF DAMAGE HITBOX - ACTIVATION HITBOX IS TRIGGER COLLIDER
+        public float timeToRespawn;
         public int upgradePrice;
     }
 }

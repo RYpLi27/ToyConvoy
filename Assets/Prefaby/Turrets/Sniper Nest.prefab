@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 257945985198470612, guid: 51aae319ba448df4d9679aa28ad93de0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.786
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 257945985198470612, guid: 51aae319ba448df4d9679aa28ad93de0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -423,6 +423,10 @@ PrefabInstance:
     - target: {fileID: 6789035337562003102, guid: 51aae319ba448df4d9679aa28ad93de0, type: 3}
       propertyPath: m_Name
       value: UpgradePrompt
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789035337562003102, guid: 51aae319ba448df4d9679aa28ad93de0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
