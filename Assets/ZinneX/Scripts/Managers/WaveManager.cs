@@ -17,6 +17,7 @@ public class WaveManager : MonoBehaviour {
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private GameObject spawnWaveButton;
     [SerializeField] private Animator bossAlert;
+    private bool bossAlertIsShown;
     
     [SerializeField] [ListDrawerSettings(NumberOfItemsPerPage = 10, ShowIndexLabels = true)]
     [InfoBox("Those numbers are indexes. Actual wave is number + 1")]
@@ -29,20 +30,25 @@ public class WaveManager : MonoBehaviour {
         get => enemyCount;
         set {
             enemyCount = value;
-            if (enemyCount == 0) RestoreLandMines();
+            if (enemyCount == 0) WaveEnd();
         }
     }
 
-    private void Update() {
-        spawnWaveButton.SetActive(enemyCount == 0);
-        
-        if (enemyCount == 0 && currentWave == enemyWaves.Count) {
+    private void WaveEnd() {
+        //WIN GAME
+        if (currentWave == enemyWaves.Count) {
             WinGame();
+            return;
         }
-    }
-
-    private void RestoreLandMines() {
-        foreach (Landmine landmine in FindObjectsByType<Landmine>(FindObjectsSortMode.None)) { landmine.RestoreLandmine(); }
+        
+        // RESTORES MINES
+        // foreach (Landmine landmine in FindObjectsByType<Landmine>(FindObjectsSortMode.None)) { landmine.RestoreLandmine(); }
+        
+        //BOSS ALERT
+        if(enemyWaves[currentWave].isBossWave == true) BossAlert(true);
+        
+        //SHOW BUTTON
+        spawnWaveButton.SetActive(true);
     }
     
     public void SpawnWave() {
@@ -50,10 +56,9 @@ public class WaveManager : MonoBehaviour {
             Debug.Log("There are enemies still alive. Can't spawn next wave.");
             return;
         }
-        
-        if (enemyWaves[currentWave].isBossWave == true) {
-            BossAlert();
-        }
+
+        spawnWaveButton.SetActive(false);
+        if(bossAlertIsShown == true) BossAlert(false);
         
         //SPAWN ENEMIES
         foreach (EnemyInstance enemyInstance in enemyWaves[currentWave].enemies) {
@@ -80,8 +85,14 @@ public class WaveManager : MonoBehaviour {
         StartCoroutine(SpawnEnemies(enemyInstance, enemiesSpawned + 1));
     }
 
-    private void BossAlert() {
-        bossAlert.Play("BossAlert");
+    private void BossAlert(bool show) {
+        if (show == true) {   
+            bossAlert.Play("Show");
+            bossAlertIsShown = true;
+        } else {
+            bossAlert.Play("Hide");
+            bossAlertIsShown = false;
+        }
     }
     
     private void WinGame() {
