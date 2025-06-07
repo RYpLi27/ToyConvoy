@@ -75,6 +75,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         if (TryGetComponent(out TurretRotateToTarget rotate)) rotate.enabled = true;
         triggerCol.enabled = true;
         normalCol.enabled = true;
+        
         rangeBorder.SetActive(false);
         interactTrigger.gameObject.SetActive(true);
         
@@ -118,6 +119,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         if (turretSO.turretStats.Count - 1 == currentLevel || GoldManager.instance.PriceCheck(turretSO.turretStats[currentLevel].upgradePrice, true) == false) return;
 
         currentLevel++;
+        triggerCol.radius = turretSO.turretStats[currentLevel].range;
         upgradePrompt.UpdatePromptUI(turretSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
     }
 }

@@ -147,7 +147,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd1938f7d87fa384f8da02dc899adba2
+      spriteID: 79e5de3f5b167c6449d3fc65f4a9bb97
       internalID: 1856295481
       vertices: []
       indices: 
@@ -169,7 +169,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df5dc860f72feda448421f08c8b57faa
+      spriteID: 7f77485d25a632b48838c7583c27e564
       internalID: 954980078
       vertices: []
       indices: 
@@ -191,7 +191,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7842ef4d1f460df45b9f4f87496f918f
+      spriteID: 84dc3d5e268c02447acba892e89f30a6
       internalID: -814507457
       vertices: []
       indices: 
@@ -213,8 +213,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f73d07f1b696e4ca326ef0544db42b
+      spriteID: 6835c3297b9223f46831bfb949816c8d
       internalID: -1269802187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textAtlas1_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f77e5901c3a654b9cb400001f8b65d
+      internalID: 1182320327
       vertices: []
       indices: 
       edges: []
@@ -238,6 +260,7 @@ TextureImporter:
       textAtlas1_2: 954980078
       textAtlas1_3: -814507457
       textAtlas1_4: -1269802187
+      textAtlas1_5: 1182320327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
