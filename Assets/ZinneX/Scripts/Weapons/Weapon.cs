@@ -2,6 +2,7 @@ using DG.Tweening;
 using Sirenix.OdinInspector;
 using Unity.Cinemachine;
 using UnityEngine;
+using FMOD.Studio;
 
 public class Weapon : MonoBehaviour {
     [SerializeField] private WeaponSO weaponSO;
@@ -12,9 +13,17 @@ public class Weapon : MonoBehaviour {
     [SerializeField] private GameObject damageText;
     private RectTransform reticle;
 
+    //audio
+    private EventInstance shotSound;
+
     private float lastShootTime;
     [ReadOnly] public bool isShooting;
     private CinemachineCamera vcam;
+
+    private void Start()
+    {
+        shotSound = AudioManager.instance.CreateEventInstance(FMODEvents.instance.shotFired);
+    }
 
     private void Update() {
         HandleReticle();
@@ -50,8 +59,8 @@ public class Weapon : MonoBehaviour {
             }
 
             CreateMuzzleFlash();
-            AudioManager.instance.playOneShot(FMODEvents.instance.shotFired, this.transform.position);
-            Debug.Log("audio");
+            //AudioManager.instance.playOneShot(FMODEvents.instance.shotFired, this.transform.position);
+            //Debug.Log("audio");
         }
 
         WeaponRecoil.instance.ApplyRecoil(weaponSO.cameraVerticalRecoil, weaponSO.cameraHorizontalRecoil);
@@ -101,4 +110,12 @@ public class Weapon : MonoBehaviour {
         
         Gizmos.DrawRay(firePoint.position, GetAimPosition() - firePoint.position);
     }
+
+    //private void UpdateSound()
+    //{
+
+    //}
+
+
+
 }
