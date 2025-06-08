@@ -20,6 +20,26 @@ PrefabInstance:
       propertyPath: weaponSO
       value: 
       objectReference: {fileID: 11400000, guid: 99aaa8b335ba5e844bfe84eb1d197cec, type: 2}
+    - target: {fileID: 6020731791447496505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: shotFired.Path
+      value: event:/Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020731791447496505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: shotFired.Guid.Data1
+      value: -1361651366
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020731791447496505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: shotFired.Guid.Data2
+      value: 1215298661
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020731791447496505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: shotFired.Guid.Data3
+      value: -1222590274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020731791447496505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: shotFired.Guid.Data4
+      value: 1619336906
+      objectReference: {fileID: 0}
     - target: {fileID: 7518100681385187746, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.99909294
