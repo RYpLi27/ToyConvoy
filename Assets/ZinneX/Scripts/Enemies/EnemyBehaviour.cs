@@ -9,9 +9,10 @@ public class EnemyBehaviour : MonoBehaviour {
     public Vector3 MoveDir => (currentNode.transform.position + nodeOffset - transform.position).normalized;
 
     private bool isRoundabout;
-    public bool backtrack;
+    public bool backtrack, canMove;
     
     private void OnEnable() {
+        canMove = true;
         FirstNodeAndOffset();
         EnemyManager.instance.AddEnemy(this);
     }
@@ -22,7 +23,7 @@ public class EnemyBehaviour : MonoBehaviour {
     }
 
     public void CustomUpdate() {
-        // if (GameManager.gameState != GameManager.GameState.Ongoing) return; IT'S IN THE ENEMYMANAGER
+        if (canMove == false) return;
         
         if(backtrack == true && currentNode != previousNode) FindPreviousNode();
 
@@ -36,7 +37,7 @@ public class EnemyBehaviour : MonoBehaviour {
     private void FirstNodeAndOffset() {
         currentNode = EnemyPathManager.instance.startingNode;
         if (currentNode != null) { isRoundabout = currentNode.isRoundabout; } 
-        nodeOffset = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
+        nodeOffset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
     }
     
     private void FindNextNode() {
