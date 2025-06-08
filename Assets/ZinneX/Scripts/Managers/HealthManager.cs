@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class HealthManager : MonoBehaviour {
         return damage;
     }
 
+    // USED TO DAMAGE BASE | WITHOUT DMG TEXT
     public float TakeDamage(float damage) {
         damage = Mathf.RoundToInt(Mathf.Max(damage - statsSO.defense, 1));
         

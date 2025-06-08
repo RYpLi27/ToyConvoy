@@ -17,19 +17,19 @@ MonoBehaviour:
   price: 250
   turretStats:
   - damage: 22
-    fireRate: 1.2
+    fireRate: 0.9
     range: 10
-    projectileSpeed: 25
+    projectileSpeed: 90
     upgradePrice: 350
-  - damage: 26
-    fireRate: 1.35
+  - damage: 42
+    fireRate: 1
     range: 10
-    projectileSpeed: 25
-    upgradePrice: 400
-  - damage: 30
-    fireRate: 1.5
+    projectileSpeed: 90
+    upgradePrice: 500
+  - damage: 65
+    fireRate: 1.1
     range: 12
-    projectileSpeed: 30
+    projectileSpeed: 120
     upgradePrice: 0
   projectilePrefab: {fileID: 1458909556012865288, guid: 6de9f7f85b414564197b29e7710bba8e, type: 3}
   objectMaterial: {fileID: 2100000, guid: b6bf256d7f2c9a44885681329372bb28, type: 2}

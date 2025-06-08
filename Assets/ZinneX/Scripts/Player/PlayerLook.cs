@@ -2,18 +2,21 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerLook : MonoBehaviour
-{
+{   
     [SerializeField] private float sensitivity;
+    [SerializeField] private float zoomSensitivityMult;
     [SerializeField] private Transform cameraFollowTransform;
 
     private float yRotation, xRotation;
 
     private bool isCursorLocked;
+    public static bool isZoomed;
 
     private Rigidbody rb;
 
     private HealthManager currentTarget;
     private InteractTrigger currentBuilding;
+
     
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -54,7 +57,7 @@ public class PlayerLook : MonoBehaviour
 
     private void EnemyLook(Ray ray) {
         if (Physics.Raycast(ray, out RaycastHit enemyHit, Mathf.Infinity, StaticVariables.whatIsEnemy, QueryTriggerInteraction.Ignore)) {
-            HealthManager enemy = enemyHit.collider.GetComponent<HealthManager>();
+            HealthManager enemy = enemyHit.collider.GetComponentInParent<HealthManager>();
             if (enemy != null && currentTarget != enemy)
             {
                 if (currentTarget != null)
@@ -75,6 +78,11 @@ public class PlayerLook : MonoBehaviour
 
             float mouseX = mouseInput.x * sensitivity;
             float mouseY = mouseInput.y * sensitivity;
+
+            if (isZoomed == true) {
+                mouseY *= zoomSensitivityMult;
+                mouseX *= zoomSensitivityMult;
+            }
             
             Rotate(mouseX, mouseY);
         }

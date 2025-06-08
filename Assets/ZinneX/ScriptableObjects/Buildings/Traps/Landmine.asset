@@ -19,14 +19,16 @@ MonoBehaviour:
     wave)'
   price: 125
   turretStats:
-  - damage: 30
-    explosionRange: 3
-    upgradePrice: 200
-  - damage: 40
-    explosionRange: 3
+  - damage: 35
+    explosionRange: 2
+    timeToRespawn: 3
     upgradePrice: 250
-  - damage: 50
+  - damage: 65
+    explosionRange: 3
+    timeToRespawn: 2
+    upgradePrice: 450
+  - damage: 105
     explosionRange: 4
+    timeToRespawn: 1
     upgradePrice: 0
-  objectMaterial: {fileID: 2100000, guid: a2fb9ff50c220904c8f22fa2c6615f45, type: 2}
-  usedMat: {fileID: 2100000, guid: 79fd36ad941a363449947531740060d5, type: 2}
+  objectMaterial: {fileID: 2100000, guid: 9b6c9c37df8a0fc458c9b785d330664f, type: 2}

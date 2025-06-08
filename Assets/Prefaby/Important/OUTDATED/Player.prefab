@@ -380,7 +380,7 @@ Transform:
   m_Children:
   - {fileID: 1984577252582828208}
   - {fileID: 5888093183224201632}
-  - {fileID: 5125017712819149262}
+  - {fileID: 212300044822359804}
   - {fileID: 4972051390150796196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -403,10 +403,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.8832431
+  m_Height: 2.4708316
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0.031877875, y: 1.2354158, z: 7.138116e-17}
 --- !u!54 &7172392146804957334
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   groundCheck: {fileID: 5888093183224201632}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 33536
   staminaManager: {fileID: 6808939221189396226}
   runTrail: {fileID: 6866773965864431436}
 --- !u!114 &6373328544389758099
@@ -475,7 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 0.2
-  cameraFollowTransform: {fileID: 5125017712819149262}
+  zoomSensitivityMult: 0.35
+  cameraFollowTransform: {fileID: 212300044822359804}
 --- !u!114 &6808939221189396226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +517,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   gunHolder: {fileID: 5125017712819149262}
+  reticle: {fileID: 0}
 --- !u!114 &3091917397319788418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,10 +537,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  placePoint: {fileID: 4972051390150796196}
   descriptionText: {fileID: 0}
   wrongMaterial: {fileID: 2100000, guid: 4ce77ef6ea4620742bb059a9d380b157, type: 2}
   correctMaterial: {fileID: 2100000, guid: c5b4ecd0a4c7a9b40b75d269af29c62a, type: 2}
+  placePoint: {fileID: 4972051390150796196}
+  placePointRotationStep: 15
 --- !u!114 &6101150525996981476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,11 +643,35 @@ MonoBehaviour:
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
     m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6373328544389758099}
+        m_TargetAssemblyTypeName: PlayerLook, Assembly-CSharp
+        m_MethodName: UpgradeTurret
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIButtonHold, Assembly-CSharp
+        m_MethodName: HoldButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 27c5f898-bc57-4ee1-8800-db469aca5fe3
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
@@ -799,11 +826,93 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2f1ab4e9-5e31-469f-9a5c-d99d4f2cb957
     m_ActionName: Player/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GoldManager, Assembly-CSharp
+        m_MethodName: AddGoldTesting
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8400c193-1586-4df7-bc57-5951fe379c75
+    m_ActionName: Player/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3091917397319788418}
+        m_TargetAssemblyTypeName: PlayerBuilding, Assembly-CSharp
+        m_MethodName: RotateTurretPlacePointInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 64fa0a23-f21d-4de9-8757-9a46b6ab653a
+    m_ActionName: Player/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 30c4cf0d-5556-4a41-bafe-5f3a68e33071
+    m_ActionName: 'Player/ZoomInput[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &5532926828625762969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974564220964898051}
+  - component: {fileID: 8069901265101187832}
+  m_Layer: 7
+  m_Name: RecoilPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1974564220964898051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5532926828625762969}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5125017712819149262}
+  m_Father: {fileID: 212300044822359804}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8069901265101187832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5532926828625762969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542a344e30db39c429a4539ef63afe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoilReturnSpeed: 0.07
 --- !u!1 &5877101499339922987
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +1051,38 @@ MonoBehaviour:
   - {fileID: 5256770147634428664}
   runTrailTime: 0.5
   walkTrailTime: 0
+--- !u!1 &6373978944975964915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 212300044822359804}
+  m_Layer: 7
+  m_Name: VerticalRotationPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &212300044822359804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373978944975964915}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1974564220964898051}
+  m_Father: {fileID: 3112420122433896997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7887605537984613170
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,11 +1108,11 @@ Transform:
   m_GameObject: {fileID: 7887605537984613170}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.099999994, y: 1, z: 0}
+  m_LocalPosition: {x: 0.099999994, y: 1, z: -0.3249998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3112420122433896997}
+  m_Father: {fileID: 1974564220964898051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &766686148194982921
 PrefabInstance:

@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd25e5b7d4ba4a41bb7de9338f265a0, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  fireRate: 5
-  damage: 5
+  fireRate: 5.7
+  damage: 12
   weaponRange: 30
-  verticalRecoil: 0.1
-  horizontalRecoil: 0.1
+  verticalRecoil: 0.2
+  horizontalRecoil: 0.2
+  cameraVerticalRecoil: 6
+  cameraHorizontalRecoil: 2
   numberOfBullets: 1
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
   bulletHitPrefab: {fileID: 833078818548240088, guid: 86acfcdbc6e4ee442bb039d7b3263cac, type: 3}
+  muzzleFlashPrefab: {fileID: 8429590732139229810, guid: 9a75395734a965145ad8d67f33179c7e, type: 3}
