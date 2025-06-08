@@ -2,18 +2,21 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerLook : MonoBehaviour
-{
+{   
     [SerializeField] private float sensitivity;
+    [SerializeField] private float zoomSensitivityMult;
     [SerializeField] private Transform cameraFollowTransform;
 
     private float yRotation, xRotation;
 
     private bool isCursorLocked;
+    public static bool isZoomed;
 
     private Rigidbody rb;
 
     private HealthManager currentTarget;
     private InteractTrigger currentBuilding;
+
     
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -75,6 +78,11 @@ public class PlayerLook : MonoBehaviour
 
             float mouseX = mouseInput.x * sensitivity;
             float mouseY = mouseInput.y * sensitivity;
+
+            if (isZoomed == true) {
+                mouseY *= zoomSensitivityMult;
+                mouseX *= zoomSensitivityMult;
+            }
             
             Rotate(mouseX, mouseY);
         }
@@ -86,7 +94,7 @@ public class PlayerLook : MonoBehaviour
         
         yRotation += xRot;
         xRotation -= yRot;
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
+        xRotation = Mathf.Clamp(xRotation, -85, 85);
 
         rb.MoveRotation(Quaternion.Euler(0f, yRotation, 0f)); // HORIZONTAL ROTATION
         cameraFollowTransform.rotation = Quaternion.Euler(xRotation, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z); // VERTICAL ROTATION

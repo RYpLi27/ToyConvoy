@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private SpikesSO spikesSO;
-    public int Price => spikesSO.price;
     
     [SerializeField] private Collider triggerCol;
     [SerializeField] private Collider normalCol;
@@ -63,11 +62,13 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
         GetComponent<PlacementCheck>().enabled = false;
         triggerCol.enabled = true;
         normalCol.enabled = true;
-        gameObject.layer = LayerMask.NameToLayer("Turret");
+        
         interactTrigger.gameObject.SetActive(true);
         
+        gameObject.layer = LayerMask.NameToLayer("Turret");
         transform.SetParent(GameObject.Find("Turrets").transform);
         GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;
+        
         return true;
     }
     
