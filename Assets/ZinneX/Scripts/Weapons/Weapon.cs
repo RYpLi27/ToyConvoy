@@ -2,13 +2,11 @@ using DG.Tweening;
 using Sirenix.OdinInspector;
 using Unity.Cinemachine;
 using UnityEngine;
-using FMODUnity;
 
 public class Weapon : MonoBehaviour {
     [SerializeField] private WeaponSO weaponSO;
     [SerializeField] private Transform firePoint;
     [SerializeField] private LayerMask whatIsTarget;
-    [SerializeField] private EventReference shotFired;
     // [SerializeField] private Material enemyHitMaterial;
     // [SerializeField] private Material obstacleHitMaterial;
     [SerializeField] private GameObject damageText;
@@ -52,7 +50,7 @@ public class Weapon : MonoBehaviour {
             }
 
             CreateMuzzleFlash();
-            AudioManager.instance.playOneShot(shotFired, this.transform.position);
+            AudioManager.instance.playOneShot(FMODEvents.instance.shotFired, this.transform.position);
             Debug.Log("audio");
         }
 

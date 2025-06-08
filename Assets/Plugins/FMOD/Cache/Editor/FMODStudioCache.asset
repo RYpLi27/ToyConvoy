@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/ToyConvoy/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638849847746044472
+  lastModified: 638849978725404737
   FileSizes:
   - Name: Desktop
-    Value: 812
+    Value: 864
   Exists: 1
 --- !u!114 &-3278900760241129557
 MonoBehaviour:
@@ -62,10 +62,10 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/ToyConvoy/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638849935155149754
+  lastModified: 638849981167297472
   FileSizes:
   - Name: Desktop
-    Value: 5184
+    Value: 7488
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -85,16 +85,19 @@ MonoBehaviour:
   - {fileID: -1261448691293473254}
   EditorEvents:
   - {fileID: -3278900760241129557}
+  - {fileID: 7954482489567301106}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4950654227084004639}
   StringsBanks:
   - {fileID: -6863669800033462934}
   cacheVersion: 131847
-  cacheTime: 638849935155149754
+  cacheTime: 638849981167297472
   SerializableEventsDict:
   - key: event:/Shoot
     index: 0
+  - key: event:/GunShoot
+    index: 1
 --- !u!114 &4950654227084004639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +113,35 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/ToyConvoy/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638849847746019297
+  lastModified: 638849978725394663
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &7954482489567301106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GunShoot
+  m_EditorClassIdentifier: 
+  Path: event:/GunShoot
+  Guid:
+    Data1: 146903661
+    Data2: 1120066298
+    Data3: -1847021899
+    Data4: -404938279
+  Banks:
+  - {fileID: -1261448691293473254}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 84
