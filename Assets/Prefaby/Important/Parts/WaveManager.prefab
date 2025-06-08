@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6489337113596418189}
   - component: {fileID: 4625565083716694933}
   m_Layer: 15
-  m_Name: EnemySpawner
+  m_Name: WaveManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4269424460275873931
 Transform:
   m_ObjectHideFlags: 0
@@ -233,16 +233,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 6489337113596418189}
     m_Modifications:
     - target: {fileID: 940840364655731387, guid: 024a070a4ba33ce4dbc68d5909039282, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.3100004
+      objectReference: {fileID: 0}
+    - target: {fileID: 940840364655731387, guid: 024a070a4ba33ce4dbc68d5909039282, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.3100004
+      objectReference: {fileID: 0}
+    - target: {fileID: 940840364655731387, guid: 024a070a4ba33ce4dbc68d5909039282, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.88500005
+      objectReference: {fileID: 0}
+    - target: {fileID: 940840364655731387, guid: 024a070a4ba33ce4dbc68d5909039282, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 940840364655731387, guid: 024a070a4ba33ce4dbc68d5909039282, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 940840364655731387, guid: 024a070a4ba33ce4dbc68d5909039282, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: -5.38
       objectReference: {fileID: 0}
     - target: {fileID: 940840364655731387, guid: 024a070a4ba33ce4dbc68d5909039282, type: 3}
       propertyPath: m_LocalRotation.w

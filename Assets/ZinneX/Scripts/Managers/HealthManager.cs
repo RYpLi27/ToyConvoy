@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class HealthManager : MonoBehaviour {
     [SerializeField] [ReadOnly] private float currentHealth;
@@ -20,6 +22,7 @@ public class HealthManager : MonoBehaviour {
         damage = Mathf.RoundToInt(Mathf.Max(damage - statsSO.defense, 1));
         
         currentHealth -= damage;
+        currentHealth = Mathf.Max(currentHealth, 0);
         UpdateUI();
         CreateDamageText(damageTextPosition, damage);
         if (currentHealth <= 0) {
@@ -34,6 +37,7 @@ public class HealthManager : MonoBehaviour {
         damage = Mathf.RoundToInt(Mathf.Max(damage - statsSO.defense, 1));
         
         currentHealth -= damage;
+        currentHealth = Mathf.Max(currentHealth, 0);
         UpdateUI();
         if (currentHealth <= 0) {
             Death();
@@ -52,9 +56,10 @@ public class HealthManager : MonoBehaviour {
         isAlive = false;
         
         if (gameObject.CompareTag("Enemy") == true) {
-            ObjectPoolManager.ReturnObjectToPool(gameObject); // LATER ADD DEATH ANIM
-            WaveManager.instance.EnemyCount--;
+            GetComponent<EnemyBehaviour>().canMove = false;
+            GetComponent<DeathAnim>().PlayAnim();
             GetComponent<DropGold>().AddGold();
+            WaveManager.instance.EnemyCount--;
 
             //THOSE LOOPS LETS TURRETS AND TRAPS KNOW THAT IT IS DEAD
             foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) { turret.EnemyDeactivated(transform); }
