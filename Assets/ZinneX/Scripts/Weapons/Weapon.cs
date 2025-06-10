@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using Unity.Cinemachine;
 using UnityEngine;
 using FMOD.Studio;
+using FMODUnity;
 
 public class Weapon : MonoBehaviour {
     [SerializeField] private WeaponSO weaponSO;
