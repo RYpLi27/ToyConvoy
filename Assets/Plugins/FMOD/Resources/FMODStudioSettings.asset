@@ -378,10 +378,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 0
-  HasPlatforms: 0
-  sourceProjectPath: ../../../FMOD Studio/ToyConvoy/ToyConvoy.fspro
-  sourceBankPath: ../../../FMOD Studio/ToyConvoy/Desktop
+  HasSourceProject: 1
+  HasPlatforms: 1
+  sourceProjectPath: ../../FMOD Studio/ToyConvoy/ToyConvoy.fspro
+  sourceBankPath: ../../FMOD Studio/ToyConvoy/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
