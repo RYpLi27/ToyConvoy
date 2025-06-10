@@ -380,8 +380,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../FMOD Studio/ToyConvoy/ToyConvoy.fspro
-  sourceBankPath: ../../../FMOD Studio/ToyConvoy/Build
+  sourceProjectPath: ../../FMOD Studio/ToyConvoy/ToyConvoy.fspro
+  sourceBankPath: ../../FMOD Studio/ToyConvoy/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

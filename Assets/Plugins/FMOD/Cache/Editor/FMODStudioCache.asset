@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6863669800033462934
+--- !u!114 &-8434180091050330427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../../FMOD Studio/ToyConvoy/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638849993246520404
+  Path: ../../../FMOD Studio/ToyConvoy/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638851721527113138
   FileSizes:
-  - Name: Desktop
-    Value: 912
+  - Name: 
+    Value: 1074
+  Exists: 1
+--- !u!114 &-5624556099269747775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/ToyConvoy/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638851721527404825
+  FileSizes:
+  - Name: 
+    Value: 15456
   Exists: 1
 --- !u!114 &-3278900760241129557
 MonoBehaviour:
@@ -39,7 +59,7 @@ MonoBehaviour:
     Data3: -1222590274
     Data4: 1619336906
   Banks:
-  - {fileID: -1261448691293473254}
+  - {fileID: -5624556099269747775}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -47,26 +67,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1261448691293473254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../FMOD Studio/ToyConvoy/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638850025307135553
-  FileSizes:
-  - Name: Desktop
-    Value: 15456
-  Exists: 1
 --- !u!114 &-497237089985997086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,25 +108,25 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6863669800033462934}
-  - {fileID: 4950654227084004639}
-  - {fileID: -1261448691293473254}
+  - {fileID: 5301940387943103309}
+  - {fileID: -8434180091050330427}
+  - {fileID: -5624556099269747775}
   EditorEvents:
   - {fileID: -3278900760241129557}
   - {fileID: 7954482489567301106}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4950654227084004639}
+  - {fileID: -8434180091050330427}
   StringsBanks:
-  - {fileID: -6863669800033462934}
+  - {fileID: 5301940387943103309}
   cacheVersion: 131847
-  cacheTime: 638850025307135553
+  cacheTime: 638851721527404825
   SerializableEventsDict:
   - key: event:/Shoot
     index: 0
   - key: event:/GunShoot
     index: 1
---- !u!114 &4950654227084004639
+--- !u!114 &5301940387943103309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,15 +136,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../../../FMOD Studio/ToyConvoy/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638849993246509999
+  Path: ../../../FMOD Studio/ToyConvoy/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638851721527133152
   FileSizes:
-  - Name: Desktop
-    Value: 1074
+  - Name: 
+    Value: 912
   Exists: 1
 --- !u!114 &7954482489567301106
 MonoBehaviour:
@@ -165,7 +165,7 @@ MonoBehaviour:
     Data3: -1847021899
     Data4: -404938279
   Banks:
-  - {fileID: -1261448691293473254}
+  - {fileID: -5624556099269747775}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
