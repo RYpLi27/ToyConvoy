@@ -7051,7 +7051,7 @@ GameObject:
   - component: {fileID: 1189350995}
   - component: {fileID: 1189350994}
   m_Layer: 15
-  m_Name: WallsVisuals (1)
+  m_Name: WallsColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18978,7 +18978,7 @@ Transform:
   m_GameObject: {fileID: 784610508191414386}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.26, y: 1.79, z: 24.92}
+  m_LocalPosition: {x: -0.37, y: 1.79, z: -31.92}
   m_LocalScale: {x: 8.1313, y: 8.1313, z: 8.1313}
   m_ConstrainProportionsScale: 0
   m_Children: []
