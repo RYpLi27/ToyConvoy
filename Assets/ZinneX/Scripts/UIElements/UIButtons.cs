@@ -10,6 +10,23 @@ public class UIButtons : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void DisableObject(GameObject obj) {
+        if (obj.TryGetComponent(out Animator anim)) {
+            anim.ResetTrigger("Show");
+            anim.SetTrigger("Hide");
+        } else {
+            obj.SetActive(false);
+        }
+    }
+
+    public void EnableObject(GameObject obj) {
+        obj.SetActive(true);
+        if (obj.TryGetComponent(out Animator anim)) {
+            anim.ResetTrigger("Hide");
+            anim.SetTrigger("Show");
+        }
+    }
+    
     public void ExitGame() {
         Application.Quit();
     }

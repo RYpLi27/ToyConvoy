@@ -1,3 +1,4 @@
+using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,8 +28,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject ongoingUI;
     [SerializeField] private HealthManager baseHP;
     
-    public void EndGame(GameState state) {
-        if (gameState != GameState.Ongoing) return;
+    public IEnumerator EndGame(GameState state) {
+        if (gameState != GameState.Ongoing) yield break;
+
+        yield return new WaitForSeconds(1f);
         
         Time.timeScale = 0;
         

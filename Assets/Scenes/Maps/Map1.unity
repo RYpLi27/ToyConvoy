@@ -993,8 +993,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.7943687, y: 6.519117, z: 39.81088}
-  m_Center: {x: -2.3971848, y: 2.759559, z: 3.5050428}
+  m_Size: {x: 8.266393, y: 5.1518784, z: 7.813594}
+  m_Center: {x: -0.58652043, y: 2.0759392, z: 1.949001}
 --- !u!1001 &677424805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1124,8 +1124,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.305812, y: 6.519117, z: 39.81088}
-  m_Center: {x: -2.1529062, y: 2.7595587, z: 3.5050426}
+  m_Size: {x: 8.042527, y: 5.0754027, z: 7.952141}
+  m_Center: {x: -0.7845489, y: 2.0377016, z: 1.8458154}
 --- !u!1001 &700372499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4298,7 +4298,7 @@ GameObject:
   - component: {fileID: 1451836694}
   - component: {fileID: 1451836693}
   - component: {fileID: 1451836692}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: WallsColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9220,8 +9220,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   statsSO: {fileID: 11400000, guid: 28b483a929f3494479fd9b9a130ba8ae, type: 2}
-  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
   hpBar: {fileID: 712890582276684335}
+  isEnemy: 0
+  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
+  positionTracker: {fileID: 0}
   isAlive: 0
 --- !u!1001 &4568921250703898634
 PrefabInstance:

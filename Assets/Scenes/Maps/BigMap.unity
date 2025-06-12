@@ -19291,7 +19291,7 @@ GameObject:
   - component: {fileID: 2041428481}
   - component: {fileID: 2041428480}
   - component: {fileID: 2041428479}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: WallsColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28414,8 +28414,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   statsSO: {fileID: 11400000, guid: 28b483a929f3494479fd9b9a130ba8ae, type: 2}
-  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
   hpBar: {fileID: 4978911459858564239}
+  isEnemy: 0
+  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
+  positionTracker: {fileID: 0}
   isAlive: 0
 --- !u!222 &8290208078215269996
 CanvasRenderer:
