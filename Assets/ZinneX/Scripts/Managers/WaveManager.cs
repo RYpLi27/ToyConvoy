@@ -98,7 +98,7 @@ public class WaveManager : MonoBehaviour {
     private void WinGame() {
         Debug.Log("WIN");
         enabled = false;
-        GameManager.instance.EndGame(GameManager.GameState.Win);
+        StartCoroutine(GameManager.instance.EndGame(GameManager.GameState.Win));
     }
 }
 
