@@ -653,6 +653,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1160313569}
     m_Modifications:
+    - target: {fileID: 1022915905462247228, guid: a9c300837e6fdf04ea9c2ff1c7c97ddf, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 2112
+      objectReference: {fileID: 0}
     - target: {fileID: 5047791567702425000, guid: a9c300837e6fdf04ea9c2ff1c7c97ddf, type: 3}
       propertyPath: m_Name
       value: doghouse
@@ -944,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 3233119630174552725, guid: b9e4a70c308a51c44b04acdf7b108fcd, type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594658538363449940, guid: b9e4a70c308a51c44b04acdf7b108fcd, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 2112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6999,6 +7007,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 7539789996456968358, guid: 7e81d9b0c7377cb42b7ee95093ce523b, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 2112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7404,6 +7416,10 @@ PrefabInstance:
     - target: {fileID: 2100434336859103162, guid: 7e81d9b0c7377cb42b7ee95093ce523b, type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539789996456968358, guid: 7e81d9b0c7377cb42b7ee95093ce523b, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 2112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9288,7 +9304,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2112
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -12584,8 +12600,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   statsSO: {fileID: 11400000, guid: 28b483a929f3494479fd9b9a130ba8ae, type: 2}
-  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
   hpBar: {fileID: 708744963252473170}
+  isEnemy: 0
+  damageText: {fileID: 6146393750684786752, guid: 67bfc56d20a9a4747a012e18f9c419cf, type: 3}
+  positionTracker: {fileID: 0}
   isAlive: 0
 --- !u!1001 &4564772431056605039
 PrefabInstance:
@@ -15478,6 +15496,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7033722310521281309}
     m_Modifications:
+    - target: {fileID: 6551264243205129652, guid: 7f2a316a56d700b47af87042a47ed399, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 2112
+      objectReference: {fileID: 0}
     - target: {fileID: 7467283814714449173, guid: 7f2a316a56d700b47af87042a47ed399, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.32000017
