@@ -11,7 +11,7 @@ public class HomingProjectile : MonoBehaviour {
     private void FixedUpdate() {
         transform.position = Vector3.MoveTowards(transform.position, target.position, Time.fixedDeltaTime * projectileSpeed);
         
-        if(target.gameObject.activeInHierarchy == false) {ObjectPoolManager.ReturnObjectToPool(gameObject);} // IF ENEMY DIES OR REACHES LAST NODE DISABLE THIS PROJECTILE
+        if(target.parent.gameObject.activeInHierarchy == false || Vector3.Distance(transform.position, target.position) <= .01f) {ObjectPoolManager.ReturnObjectToPool(gameObject);} // IF ENEMY DIES OR REACHES LAST NODE DISABLE THIS PROJECTILE
     }
 
     public void SetupProjectile(float projSpeed, Transform newTarget, float newDamage) {
