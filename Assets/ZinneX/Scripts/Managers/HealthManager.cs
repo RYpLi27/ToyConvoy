@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using TMPro;
@@ -62,7 +63,10 @@ public class HealthManager : MonoBehaviour {
             hpBar.gameObject.SetActive(false);
 
             //THOSE LOOPS LETS TURRETS AND TRAPS KNOW THAT IT IS DEAD
-            foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) { turret.EnemyDeactivated(transform); }
+            foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) {
+                List<Collider> cols = GetComponentsInChildren<Collider>().ToList();
+                cols.ForEach(c => turret.EnemyDeactivated(c.transform));
+            }
 
             foreach (Spikes spikes in FindObjectsByType<Spikes>(FindObjectsSortMode.None)) { spikes.EnemyDeactivated(this); }
         } else {
