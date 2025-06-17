@@ -1,18 +1,20 @@
 using System.Collections.Generic;
-using DG.Tweening;
+using System.Linq;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-using UnityEngine.ProBuilder;
 
 public class HealthManager : MonoBehaviour {
     [SerializeField] [ReadOnly] private float currentHealth;
     [SerializeField] private StatsSO statsSO;
-    [SerializeField] private GameObject damageText;
     [SerializeField] private Bar hpBar;
+    [SerializeField] private bool isEnemy;
+    [SerializeField] [ShowIf("isEnemy")] private GameObject damageText;
+    [SerializeField] [ShowIf("isEnemy")] private GameObject positionTracker;
     [ReadOnly] public bool isAlive;
     
     private void OnEnable() {
+        if(isEnemy == true) SetComponents(true);
         currentHealth = statsSO.maxHealth;
         UpdateUI();
         isAlive = true;
@@ -33,7 +35,7 @@ public class HealthManager : MonoBehaviour {
     }
 
     // USED TO DAMAGE BASE | WITHOUT DMG TEXT
-    public float TakeDamage(float damage) {
+    public void TakeDamage(float damage) {
         damage = Mathf.RoundToInt(Mathf.Max(damage - statsSO.defense, 1));
         
         currentHealth -= damage;
@@ -42,8 +44,6 @@ public class HealthManager : MonoBehaviour {
         if (currentHealth <= 0) {
             Death();
         }
-
-        return damage;
     }
 
     private void CreateDamageText(Vector3 position, float value) {
@@ -55,19 +55,29 @@ public class HealthManager : MonoBehaviour {
         if (isAlive == false) return;
         isAlive = false;
         
-        if (gameObject.CompareTag("Enemy") == true) {
-            GetComponent<EnemyBehaviour>().canMove = false;
+        if (isEnemy == true) {
+            SetComponents(false);
             GetComponent<DeathAnim>().PlayAnim();
             GetComponent<DropGold>().AddGold();
             WaveManager.instance.EnemyCount--;
+            hpBar.gameObject.SetActive(false);
 
             //THOSE LOOPS LETS TURRETS AND TRAPS KNOW THAT IT IS DEAD
-            foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) { turret.EnemyDeactivated(transform); }
+            foreach (TurretBehaviour turret in FindObjectsByType<TurretBehaviour>(FindObjectsSortMode.None)) {
+                List<Collider> cols = GetComponentsInChildren<Collider>().ToList();
+                cols.ForEach(c => turret.EnemyDeactivated(c.transform));
+            }
 
             foreach (Spikes spikes in FindObjectsByType<Spikes>(FindObjectsSortMode.None)) { spikes.EnemyDeactivated(this); }
         } else {
-            GameManager.instance.EndGame(GameManager.GameState.Lose);
+            StartCoroutine(GameManager.instance.EndGame(GameManager.GameState.Lose));
         }
+    }
+
+    private void SetComponents(bool value) {
+        GetComponent<EnemyBehaviour>().canMove = value;
+        GetComponentsInChildren<Collider>().ToList().ForEach(col => col.enabled = value);
+        positionTracker.SetActive(value);
     }
     
     private void UpdateUI() {

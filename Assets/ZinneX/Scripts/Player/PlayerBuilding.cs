@@ -57,7 +57,7 @@ public class PlayerBuilding : MonoBehaviour {
     }
 
     public void RotateTurretPlacePointInput(InputAction.CallbackContext context) {
-        if (context.performed) {
+        if (context.performed && CanMakeAction() == true) {
             placePointRotation += context.ReadValue<float>() * placePointRotationStep;
         }
     }
