@@ -3,9 +3,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerLook : MonoBehaviour
 {   
-    [SerializeField] private float sensitivity;
     [SerializeField] private float zoomSensitivityMult;
     [SerializeField] private Transform cameraFollowTransform;
+    private float sensitivity; // is set in menu
+    public float Sensitivity { set => sensitivity = value; }
 
     private float yRotation, xRotation;
 
@@ -22,11 +23,16 @@ public class PlayerLook : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         
         isCursorLocked = true;
+        ApplySens();
         
         yRotation = transform.rotation.eulerAngles.y;
         xRotation = transform.rotation.eulerAngles.x;
     }
 
+    public void ApplySens() {
+        sensitivity = PlayerPrefs.GetFloat("sens", .5f);
+    }
+    
     private void FixedUpdate() {
         HandleLook();
     }
