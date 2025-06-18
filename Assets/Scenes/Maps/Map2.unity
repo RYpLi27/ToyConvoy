@@ -425,34 +425,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4797711321516519434}
-    - target: {fileID: 332529982537015459, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 578698001816696293, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578698001816696293, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 622133860606649524, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 622133860606649524, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 891165999524477671, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.024403
-      objectReference: {fileID: 0}
-    - target: {fileID: 891165999524477671, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.6745706
-      objectReference: {fileID: 0}
     - target: {fileID: 1675420645983918199, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -497,49 +469,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4008286916007085501, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4008286916007085501, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4031868043567551029, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4031868043567551029, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4208553053135350264, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4208553053135350264, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521983712691032356, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4797711321516519434}
-    - target: {fileID: 5643858446071154219, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 21.357977
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643858446071154219, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643858446071154219, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643858446071154219, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
+    - target: {fileID: 3627923339949053575, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Map3
       objectReference: {fileID: 0}
     - target: {fileID: 8150323398263926044, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
       propertyPath: m_Name
