@@ -4041,6 +4041,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6870347264643872090, guid: a27b1c2b60454644591f96430c253205, type: 3}
   m_PrefabInstance: {fileID: 688292567}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &708907407
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4549568
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.964775
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.639377
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606430963578507987, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146172364249518475, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
 --- !u!1001 &709141242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13183,14 +13240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ce49ba897f2924a832f0116ca60d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &1410516611092379656
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7863774144413823232}
-  m_Enabled: 1
 --- !u!1001 &1568775671439987649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14110,9 +14159,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7795936526996741701}
   - component: {fileID: 127227668404757313}
-  - component: {fileID: 1410516611092379656}
   - component: {fileID: 5102613015660994203}
   - component: {fileID: 6652051486615433668}
+  - component: {fileID: 7863774144413823233}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14120,6 +14169,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7863774144413823233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7863774144413823232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1001 &7980464003038672814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14559,6 +14622,7 @@ SceneRoots:
   - {fileID: 8584550329772673836}
   - {fileID: 4458620973985690468}
   - {fileID: 6637001624252760447}
+  - {fileID: 708907407}
   - {fileID: 2233338562125667977}
   - {fileID: 7795936526996741701}
   - {fileID: 8551803294119935458}
