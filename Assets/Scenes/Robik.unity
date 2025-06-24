@@ -161,19 +161,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data1
-      value: 567530436
+      value: 1384887847
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data2
-      value: 1174355382
+      value: 1254139300
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data3
-      value: 1454175392
+      value: 680912304
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data4
-      value: 1117896101
+      value: 1134502564
       objectReference: {fileID: 0}
     - target: {fileID: 670827074032135739, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: m_Name
