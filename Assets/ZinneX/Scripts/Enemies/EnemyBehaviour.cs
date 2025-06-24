@@ -12,7 +12,6 @@ public class EnemyBehaviour : MonoBehaviour {
     public bool backtrack, canMove;
     
     private void OnEnable() {
-        canMove = true;
         FirstNodeAndOffset();
         EnemyManager.instance.AddEnemy(this);
     }

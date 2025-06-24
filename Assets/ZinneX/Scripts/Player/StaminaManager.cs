@@ -18,6 +18,7 @@ public class StaminaManager : MonoBehaviour
     
     private void Start() {
         currentStamina = stamina;
+        fillArea.material = normalBarColor;
     }
 
     private void Update()

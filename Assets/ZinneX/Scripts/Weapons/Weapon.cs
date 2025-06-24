@@ -60,7 +60,7 @@ public class Weapon : MonoBehaviour {
             }
 
             CreateMuzzleFlash();
-            //AudioManager.instance.playOneShot(FMODEvents.instance.shotFired, this.transform.position);
+            AudioManager.instance.playOneShot(FMODEvents.instance.shotFired, this.transform.position);
             //Debug.Log("audio");
         }
 

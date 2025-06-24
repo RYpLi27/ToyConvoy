@@ -1,3 +1,4 @@
+using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,8 +28,12 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject ongoingUI;
     [SerializeField] private HealthManager baseHP;
     
-    public void EndGame(GameState state) {
-        if (gameState != GameState.Ongoing) return;
+    public IEnumerator EndGame(GameState state) {
+        if (gameState != GameState.Ongoing) yield break;
+        
+        gameState = state;
+        
+        yield return new WaitForSeconds(1f);
         
         Time.timeScale = 0;
         
@@ -36,14 +41,17 @@ public class GameManager : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Confined;
 
         ongoingUI.SetActive(false);
-        if (state == GameState.Win) { winScreen.SetActive(true); } 
-        else { loseScreen.SetActive(true);}
+
+        GameObject screen = state == GameState.Win ? winScreen : loseScreen;
         
-        gameState = state;
+        screen.SetActive(true);
+        screen.GetComponent<Animator>().SetTrigger("Show");
+        
+        
     }
     
     public void PauseGameInput(InputAction.CallbackContext context) {
-        if (context.performed) {
+        if (context.performed) { // ADD THAT WHEN SETTINGS ARE OPEN CLOSE THEM FIRST
             PauseGame();
         }
     }
