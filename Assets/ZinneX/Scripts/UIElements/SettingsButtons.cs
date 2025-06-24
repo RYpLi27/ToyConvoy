@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsButtons : MonoBehaviour {
     [SerializeField] private TMP_Dropdown fullscreenDropdown;
     [SerializeField] private TMP_Dropdown resolutionDropdown;
+    [SerializeField] private Slider sensSlider;
     
     public void SetValues() {
         fullscreenDropdown.value = Screen.fullScreenMode switch {
@@ -20,6 +22,8 @@ public class SettingsButtons : MonoBehaviour {
                 break;
             }
         }
+
+        sensSlider.value = PlayerPrefs.GetFloat("sens", .5f);
     }
 
     public void SetFullscreenMode() {
@@ -37,5 +41,9 @@ public class SettingsButtons : MonoBehaviour {
         if (values.Length == 2 && int.TryParse(values[0], out int x) && int.TryParse(values[1], out int y)) {
             Screen.SetResolution(x, y, Screen.fullScreenMode);
         }
+    }
+
+    public void ChangeSensitivity() {
+        PlayerPrefs.SetFloat("sens", sensSlider.value);
     }
 }

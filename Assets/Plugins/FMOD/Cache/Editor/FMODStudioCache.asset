@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
   Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/Master.bank
   Name: Master
@@ -70,7 +70,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3392891275485700023}
   cacheVersion: 131847
-  cacheTime: 638851771455175173
+  cacheTime: 638852010462773208
   SerializableEventsDict:
   - key: event:/GunShoot
     index: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
   Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/SFX.bank
   Name: SFX
