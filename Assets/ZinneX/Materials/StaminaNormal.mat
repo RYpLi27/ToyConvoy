@@ -52,8 +52,8 @@ Material:
     - _UIMaskSoftnessY: 1
     m_Colors:
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
-    - _HealtColor2: {r: 0.0138203455, g: 0.4339623, b: 0, a: 0}
-    - _HealthColor1: {r: 0.02367392, g: 0.7169812, b: 0.05086252, a: 0}
+    - _HealtColor2: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 0}
+    - _HealthColor1: {r: 1, g: 1, b: 1, a: 0}
     - _TwirlOffsetSpeed: {r: 0.2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
