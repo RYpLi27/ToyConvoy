@@ -1,0 +1,2177 @@
+fileFormatVersion: 2
+guid: 4bc352eb2f9fd6e45a266c99fd897b5a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InputIcons_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 759
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d97a594266343499c47738f3ae94d7
+      internalID: -2026737862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 760
+        width: 68
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979d80190355a0e4c81649e1dfad3101
+      internalID: -546282876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_2
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 759
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042daa07ab761844e96c589805d60a20
+      internalID: 990504556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 760
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedb8882cd52d624ab6e8bc4cdafc2b2
+      internalID: 2088850574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 673
+        width: 224
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1565d91467b38438f83ba784b203a0
+      internalID: -819856026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 672
+        width: 225
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff9ab24c65da184791e13529e24f6b7
+      internalID: -1043768503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_6
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 670
+        width: 225
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9256be1af33e96b4aa51f9ac5aaa2a69
+      internalID: -358571571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_7
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 672
+        width: 225
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849076046fec10041aa65d17ba179950
+      internalID: 1731384592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_8
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 670
+        width: 225
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52e95f8829615e48a0d927ca5d94d68
+      internalID: 57914184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_9
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 670
+        width: 224
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20654c9f8b76cd84cb9f430712bc0103
+      internalID: 1928623343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_10
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 667
+        width: 224
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481b2ed779706014f978751d32e097cb
+      internalID: -333155365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_11
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 664
+        width: 226
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94f409d901cbe7438570d2c48220870
+      internalID: 275808061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 577
+        width: 224
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9845adfc8085d264da9b4979ef459bb5
+      internalID: -1113628902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_13
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 576
+        width: 225
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60c67fb7dba8b7458db245494433cbd
+      internalID: 479316971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_14
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 576
+        width: 225
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8cb77853e40d348948fb9833e76484
+      internalID: -1744347637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 485
+        width: 67
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cba8cc8dd95a24eaf1884bd46d25c2
+      internalID: 120939294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 485
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00373772963140468aa0792458c6fe1
+      internalID: 1479213297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 486
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97a7044481b8b448afbb3119f084308
+      internalID: -458463310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_18
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 486
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dc5bcca3010f84e9ba436b37934be6
+      internalID: 205720227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_19
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 485
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d0c16f11feb7d44a3cfce71a6f57c4
+      internalID: -551430052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_20
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 486
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b35af661045674caeeec26573a6bee
+      internalID: 282262576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_21
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 485
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b558771188a7df94aa870fbadf17b725
+      internalID: 1171830768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_22
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 485
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3d1622c2d489a4b8dd35567aceab13
+      internalID: -1257383995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_23
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 486
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3c4dcdac9d74f46bec0cc020fd938f
+      internalID: -1061534365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_24
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 484
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d80e2104c5e5c47a9694c975d99746
+      internalID: 517535882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 381
+        width: 71
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc90887ef26bd844a50705445c90cbc
+      internalID: 1589215926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_26
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e2371ef91cbee40a62f4bed2a3fb90
+      internalID: 52347432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a84db1ecad1fd478af6f5bbe323a03
+      internalID: 1435864248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_28
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f320475e8ab70584187dbeefa31cd446
+      internalID: 1013430012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_29
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be80199ef38b30f4aabe734be08c9e2b
+      internalID: -1358667908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_30
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796beabc94e5cbc47acd7e7486bb2501
+      internalID: 257850961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_31
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd29846b94dacf48a07d35d7e7fc4a2
+      internalID: -606762000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_32
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc85ceb7e15cdf646880b02f669c25fd
+      internalID: -2067030833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_33
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 378
+        width: 67
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337a5a71a49c4b7408cd4e1cd8659397
+      internalID: 1046698856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_34
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e323dbd948b13a749a2fde8348a651df
+      internalID: 382783347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_35
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f297909d672ad7541922dbb70c6c51ea
+      internalID: -1512003520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_36
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29bfcdc111e9e541858ad71d628df7f
+      internalID: 983112354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_37
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d01067f282b13541a3d9c8bf2fdc7ca
+      internalID: -1318774010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_38
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 378
+        width: 67
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2389cb15d94f6fd47bfed09e4a586a5b
+      internalID: 1680075720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_39
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e17f05d821f4543add874948cf1660
+      internalID: 494903005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_40
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f7c8257d090ac47be4f756212a90df
+      internalID: 1300439211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_41
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b86c1023a7e5045a4953a43b793234
+      internalID: -411263806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_42
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca969e3ce91d65348b1bfa3b3f54ad6f
+      internalID: -1009031191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_43
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a28ef80949eaa940a8e68732dc998a7
+      internalID: -2071349597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_44
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 378
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd0262b577011f4e96c7dbdda0d4870
+      internalID: 265349453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_45
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeb94350312e4d4b838c860c7b914e1
+      internalID: 841973847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_46
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 378
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660bef2541b0b2144b992109cb4a8855
+      internalID: 273004338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_47
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 382
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63858ca237f179f4085d09843e71ad39
+      internalID: 918581558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_48
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 382
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8960e253bfc25b4eba689299d4f1671
+      internalID: -62521666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_49
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 382
+        width: 67
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caec1164fc8110044b70ef00b2dba8d8
+      internalID: -619523028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_50
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 381
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726b4ace72d07da40affc498b78ddf53
+      internalID: -302835481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_51
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 284
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ac3d2018318364ab53ff454546f6c0
+      internalID: -459866179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_52
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 284
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f859bd76606ac240bd25afce863221d
+      internalID: -1461666920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 284
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8d29f8dbdf4da4a84a230552054949
+      internalID: 1098020949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_54
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 283
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a143a72a9a777488d58fdaefbcf6f7
+      internalID: -707390293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_55
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 193
+        width: 68
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c70d16d82a05a4db62df8e5b52d942
+      internalID: 1972321411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_56
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 193
+        width: 68
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002c2f27bfaeb884f80a8689840762ef
+      internalID: 1489408440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 193
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d266672314b04f4daecc3704b4ef88a
+      internalID: -819770442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_58
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 190
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c794c671cb0c1d419d020fc0d69d071
+      internalID: -1561363591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_59
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 190
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b523ef564a9eb6418823d24bd941364
+      internalID: -21694050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_60
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 188
+        width: 68
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cca0170b63f95446b238f5625adca26
+      internalID: -229835222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_61
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 189
+        width: 66
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095978cc7cfc5af48bdf35d9ebf05017
+      internalID: 1192152137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_62
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 186
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca3e686813bcd3468e9d21e02224128
+      internalID: 593601315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_63
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 186
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1725b23b6cdd24b823a9ad9d63a7d9
+      internalID: 426059256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_64
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 188
+        width: 68
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adcf9b14409e0145ad32093b8b0b27b
+      internalID: -611716843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_65
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 188
+        width: 68
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c167f5ea09e0c04bbe271cf8c827e2f
+      internalID: -1070791572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_66
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 189
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9266563aaa65f24795ae4d2adbceb54
+      internalID: -822635659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_67
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 190
+        width: 67
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afd6449fb734514385a71a8712c1f4f
+      internalID: -1631886613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_68
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 92
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46f57833179821478939a96b1ae4b14
+      internalID: 394824372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_69
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 92
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caebd769d12d2bd49a3738f17b95c0cd
+      internalID: 1795153795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_70
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 92
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef4c7f8a47fbae4bb817e6687afb5f4
+      internalID: 1646733211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_71
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 92
+        width: 67
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252bbba444f8b8049a402ab6f9bafcc8
+      internalID: 448890412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_72
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 91
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7ec67dda30c5b4b8206ee5c8097bad
+      internalID: -1459220120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_73
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 92
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63fd51cebe344a428391e1d1fe8682e
+      internalID: 2058103522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_74
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 92
+        width: 68
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b79a4f9ba2464848b159ed8ceba34b0
+      internalID: 1281555738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_75
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 95
+        width: 68
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fdad3fa1e35c74cac4c0a3a17487ba
+      internalID: -263773422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_76
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 96
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbabaf58a7c481a459a0362f9703255c
+      internalID: 651282777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_77
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edf2dab169f1994bbbf141c5963b6bb
+      internalID: -1813943485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_78
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4636f040365474cbba9d999343a4d2
+      internalID: 1960299226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_79
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31a69b3cba10f14faa342352893dd41
+      internalID: 316656042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_80
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9f972236b6ffd4d8033d2dd26cf861
+      internalID: 166419082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_81
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d47376651dfd74469a5f617ae72f718
+      internalID: 1284192144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_82
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1
+        width: 66
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0315c6a0354c3374a99e5cafda0fb3c9
+      internalID: -893113836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_83
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37489255fa4b0d347bbb84df51422c3e
+      internalID: -496762378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_84
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1
+        width: 68
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964cc652fb73c75498cc19e90f56fa55
+      internalID: 1652326559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_85
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1
+        width: 68
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58401fe911cec67418dccc9713fad206
+      internalID: -85418772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_86
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadd2ede4e5e634499c8221710474edb
+      internalID: -2128182102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_87
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1
+        width: 68
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bc8e61c3a758749ac703dd996ce15a
+      internalID: 993679484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InputIcons_88
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1
+        width: 68
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496d0b74637ba6e48ada878ba7de8e69
+      internalID: -1022484160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dd227e6f1a49b1247bc00135f1117ce6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      InputIcons_0: -2026737862
+      InputIcons_1: -546282876
+      InputIcons_10: -333155365
+      InputIcons_11: 275808061
+      InputIcons_12: -1113628902
+      InputIcons_13: 479316971
+      InputIcons_14: -1744347637
+      InputIcons_15: 120939294
+      InputIcons_16: 1479213297
+      InputIcons_17: -458463310
+      InputIcons_18: 205720227
+      InputIcons_19: -551430052
+      InputIcons_2: 990504556
+      InputIcons_20: 282262576
+      InputIcons_21: 1171830768
+      InputIcons_22: -1257383995
+      InputIcons_23: -1061534365
+      InputIcons_24: 517535882
+      InputIcons_25: 1589215926
+      InputIcons_26: 52347432
+      InputIcons_27: 1435864248
+      InputIcons_28: 1013430012
+      InputIcons_29: -1358667908
+      InputIcons_3: 2088850574
+      InputIcons_30: 257850961
+      InputIcons_31: -606762000
+      InputIcons_32: -2067030833
+      InputIcons_33: 1046698856
+      InputIcons_34: 382783347
+      InputIcons_35: -1512003520
+      InputIcons_36: 983112354
+      InputIcons_37: -1318774010
+      InputIcons_38: 1680075720
+      InputIcons_39: 494903005
+      InputIcons_4: -819856026
+      InputIcons_40: 1300439211
+      InputIcons_41: -411263806
+      InputIcons_42: -1009031191
+      InputIcons_43: -2071349597
+      InputIcons_44: 265349453
+      InputIcons_45: 841973847
+      InputIcons_46: 273004338
+      InputIcons_47: 918581558
+      InputIcons_48: -62521666
+      InputIcons_49: -619523028
+      InputIcons_5: -1043768503
+      InputIcons_50: -302835481
+      InputIcons_51: -459866179
+      InputIcons_52: -1461666920
+      InputIcons_53: 1098020949
+      InputIcons_54: -707390293
+      InputIcons_55: 1972321411
+      InputIcons_56: 1489408440
+      InputIcons_57: -819770442
+      InputIcons_58: -1561363591
+      InputIcons_59: -21694050
+      InputIcons_6: -358571571
+      InputIcons_60: -229835222
+      InputIcons_61: 1192152137
+      InputIcons_62: 593601315
+      InputIcons_63: 426059256
+      InputIcons_64: -611716843
+      InputIcons_65: -1070791572
+      InputIcons_66: -822635659
+      InputIcons_67: -1631886613
+      InputIcons_68: 394824372
+      InputIcons_69: 1795153795
+      InputIcons_7: 1731384592
+      InputIcons_70: 1646733211
+      InputIcons_71: 448890412
+      InputIcons_72: -1459220120
+      InputIcons_73: 2058103522
+      InputIcons_74: 1281555738
+      InputIcons_75: -263773422
+      InputIcons_76: 651282777
+      InputIcons_77: -1813943485
+      InputIcons_78: 1960299226
+      InputIcons_79: 316656042
+      InputIcons_8: 57914184
+      InputIcons_80: 166419082
+      InputIcons_81: 1284192144
+      InputIcons_82: -893113836
+      InputIcons_83: -496762378
+      InputIcons_84: 1652326559
+      InputIcons_85: -85418772
+      InputIcons_86: -2128182102
+      InputIcons_87: 993679484
+      InputIcons_88: -1022484160
+      InputIcons_9: 1928623343
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
