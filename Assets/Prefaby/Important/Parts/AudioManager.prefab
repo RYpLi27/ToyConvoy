@@ -59,8 +59,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <shotFired>k__BackingField:
     Guid:
-      Data1: 567530436
-      Data2: 1174355382
-      Data3: 1454175392
-      Data4: 1117896101
+      Data1: 1384887847
+      Data2: 1254139300
+      Data3: 680912304
+      Data4: 1134502564
     Path: event:/GunShoot

@@ -197,15 +197,16 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             if (action != null)
             {
                 var bindingIndex = action.bindings.IndexOf(x => x.id.ToString() == m_BindingId);
-                if (bindingIndex != -1)
+                if (bindingIndex != -1) 
                     displayString = action.GetBindingDisplayString(bindingIndex, out deviceLayoutName, out controlPath, displayStringOptions);
             }
 
             // Set on label (if any).
-            if (m_BindingText != null)
+            if (m_BindingText != null) 
                 m_BindingText.text = displayString;
 
             // Give listeners a chance to configure UI in response.
+            
             m_UpdateBindingUIEvent?.Invoke(this, displayString, deviceLayoutName, controlPath);
         }
 
@@ -321,6 +322,11 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             m_RebindStartEvent?.Invoke(this, m_RebindOperation);
 
             m_RebindOperation.Start();
+        }
+
+        // Makes sure that overriden controls are always displayed
+        private void Start() {
+            UpdateBindingDisplay();
         }
 
         protected void OnEnable()

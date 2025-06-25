@@ -7353,6 +7353,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+--- !u!1 &1073487424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4534550830232214268, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+  m_PrefabInstance: {fileID: 1073487423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1081421303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10735,6 +10740,10 @@ PrefabInstance:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 440871583971722193}
+    - target: {fileID: 7706757999554147288, guid: 1ff96482c8e131e48bac60e3b98983e2, type: 3}
+      propertyPath: settingsScreen
+      value: 
+      objectReference: {fileID: 1073487424}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
