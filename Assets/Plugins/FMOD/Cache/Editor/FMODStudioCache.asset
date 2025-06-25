@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638864032631888004
+  lastModified: 638864851397349223
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -42,7 +42,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3392891275485700023}
   cacheVersion: 131847
-  cacheTime: 638864032631898016
+  cacheTime: 638864851397364253
   SerializableEventsDict:
   - key: event:/GunShoot
     index: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638864032631898016
+  lastModified: 638864851397364253
   FileSizes: []
   Exists: 1
 --- !u!114 &3392891275485700023
@@ -135,7 +135,7 @@ MonoBehaviour:
   Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638864032631893017
+  lastModified: 638864851397349223
   FileSizes:
   - Name: 
     Value: 864
