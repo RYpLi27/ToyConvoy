@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -25,8 +26,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject loseScreen;
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject settingsScreen;
     [SerializeField] private GameObject ongoingUI;
     [SerializeField] private HealthManager baseHP;
+    [SerializeField] private List<GetNewInputIcon> inputIconTexts;
     
     public IEnumerator EndGame(GameState state) {
         if (gameState != GameState.Ongoing) yield break;
@@ -57,27 +60,42 @@ public class GameManager : MonoBehaviour {
     }
 
     public void PauseGame() {
-        if (gameState == GameState.Ongoing) {
-            Time.timeScale = 0;
-            gameState = GameState.Pause;
-            
-            pauseScreen.SetActive(true);
-            ongoingUI.SetActive(false);
-            
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
-        } else if (gameState == GameState.Pause) {
-            Time.timeScale = 1;
-            gameState = GameState.Ongoing;
-            
-            pauseScreen.SetActive(false);
-            ongoingUI.SetActive(true);
-            
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Locked;
+        if (settingsScreen.activeInHierarchy == true) { // Prioritise closing settings before unpausing
+            UpdateAllInputIcons();
+            UIButtons.DisableObject(settingsScreen);
+            UIButtons.EnableObject(pauseScreen);
+            return;
+        }
+
+        switch (gameState) {
+            case GameState.Ongoing:
+                Time.timeScale = 0;
+                gameState = GameState.Pause;
+
+                UIButtons.EnableObject(pauseScreen);
+                ongoingUI.SetActive(false);
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                break;
+
+            case GameState.Pause:
+                Time.timeScale = 1;
+                gameState = GameState.Ongoing;
+
+                UIButtons.DisableObject(pauseScreen);
+                ongoingUI.SetActive(true);
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                break;
         }
     }
 
+    public void UpdateAllInputIcons() {
+        inputIconTexts.ForEach(i => i.GetNewIcon());
+    }
+    
     public void DealDamageToBase(int i) {
         baseHP.TakeDamage(i);
     }

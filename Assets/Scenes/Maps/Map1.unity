@@ -418,6 +418,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7737477239850946027, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 4802421581157287789}
     - target: {fileID: 8150323398263926044, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
       propertyPath: m_Name
       value: UI
@@ -451,6 +455,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+--- !u!114 &172031131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5493761406389251223, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+  m_PrefabInstance: {fileID: 172031130}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e27785062b948048aa1a6cfb776674a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &172031137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4534550830232214268, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+  m_PrefabInstance: {fileID: 172031130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &182836928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6215,6 +6235,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: <shotFired>k__BackingField.Path
+      value: event:/Shots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: <shotFired>k__BackingField.Guid.Data1
+      value: -2010610333
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: <shotFired>k__BackingField.Guid.Data2
+      value: 1291729929
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: <shotFired>k__BackingField.Guid.Data3
+      value: -2056271195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
+      propertyPath: <shotFired>k__BackingField.Guid.Data4
+      value: -599617827
+      objectReference: {fileID: 0}
     - target: {fileID: 8146172364249518475, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -6384,6 +6424,10 @@ PrefabInstance:
       propertyPath: spawnWaveButton
       value: 
       objectReference: {fileID: 6839374860504149646}
+    - target: {fileID: 4625565083716694933, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemies.Array.data[0].enemyPrefab
+      value: 
+      objectReference: {fileID: 5395357637735131776, guid: 40897c47a2217bf42bc210f73f2a0cc2, type: 3}
     - target: {fileID: 6489337113596418189, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.353
@@ -6524,17 +6568,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48dfccf9f7865de4d9bf5d362f08f48f, type: 3}
---- !u!114 &4568921250703898635 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4103182858685326572, guid: 48dfccf9f7865de4d9bf5d362f08f48f, type: 3}
-  m_PrefabInstance: {fileID: 4568921250703898634}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11ce49ba897f2924a832f0116ca60d4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4635707834305588871
 Transform:
   m_ObjectHideFlags: 0
@@ -6664,6 +6697,18 @@ PrefabInstance:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 4908676582400721979}
+    - target: {fileID: 7706757999554147288, guid: 1ff96482c8e131e48bac60e3b98983e2, type: 3}
+      propertyPath: settingsScreen
+      value: 
+      objectReference: {fileID: 172031137}
+    - target: {fileID: 7706757999554147288, guid: 1ff96482c8e131e48bac60e3b98983e2, type: 3}
+      propertyPath: inputIconTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706757999554147288, guid: 1ff96482c8e131e48bac60e3b98983e2, type: 3}
+      propertyPath: 'inputIconTexts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 172031131}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7179,13 +7224,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 401423583926621884}
     - target: {fileID: 6446168381550515258, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4802421581157287789}
-    - target: {fileID: 6446168381550515258, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4568921250703898635}
     - target: {fileID: 6808939221189396226, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
       propertyPath: fillArea
       value: 

@@ -160,20 +160,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
+      propertyPath: <shotFired>k__BackingField.Path
+      value: event:/Shots
+      objectReference: {fileID: 0}
+    - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data1
-      value: 567530436
+      value: -2010610333
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data2
-      value: 1174355382
+      value: 1291729929
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data3
-      value: 1454175392
+      value: -2056271195
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data4
-      value: 1117896101
+      value: -599617827
       objectReference: {fileID: 0}
     - target: {fileID: 670827074032135739, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: m_Name
