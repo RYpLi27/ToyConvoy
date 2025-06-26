@@ -1,6 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5907058648636363807
+--- !u!114 &-7441605509576401469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Shots/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 288555269
+    data2: 4204618156
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Gun
+  - Value B
+  - Value C
+  Exists: 1
+--- !u!114 &-4372701447434002600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,12 +37,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/Master.bank
+  Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638864851397349223
+  lastModified: 638865558538751628
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -31,78 +58,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 3392891275485700023}
-  - {fileID: -5907058648636363807}
-  - {fileID: 2908097144255224724}
+  - {fileID: 8675502911868692225}
+  - {fileID: -4372701447434002600}
+  - {fileID: 5385905825923309710}
   EditorEvents:
-  - {fileID: 1458459184511047957}
+  - {fileID: 8324733226594353348}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5907058648636363807}
+  - {fileID: -4372701447434002600}
   StringsBanks:
-  - {fileID: 3392891275485700023}
+  - {fileID: 8675502911868692225}
   cacheVersion: 131847
-  cacheTime: 638864851397364253
+  cacheTime: 638865558538781604
   SerializableEventsDict:
-  - key: event:/GunShoot
+  - key: event:/Shots
     index: 0
---- !u!114 &1091466232226336345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GunShoot/GunType
-  m_EditorClassIdentifier: 
-  Name: GunType
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 433660871
-    data2: 4090392933
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Gun
-  - MachineGun
-  - Sniper
-  - Shotgun
-  Exists: 1
---- !u!114 &1458459184511047957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/GunShoot
-  m_EditorClassIdentifier: 
-  Path: event:/GunShoot
-  Guid:
-    Data1: 1384887847
-    Data2: 1254139300
-    Data3: 680912304
-    Data4: 1134502564
-  Banks:
-  - {fileID: 2908097144255224724}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 1091466232226336345}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 300
---- !u!114 &2908097144255224724
+--- !u!114 &5385905825923309710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,15 +83,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/SFX.bank
+  Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638864851397364253
+  lastModified: 638865558538781604
   FileSizes: []
   Exists: 1
---- !u!114 &3392891275485700023
+--- !u!114 &8324733226594353348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Shots
+  m_EditorClassIdentifier: 
+  Path: event:/Shots
+  Guid:
+    Data1: -2010610333
+    Data2: 1291729929
+    Data3: -2056271195
+    Data4: -599617827
+  Banks:
+  - {fileID: 5385905825923309710}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7441605509576401469}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8675502911868692225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,11 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/RYpLi/FMOD/ToyConvoyFMOD/Build/Desktop/Master.strings.bank
+  Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638864851397349223
+  lastModified: 638865558538775967
   FileSizes:
   - Name: 
-    Value: 864
+    Value: 866
   Exists: 1
