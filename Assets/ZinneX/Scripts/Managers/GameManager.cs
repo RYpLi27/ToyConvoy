@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject settingsScreen;
     [SerializeField] private GameObject ongoingUI;
     [SerializeField] private HealthManager baseHP;
+    [SerializeField] private List<GetNewInputIcon> inputIconTexts;
     
     public IEnumerator EndGame(GameState state) {
         if (gameState != GameState.Ongoing) yield break;
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour {
 
     public void PauseGame() {
         if (settingsScreen.activeInHierarchy == true) { // Prioritise closing settings before unpausing
+            UpdateAllInputIcons();
             UIButtons.DisableObject(settingsScreen);
             UIButtons.EnableObject(pauseScreen);
             return;
@@ -89,6 +92,10 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void UpdateAllInputIcons() {
+        inputIconTexts.ForEach(i => i.GetNewIcon());
+    }
+    
     public void DealDamageToBase(int i) {
         baseHP.TakeDamage(i);
     }
