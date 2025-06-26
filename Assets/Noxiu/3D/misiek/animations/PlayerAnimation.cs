@@ -4,9 +4,6 @@ public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    private bool hasWeaponEquipped = false;
-    private int currentWeaponSlot = -1;
-
     void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -26,43 +23,5 @@ public class PlayerAnimation : MonoBehaviour
         {
             animator.SetTrigger("Jump");
         }
-
-        for (int i = 0; i < 4; i++)
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
-            {
-                if (currentWeaponSlot == i)
-                {
-                    animator.SetTrigger("Weapon_PutAway");
-                    hasWeaponEquipped = false;
-                    currentWeaponSlot = -1;
-                    animator.SetBool("HasWeaponEquipped", false);
-                }
-                else
-                {
-                    if (hasWeaponEquipped)
-                    {
-                        StartCoroutine(SwapWeapon(i));
-                    }
-                    else
-                    {
-                        animator.SetTrigger("Weapon_TakeOut");
-                        hasWeaponEquipped = true;
-                        currentWeaponSlot = i;
-                        animator.SetBool("HasWeaponEquipped", true);
-                    }
-                }
-            }
-        }
-    }
-
-    private System.Collections.IEnumerator SwapWeapon(int newSlot)
-    {
-        animator.SetTrigger("Weapon_PutAway");
-        yield return new WaitForSeconds(0.5f);
-        animator.SetTrigger("Weapon_TakeOut");
-        hasWeaponEquipped = true;
-        currentWeaponSlot = newSlot;
-        animator.SetBool("HasWeaponEquipped", true);
     }
 }
