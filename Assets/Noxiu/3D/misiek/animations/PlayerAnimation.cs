@@ -20,7 +20,7 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetBool("IsWalkingBackward", isWalkingBack);
         animator.SetFloat("MoveX", moveX);
         animator.SetFloat("MoveY", moveY);
-        animator.SetFloat("SpeedMultiplier", isRunning ? 1.5f : 1f);
+        // animator.SetFloat("SpeedMultiplier", isRunning ? 1.5f : 1f);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
