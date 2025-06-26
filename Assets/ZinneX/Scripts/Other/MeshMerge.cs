@@ -1,7 +1,6 @@
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
-[RequireComponent(typeof(Mesh))]
 [RequireComponent(typeof(MeshCollider))]
 public class MeshMerge : MonoBehaviour
 {
@@ -11,8 +10,9 @@ public class MeshMerge : MonoBehaviour
         int index = 0;
         foreach (Transform child in gameObject.transform) {
             MeshFilter filter = child.GetComponent<MeshFilter>();
+            Debug.Log(filter.mesh);
             combine[index].mesh = filter.sharedMesh;
-            combine[index].transform = child.localToWorldMatrix;
+            combine[index].transform = transform.worldToLocalMatrix * child.localToWorldMatrix;
             child.gameObject.SetActive(false);
             index++;
         }

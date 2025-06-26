@@ -12,7 +12,6 @@ public class EnemyBehaviour : MonoBehaviour {
     public bool backtrack, canMove;
     
     private void OnEnable() {
-        canMove = true;
         FirstNodeAndOffset();
         EnemyManager.instance.AddEnemy(this);
     }
@@ -43,7 +42,8 @@ public class EnemyBehaviour : MonoBehaviour {
     private void FindNextNode() {
         previousNode = currentNode;
         if (backtrack == false) {
-            currentNode = currentNode.GetNextNode();
+            do { currentNode = currentNode.GetNextNode();
+            } while (currentNode == previousNode);
         } else {
             currentNode = currentNode.GetBacktrackNode();
             backtrack = false;
