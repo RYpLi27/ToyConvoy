@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: Landmine
   m_EditorClassIdentifier: 
   buildingName: Landmine
-  description: 'Deals AOE damage when enemy steps on it
-
-    (Works only once per
-    wave)'
+  description: Deals AOE damage when enemy steps on it
   price: 125
   turretStats:
   - damage: 35
