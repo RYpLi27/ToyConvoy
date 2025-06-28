@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void UpdateAllInputIcons() {
-        inputIconTexts.ForEach(i => i.GetNewIcon());
+        FindObjectsByType<GetNewInputIcon>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList().ForEach(i => i.GetNewIcon());
     }
     
     public void DealDamageToBase(int i) {
