@@ -27,7 +27,27 @@ MonoBehaviour:
   - Value B
   - Value C
   Exists: 1
---- !u!114 &-4372701447434002600
+--- !u!114 &-7393562244502984983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: AudioFMOD/FMOD_Banks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638868071613656182
+  FileSizes:
+  - Name: 
+    Value: 866
+  Exists: 1
+--- !u!114 &-6492908885365935984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,10 +59,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/Master.bank
+  Path: AudioFMOD/FMOD_Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638865558538751628
+  lastModified: 638868071613636173
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-832797253479011886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: AudioFMOD/FMOD_Banks/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638868071615182283
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -58,39 +96,21 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 8675502911868692225}
-  - {fileID: -4372701447434002600}
-  - {fileID: 5385905825923309710}
+  - {fileID: -7393562244502984983}
+  - {fileID: -6492908885365935984}
+  - {fileID: -832797253479011886}
   EditorEvents:
   - {fileID: 8324733226594353348}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4372701447434002600}
+  - {fileID: -6492908885365935984}
   StringsBanks:
-  - {fileID: 8675502911868692225}
+  - {fileID: -7393562244502984983}
   cacheVersion: 131847
-  cacheTime: 638865558538781604
+  cacheTime: 638868071615182283
   SerializableEventsDict:
   - key: event:/Shots
     index: 0
---- !u!114 &5385905825923309710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638865558538781604
-  FileSizes: []
-  Exists: 1
 --- !u!114 &8324733226594353348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +130,7 @@ MonoBehaviour:
     Data3: -2056271195
     Data4: -599617827
   Banks:
-  - {fileID: 5385905825923309710}
+  - {fileID: -832797253479011886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -119,23 +139,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8675502911868692225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638865558538775967
-  FileSizes:
-  - Name: 
-    Value: 866
-  Exists: 1
