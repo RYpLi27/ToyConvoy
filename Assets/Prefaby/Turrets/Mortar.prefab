@@ -221,6 +221,7 @@ MonoBehaviour:
   rangeBorder: {fileID: 4066880935014689361}
   upgradePrompt: {fileID: 4458902262764734686}
   interactTrigger: {fileID: 5792616111303052654}
+  anim: {fileID: 0}
 --- !u!114 &4703976167009314807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPlace: 0
-  mesh: {fileID: 6567002614197429235}
+  mesh:
+  - {fileID: 6567002614197429235}
 --- !u!1001 &5568389156035533051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,11 +458,23 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 299892170502962324, guid: c884c1ddf87136a4398241beed2e31f1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 299892170502962324, guid: c884c1ddf87136a4398241beed2e31f1, type: 3}
       propertyPath: m_Size.z
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 299892170502962324, guid: c884c1ddf87136a4398241beed2e31f1, type: 3}
       propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299892170502962324, guid: c884c1ddf87136a4398241beed2e31f1, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 299892170502962324, guid: c884c1ddf87136a4398241beed2e31f1, type: 3}
+      propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2695181259938516732, guid: c884c1ddf87136a4398241beed2e31f1, type: 3}
