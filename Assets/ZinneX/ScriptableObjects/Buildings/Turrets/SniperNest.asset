@@ -32,4 +32,4 @@ MonoBehaviour:
     projectileSpeed: 40
     upgradePrice: 0
   projectilePrefab: {fileID: 1561201658955599378, guid: 2824d62e4639f99409b00c8b8b1e88da, type: 3}
-  objectMaterial: {fileID: 2100000, guid: e24ff6892cd32aa4b93aa9a5fefec8ad, type: 2}
+  objectMaterial: {fileID: 2100000, guid: c317446c59774574e8d256aad9be66bf, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638865633153866610
+  lastModified: 638865616522253515
   FileSizes:
   - Name: 
     Value: 866
@@ -59,7 +59,7 @@ MonoBehaviour:
   Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638865633153866610
+  lastModified: 638865616522248485
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -86,7 +86,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -8038843108873937238}
   cacheVersion: 131847
-  cacheTime: 638865633153866610
+  cacheTime: 638865616522253515
   SerializableEventsDict:
   - key: event:/Shots
     index: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   Path: AudioFMOD/ToyConvoyFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638865633153866610
+  lastModified: 638865616522253515
   FileSizes: []
   Exists: 1
 --- !u!114 &5398714430801128615

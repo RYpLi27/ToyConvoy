@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4466f4ebdd8b8fa4780c6ae7d4ecc20d, type: 3}
-  m_Name: WoodenTrain
+  m_Name: ShieldSoldierBasic
   m_EditorClassIdentifier: 
-  maxHealth: 400
-  defense: 4
-  moveSpeed: 3
-  damageToBase: 3
+  maxHealth: 450
+  defense: 5
+  moveSpeed: 2
+  damageToBase: 1
+  minGold: 20
+  maxGold: 25

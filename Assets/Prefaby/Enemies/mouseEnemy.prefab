@@ -183,8 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b566c31bdcc3a1241ab3a95b464ea769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGold: 18
-  maxGold: 23
+  stats: {fileID: 11400000, guid: 4e8e86e25aed8f942b57f01ba6e1de06, type: 2}
 --- !u!114 &-7376247501922972224
 MonoBehaviour:
   m_ObjectHideFlags: 0
