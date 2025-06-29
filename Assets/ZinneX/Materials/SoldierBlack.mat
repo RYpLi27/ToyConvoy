@@ -65,7 +65,7 @@ Material:
     - _NormalStrenght: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.242
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _DissolveColor: {r: 4, g: 1.67146, b: 0, a: 0}
