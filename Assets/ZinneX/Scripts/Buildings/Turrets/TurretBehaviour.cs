@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 
 public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
@@ -16,6 +17,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private GameObject rangeBorder;
     [SerializeField] private TurretPrompt upgradePrompt;
     [SerializeField] private InteractTrigger interactTrigger;
+    [SerializeField] private Animator anim;
 
     private int currentLevel;
     
@@ -50,6 +52,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         if (Time.time - lastShootTime > 1/turretSO.turretStats[currentLevel].fireRate) { // FIRERATE LOGIC
             lastShootTime = Time.time;
             turretSO.Shoot(firepoint, currentTarget, turretSO.turretStats[currentLevel]);
+            anim?.SetTrigger("Shoot");
         }
     }
 
@@ -80,7 +83,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         interactTrigger.gameObject.SetActive(true);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
-        GetComponentInChildren<MeshRenderer>().material = turretSO.objectMaterial;
+        GetComponentsInChildren<MeshRenderer>().ForEach(m => m.material = turretSO.objectMaterial);
 
         return true;
     }

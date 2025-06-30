@@ -196,7 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPlace: 0
-  mesh: {fileID: 4598805137271527471}
+  mesh:
+  - {fileID: 4598805137271527471}
 --- !u!1001 &579293692049574388
 PrefabInstance:
   m_ObjectHideFlags: 0

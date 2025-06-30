@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4466f4ebdd8b8fa4780c6ae7d4ecc20d, type: 3}
-  m_Name: EnemyStatsSO
+  m_Name: TankBoss
   m_EditorClassIdentifier: 
-  maxHealth: 250
-  defense: 4
-  moveSpeed: 5
-  damageToBase: 3
+  maxHealth: 1500
+  defense: 12
+  moveSpeed: 1
+  damageToBase: 12
+  minGold: 100
+  maxGold: 120
