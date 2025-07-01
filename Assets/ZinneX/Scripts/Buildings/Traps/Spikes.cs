@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using Sirenix.Utilities;
 using UnityEngine;
 
 public class Spikes : MonoBehaviour, IBuilding, IInteractable {
@@ -67,7 +68,7 @@ public class Spikes : MonoBehaviour, IBuilding, IInteractable {
         
         gameObject.layer = LayerMask.NameToLayer("Turret");
         transform.SetParent(GameObject.Find("Turrets").transform);
-        GetComponentInChildren<MeshRenderer>().material = spikesSO.objectMaterial;
+        GetComponentsInChildren<MeshRenderer>().ForEach(m => m.material = spikesSO.objectMaterial);
         
         return true;
     }

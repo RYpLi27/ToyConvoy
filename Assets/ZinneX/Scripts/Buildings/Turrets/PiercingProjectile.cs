@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PiercingProjectile : MonoBehaviour
-{
+public class PiercingProjectile : MonoBehaviour {
+    [SerializeField] private float rotationOffset;
+    
     private Vector3 startPos;
     private Vector3 targetPos;
     private float distance;
@@ -11,6 +12,7 @@ public class PiercingProjectile : MonoBehaviour
     private float currentFlightLength;
     private PiercingTurret turretSO;
     private TurretSO.TurretStats stats;
+    private bool isFinished;
     
     private List<Transform> enemiesHit = new();
     
@@ -22,31 +24,37 @@ public class PiercingProjectile : MonoBehaviour
         
         startPos = transform.position;
         targetPos = newTarget + movePredict * turretSO.movementPredictDistance;
-        targetPos += (targetPos - startPos).normalized * turretSO.overshootDistance; // APPLYING OVERSHOOT (MORE DETAILS IN PiercingTurret.cs)
+
+        Vector3 overshoot = new Vector3(targetPos.x - startPos.x, 0, targetPos.z - startPos.z).normalized * turretSO.overshootDistance;
+        targetPos += overshoot;
         
         distance = Vector3.Distance(startPos, targetPos);
         entireFlightLength = distance / stats.projectileSpeed;
         
-        transform.rotation = Quaternion.LookRotation(targetPos - transform.position);
+        Vector3 targetEuler = Quaternion.LookRotation(targetPos - transform.position).eulerAngles;
+        targetEuler.y += rotationOffset;
+        Quaternion targetRotation = Quaternion.Euler(targetEuler);
+        
+        transform.rotation = targetRotation;
         GetComponent<Collider>().enabled = true;
     }
 
     private void Update() {
+        if (isFinished) return;
+        
         if (currentFlightLength >= entireFlightLength) { // REACHED TARGET
             StartCoroutine(Finished());
             return;
         } 
         
-        CalculateNextStep();
+        currentFlightLength += Time.deltaTime;
+        CalculateNextStep(currentFlightLength / entireFlightLength);
     }
 
-    private void CalculateNextStep() {
-        currentFlightLength += Time.deltaTime;
-        float t = currentFlightLength / entireFlightLength; // CURRENT % OF FLIGHT
-
+    private void CalculateNextStep(float t) {
         Vector3 newPosition = Vector3.Lerp(startPos, targetPos, t);
 
-        float heightOffset = turretSO.arcHeight * turretSO.heightCurve.Evaluate(t); // CALCULATING Y POSITION BASED ON CURVE (DON'T TOUCH)
+        float heightOffset = turretSO.arcHeight * turretSO.heightCurve.Evaluate(t); // CALCULATING Y POSITION BASED ON CURVE
         newPosition.y += heightOffset;
         
         transform.position = newPosition;
@@ -54,12 +62,15 @@ public class PiercingProjectile : MonoBehaviour
     }
 
     private IEnumerator Finished() {
+        isFinished = true;
         GetComponent<Collider>().enabled = false;
+        CalculateNextStep(1);
 
         yield return new WaitForSeconds(turretSO.lifetimeAfterReachingEnd);
         
         currentFlightLength = 0;
         ObjectPoolManager.ReturnObjectToPool(gameObject);
+        isFinished = false;
     }
 
     private void OnTriggerEnter(Collider other) {

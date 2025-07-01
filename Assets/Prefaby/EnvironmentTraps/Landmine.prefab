@@ -273,6 +273,7 @@ MonoBehaviour:
   upgradePrompt: {fileID: 8581395235123743365}
   interactTrigger: {fileID: 2867056337020157127}
   launchObj: {fileID: 3449852513617095658}
+  spawnerRenderer: {fileID: 6874076330704505100}
 --- !u!114 &3366927628110917603
 MonoBehaviour:
   m_ObjectHideFlags: 0

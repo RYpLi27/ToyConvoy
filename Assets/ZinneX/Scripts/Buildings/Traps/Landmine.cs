@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Sirenix.Utilities;
 
 public class Landmine : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private LandmineSO landmineSO;
@@ -13,6 +14,7 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private TurretPrompt upgradePrompt;
     [SerializeField] private InteractTrigger interactTrigger;
     [SerializeField] private Transform launchObj;
+    [SerializeField] private MeshRenderer spawnerRenderer;
     private int currentLevel;
     private bool readyToLaunch;
     
@@ -82,7 +84,7 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
         
         gameObject.layer = LayerMask.NameToLayer("EnvironmentalTrap");
         transform.SetParent(GameObject.Find("Turrets").transform);
-        GetComponentInChildren<MeshRenderer>().material = landmineSO.objectMaterial;
+        spawnerRenderer.material = landmineSO.objectMaterial;
         
         return true;
     }

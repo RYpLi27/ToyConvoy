@@ -16,11 +16,11 @@ MonoBehaviour:
   description: Deals damage over time when enemy stand on it
   price: 200
   turretStats:
-  - damagePerSecond: 50
+  - damagePerSecond: 125
     upgradePrice: 250
-  - damagePerSecond: 110
+  - damagePerSecond: 250
     upgradePrice: 450
-  - damagePerSecond: 200
+  - damagePerSecond: 400
     upgradePrice: 0
   hitInstancesPerSecond: 12
   objectMaterial: {fileID: 2100000, guid: 29f30f19091fbbf4996cdc6dabe190ac, type: 2}

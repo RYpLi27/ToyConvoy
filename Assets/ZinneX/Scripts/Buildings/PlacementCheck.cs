@@ -7,6 +7,7 @@ public class PlacementCheck : MonoBehaviour {
     [ReadOnly] public bool canPlace;
 
     [SerializeField] private List<MeshRenderer> mesh;
+    [SerializeField] private List<SkinnedMeshRenderer> skinnedMesh;
     private BoxCollider col;
 
     private Vector3 colPos;
@@ -42,6 +43,7 @@ public class PlacementCheck : MonoBehaviour {
         }
         
         mesh.ForEach(m => m.material = PlayerBuilding.instance.wrongMaterial);
+        if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.wrongMaterial);
         canPlace = false;
     }
 
@@ -49,6 +51,7 @@ public class PlacementCheck : MonoBehaviour {
         if (Physics.CheckBox(colPos, colSize / 2, transform.rotation, ~0, QueryTriggerInteraction.Ignore) == false) {
             if (GetComponent<TurretBehaviour>().PriceCheck()) {
                 mesh.ForEach(m => m.material = PlayerBuilding.instance.correctMaterial);
+                if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.correctMaterial);
                 canPlace = true;
                 return true;
             }
@@ -94,6 +97,7 @@ public class PlacementCheck : MonoBehaviour {
         if(TryGetComponent(out Spikes spikes)) {
             if (spikes.PriceCheck() == false) return false;
             mesh.ForEach(m => m.material = PlayerBuilding.instance.correctMaterial);
+            if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.correctMaterial);
             canPlace = true;
             return true;
         } 
@@ -101,6 +105,7 @@ public class PlacementCheck : MonoBehaviour {
         if (TryGetComponent(out Landmine landmine)) {
             if (landmine.PriceCheck() == false) return false;
             mesh.ForEach(m => m.material = PlayerBuilding.instance.correctMaterial);
+            if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.correctMaterial);
             canPlace = true;
             return true;
         }

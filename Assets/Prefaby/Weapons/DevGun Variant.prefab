@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: weaponSO
       value: 
       objectReference: {fileID: 11400000, guid: f1745ed15c1551e479523e335d6984b0, type: 2}
+    - target: {fileID: 6662308830831990206, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 43651cd5e925b4c4e94aee7211c60b38, type: 2}
     - target: {fileID: 7518100681385187746, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.99909294

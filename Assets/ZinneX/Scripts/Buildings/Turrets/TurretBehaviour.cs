@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private TurretPrompt upgradePrompt;
     [SerializeField] private InteractTrigger interactTrigger;
     [SerializeField] private Animator anim;
+    [SerializeField] private List<MeshRenderer> renderers;
+    [SerializeField] private List<SkinnedMeshRenderer> skinnedRenderers;
 
     private int currentLevel;
     
@@ -29,7 +32,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
     }
 
     private void FixedUpdate() {
-        Shoot();
+        TryShoot();
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -46,14 +49,18 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         }
     }
 
-    private void Shoot() {
+    private void TryShoot() {
         if (enemiesInRange.Count == 0 || GameManager.gameState != GameManager.GameState.Ongoing) return; // IF NO ENEMIES IN RANGE DON'T SHOOT
-
+        
         if (Time.time - lastShootTime > 1/turretSO.turretStats[currentLevel].fireRate) { // FIRERATE LOGIC
             lastShootTime = Time.time;
-            turretSO.Shoot(firepoint, currentTarget, turretSO.turretStats[currentLevel]);
             anim?.SetTrigger("Shoot");
         }
+    }
+    
+    private void Shoot() { // CALLED INSIDE ANIMATOR VIA EVENT
+        if (enemiesInRange.Count == 0 || GameManager.gameState != GameManager.GameState.Ongoing) return;
+            turretSO.Shoot(firepoint, currentTarget, turretSO.turretStats[currentLevel]);
     }
 
     private void UpdateTarget() {
@@ -76,6 +83,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
 
         GetComponent<PlacementCheck>().enabled = false;
         if (TryGetComponent(out TurretRotateToTarget rotate)) rotate.enabled = true;
+        if(skinnedRenderers.Count != 0) skinnedRenderers.ForEach(smr => smr.material = turretSO.objectMaterial);
         triggerCol.enabled = true;
         normalCol.enabled = true;
         
@@ -83,7 +91,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         interactTrigger.gameObject.SetActive(true);
         
         transform.SetParent(GameObject.Find("Turrets").transform);
-        GetComponentsInChildren<MeshRenderer>().ForEach(m => m.material = turretSO.objectMaterial);
+        renderers.ForEach(m => m.material = turretSO.objectMaterial);
 
         return true;
     }
