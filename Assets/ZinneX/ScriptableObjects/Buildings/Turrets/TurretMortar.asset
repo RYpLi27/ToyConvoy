@@ -69,3 +69,4 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   movementPredictDistance: 1.5
+  hitEffect: {fileID: 7403103098228120956, guid: 513099c3c135b01439895582ca4ec420, type: 3}

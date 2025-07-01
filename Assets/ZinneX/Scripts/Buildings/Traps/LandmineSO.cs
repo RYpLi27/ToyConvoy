@@ -6,6 +6,7 @@ using UnityEngine;
 public class LandmineSO : BuildingSO {
     public List<TurretStats> turretStats;
     public Material objectMaterial;
+    public GameObject explosionEffect;
 
     [System.Serializable]
     public class TurretStats {
