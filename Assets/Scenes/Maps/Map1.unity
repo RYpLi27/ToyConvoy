@@ -6963,7 +6963,7 @@ PrefabInstance:
     - target: {fileID: 4625565083716694933, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: enemyWaves.Array.data[0].enemies.Array.data[0].enemyPrefab
       value: 
-      objectReference: {fileID: 5395357637735131776, guid: 40897c47a2217bf42bc210f73f2a0cc2, type: 3}
+      objectReference: {fileID: 7462552514804546042, guid: 0ddc72bcd4989f7478b8db688e5729a9, type: 3}
     - target: {fileID: 6489337113596418189, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.353
@@ -7838,6 +7838,10 @@ PrefabInstance:
     - target: {fileID: 6313768919783070541, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.28834966
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344338820677979542, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6446168381550515258, guid: 726befa6793156e41ae91d7afbbaa5f9, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target

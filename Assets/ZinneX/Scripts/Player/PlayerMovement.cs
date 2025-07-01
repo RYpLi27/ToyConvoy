@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour {
     [TabGroup("Others")] [SerializeField] private Transform groundCheck;
     [TabGroup("Others")] [SerializeField] private LayerMask whatIsGround;
     [TabGroup("Others")] [SerializeField] private StaminaManager staminaManager;
-    [TabGroup("Others")] [SerializeField] private RunTrail runTrail;
+    // [TabGroup("Others")] [SerializeField] private RunTrail runTrail;
     
     private Vector2 moveInputValues;
 
@@ -54,12 +54,12 @@ public class PlayerMovement : MonoBehaviour {
     public void RunInput(InputAction.CallbackContext context) {
         if (context.performed && staminaManager.isExhausted == false) {
             isRunning = true;
-            runTrail.EnableTrail();
+            // runTrail.EnableTrail();
         }
         
         if (context.canceled) {
             isRunning = false;
-            if(GroundedCheck() == true) runTrail.DisableTrail();
+            // if(GroundedCheck() == true) runTrail.DisableTrail();
         }
     }
     
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour {
         if (isRunning == true && Mathf.Abs(rb.linearVelocity.magnitude) >= .1f && staminaManager.isExhausted == false)
             if (staminaManager.DrainStamina(runStaminaCost * Time.deltaTime) == true) {
                 isRunning = false;
-                runTrail.DisableTrail();
+                // runTrail.DisableTrail();
             }
     }
     #endregion
@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Jump() {
         if (staminaManager.isExhausted || canJump == false) return;
         
-        runTrail.EnableTrail();
+        // runTrail.EnableTrail();
         
         canJump = false;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
@@ -126,7 +126,7 @@ public class PlayerMovement : MonoBehaviour {
             coyoteTimeCounter = coyoteTime;
         } else { coyoteTimeCounter -= Time.fixedDeltaTime; }
 
-        if(coyoteTimeCounter > 0 && canJump == true && isRunning == false) runTrail.DisableTrail();
+        // if(coyoteTimeCounter > 0 && canJump == true && isRunning == false) runTrail.DisableTrail();
         
         return coyoteTimeCounter > 0;
     }

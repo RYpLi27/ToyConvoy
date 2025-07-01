@@ -83,14 +83,86 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e24ff6892cd32aa4b93aa9a5fefec8ad, type: 2}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0015999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0015999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0015999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097941632779785465, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2467116463142843505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
       propertyPath: m_Name
       value: Sniper Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4101269521367556637, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101269521367556637, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101269521367556637, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522436184462551072, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5180816273028475080, guid: 9353f3b8c729dcc4ba29e97415faa893, type: 3}
     - target: {fileID: 6020731791447496505, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
       propertyPath: weaponSO
       value: 
       objectReference: {fileID: 11400000, guid: 862a4bba8163cc94ab86aa95df29f96c, type: 2}
+    - target: {fileID: 6662308830831990206, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: edb91186d17c29f4ba73b46d4dc05989, type: 2}
     - target: {fileID: 7518100681385187746, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.99909294
@@ -153,4 +225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomFOV: 18
+  weaponModel: {fileID: 9103687073796647938}
   zoomVolume: {fileID: 6222976712668054069}
+--- !u!1 &9103687073796647938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2693957437242985818, guid: ba2e813fa8256ab46a7b90977acf5d05, type: 3}
+  m_PrefabInstance: {fileID: 6571903238635069784}
+  m_PrefabAsset: {fileID: 0}

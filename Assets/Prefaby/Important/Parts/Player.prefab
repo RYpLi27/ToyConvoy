@@ -184,7 +184,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 33536
   staminaManager: {fileID: 6808939221189396226}
-  runTrail: {fileID: 0}
+  runTrail: {fileID: 6866773965864431436}
 --- !u!114 &6373328544389758099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,9 +594,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4551670548953444072}
-  - {fileID: 3726796677914646025}
+  m_Children: []
   m_Father: {fileID: 3112420122433896997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6866773965864431436
@@ -612,8 +610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trails:
-  - {fileID: 7859360792026677921}
-  - {fileID: 5256770147634428664}
+  - {fileID: 0}
+  - {fileID: 0}
   runTrailTime: 0.5
   walkTrailTime: 0
 --- !u!1 &6373978944975964915

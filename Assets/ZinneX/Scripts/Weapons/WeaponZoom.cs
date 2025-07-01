@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 
 public class WeaponZoom : MonoBehaviour {
     [SerializeField] private float zoomFOV;
+    [SerializeField] private GameObject weaponModel;
     private float standardFOV;
     private bool isZoomed;
     private CinemachineCamera cam;
@@ -32,6 +33,8 @@ public class WeaponZoom : MonoBehaviour {
     }
 
     private void Zoom() {
+        weaponModel.SetActive(!isZoomed);
+        
         DOTween.To(
             () => cam.Lens.FieldOfView,
             v =>  cam.Lens.FieldOfView = v,
