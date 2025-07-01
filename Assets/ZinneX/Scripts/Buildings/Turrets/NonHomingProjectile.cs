@@ -45,6 +45,10 @@ public class NonHomingProjectile : MonoBehaviour {
     }
 
     private void Hit() {
+        Vector3 hitEffectPos = transform.position;
+        hitEffectPos.y = .5f;
+        ObjectPoolManager.SpawnObject(turretSO.hitEffect, hitEffectPos, Quaternion.identity);
+        
         currentFlightLength = 0;
         Collider[] enemiesInRadius = Physics.OverlapSphere(transform.position, turretSO.hitRadius, StaticVariables.whatIsEnemy);
         if (enemiesInRadius.Length == 0) { return; }

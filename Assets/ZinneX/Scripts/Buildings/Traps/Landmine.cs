@@ -45,6 +45,8 @@ public class Landmine : MonoBehaviour, IBuilding, IInteractable {
     private void Explode() {
         Collider[] enemiesInRange = Physics.OverlapSphere(launchObj.position, landmineSO.turretStats[0].explosionRange, StaticVariables.whatIsEnemy);
 
+        ObjectPoolManager.SpawnObject(landmineSO.explosionEffect, launchObj.position, Quaternion.identity, ObjectPoolManager.PoolingParent.Effect);
+
         List<Transform> enemiesHit = new();
         foreach (Collider col in enemiesInRange) {
             if (enemiesHit.Contains(col.transform.parent)) continue;
