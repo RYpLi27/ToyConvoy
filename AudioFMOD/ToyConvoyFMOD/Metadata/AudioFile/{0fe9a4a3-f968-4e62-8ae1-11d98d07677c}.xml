@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{0fe9a4a3-f968-4e62-8ae1-11d98d07677c}">
 		<property name="assetPath">
-			<value>ToSort/Sonic_Soundfx_household_bedroom_pillow_pat_2.mp3</value>
+			<value>SFX/Steps.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

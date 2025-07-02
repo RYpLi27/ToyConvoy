@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{7f6a98dc-ea84-4192-9928-52c405a2f5d6}">
 		<property name="assetPath">
-			<value>ToSort/43563472_menu-button-click-swoosh-12.wav</value>
+			<value>SFX/LifeLost.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

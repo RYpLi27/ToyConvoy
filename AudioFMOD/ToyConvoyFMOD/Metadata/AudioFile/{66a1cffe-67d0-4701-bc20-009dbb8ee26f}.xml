@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{66a1cffe-67d0-4701-bc20-009dbb8ee26f}">
 		<property name="assetPath">
-			<value>ToSort/43132597_cartoon-bomb-explosion-03.wav</value>
+			<value>SFX/Explosion.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

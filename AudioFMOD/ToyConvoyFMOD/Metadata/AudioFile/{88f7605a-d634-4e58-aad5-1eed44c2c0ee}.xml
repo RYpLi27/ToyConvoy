@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{88f7605a-d634-4e58-aad5-1eed44c2c0ee}">
 		<property name="assetPath">
-			<value>ToSort/43133601_cartoon-spring-boing-02.wav</value>
+			<value>SFX/Jump2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

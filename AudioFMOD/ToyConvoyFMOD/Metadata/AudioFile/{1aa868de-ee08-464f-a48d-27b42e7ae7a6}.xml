@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{1aa868de-ee08-464f-a48d-27b42e7ae7a6}">
 		<property name="assetPath">
-			<value>ToSort/zapsplat_household_bed_movement_frame_thud_111234.mp3</value>
+			<value>Weapons/zapsplat_household_bed_movement_frame_thud_111234.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{a6ffb50f-c7d3-42a4-a513-b94c9cccd69f}">
 		<property name="assetPath">
-			<value>ToSort/PM_FN_Dash_Slide_7.mp3</value>
+			<value>Weapons/Button Click.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

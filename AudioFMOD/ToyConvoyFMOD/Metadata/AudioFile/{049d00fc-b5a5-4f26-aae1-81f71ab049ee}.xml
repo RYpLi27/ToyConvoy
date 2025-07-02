@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{049d00fc-b5a5-4f26-aae1-81f71ab049ee}">
 		<property name="assetPath">
-			<value>ToSort/zapsplat_multimedia_male_voice_processed_says_game_over_002_23669.mp3</value>
+			<value>SFX/UI/GameOver.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

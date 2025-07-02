@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{893e7493-7c60-4206-8a29-ef556f363959}">
 		<property name="assetPath">
-			<value>ToSort/fork_media_cartoon_people_stampede.mp3</value>
+			<value>SFX/RatCharge.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

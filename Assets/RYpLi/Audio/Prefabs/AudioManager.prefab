@@ -80,21 +80,19 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -2010610333
-      Data2: 1291729929
-      Data3: -2056271195
-      Data4: -599617827
-    Path: event:/Shots
+      Data1: -1488432880
+      Data2: 1091306216
+      Data3: 2112885906
+      Data4: 1795628572
+    Path: event:/Soundtrack/SoundtrackGame
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params:
-  - Name: Parameter 1
-    Value: 0
+  Preload: 1
+  NonRigidbodyVelocity: 1
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
