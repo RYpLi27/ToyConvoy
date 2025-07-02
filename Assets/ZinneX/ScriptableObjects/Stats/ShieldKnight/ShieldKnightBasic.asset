@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 225
   defense: 5
-  moveSpeed: 2
+  moveSpeed: 2.5
   damageToBase: 1
-  minGold: 20
-  maxGold: 25
+  minGold: 15
+  maxGold: 20

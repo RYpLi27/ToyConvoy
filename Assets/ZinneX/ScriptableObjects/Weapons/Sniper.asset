@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd25e5b7d4ba4a41bb7de9338f265a0, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  fireRate: 0.9
-  damage: 57
-  weaponRange: 125
+  fireRate: 0.7
+  damage: 65
+  weaponRange: 150
   verticalRecoil: 0.05
   horizontalRecoil: 0.05
   cameraVerticalRecoil: 35

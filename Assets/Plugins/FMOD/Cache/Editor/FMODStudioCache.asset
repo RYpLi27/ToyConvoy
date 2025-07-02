@@ -218,29 +218,29 @@ MonoBehaviour:
   cacheVersion: 131847
   cacheTime: 638870964771832986
   SerializableEventsDict:
-  - key: event:/Soundtrack/MenuSoundtrack
-    index: 0
   - key: event:/Soundtrack/SoundtrackGame
-    index: 1
+    index: 0
   - key: event:/Sounds/Jump
-    index: 2
+    index: 1
   - key: event:/Sounds/GameOver
-    index: 3
+    index: 2
   - key: event:/Sounds/Shots
-    index: 4
+    index: 3
   - key: event:/Sounds/RatCharge
-    index: 5
+    index: 4
   - key: event:/Sounds/LifeLost
-    index: 6
+    index: 5
   - key: event:/UISounds/ButtonClick
-    index: 7
+    index: 6
   - key: event:/Steps
-    index: 8
+    index: 7
   - key: event:/Towers/MortarBoom
-    index: 9
+    index: 8
   - key: event:/Towers/BallistaShot
-    index: 10
+    index: 9
   - key: event:/Towers/SniperTowerShot
+    index: 10
+  - key: event:/Soundtrack/SoundtrackMenu
     index: 11
 --- !u!114 &2064622673952881649
 MonoBehaviour:

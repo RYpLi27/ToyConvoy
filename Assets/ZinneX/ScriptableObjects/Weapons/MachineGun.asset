@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd25e5b7d4ba4a41bb7de9338f265a0, type: 3}
   m_Name: MachineGun
   m_EditorClassIdentifier: 
-  fireRate: 14
+  fireRate: 15
   damage: 7
-  weaponRange: 40
+  weaponRange: 45
   verticalRecoil: 0.2
   horizontalRecoil: 0.4
   cameraVerticalRecoil: 6

@@ -16,5 +16,5 @@ MonoBehaviour:
   defense: 4
   moveSpeed: 3
   damageToBase: 1
-  minGold: 30
-  maxGold: 40
+  minGold: 25
+  maxGold: 35
