@@ -25,7 +25,7 @@
 			<value>Shotgun</value>
 		</property>
 		<property name="initialValue">
-			<value>3</value>
+			<value>1</value>
 		</property>
 	</object>
 </objects>

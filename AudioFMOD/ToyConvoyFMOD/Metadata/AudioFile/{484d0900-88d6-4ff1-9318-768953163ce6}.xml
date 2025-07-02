@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{484d0900-88d6-4ff1-9318-768953163ce6}">
+		<property name="assetPath">
+			<value>Sounds2/musical_human_beatbox_open_hi_hat.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49632653061224491</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a3a7f355-accb-4f53-b0b8-ab4c51abd2dd}</destination>
+		</relationship>
+	</object>
+</objects>

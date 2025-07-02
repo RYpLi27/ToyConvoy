@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{86e99f40-f7d7-4b3b-81cc-1677e6d16bf3}">
 		<property name="name">
-			<value>Boom</value>
+			<value>MortarBoom</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{db91a2c8-ea22-4061-ad47-853531b5f7ed}</destination>
+			<destination>{affbf902-bd50-47bd-a6ce-ee4778a18319}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{eaa6f06f-680b-446b-9aba-b863539e1a64}</destination>
@@ -91,9 +91,6 @@
 	<object class="MultiSound" id="{a8737d83-50f1-4fe9-abe7-bc48ce32f0ba}">
 		<property name="length">
 			<value>1.1508163265306122</value>
-		</property>
-		<property name="pitch">
-			<value>1.20000005</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{70b57d79-506a-4eb4-a492-f9bbaeb33383}</destination>
@@ -304,25 +301,25 @@
 			<value>11</value>
 		</property>
 		<property name="frequencyA">
-			<value>55.200367</value>
+			<value>85.2911987</value>
 		</property>
 		<property name="frequencyB">
-			<value>4847.90039</value>
+			<value>5963.97363</value>
 		</property>
 		<property name="frequencyC">
-			<value>766.855774</value>
+			<value>924.054321</value>
 		</property>
 		<property name="qualityA">
-			<value>0.7961725</value>
+			<value>1.10827589</value>
 		</property>
 		<property name="qualityB">
 			<value>4.27586222</value>
 		</property>
 		<property name="qualityC">
-			<value>3.65517259</value>
+			<value>7.75862122</value>
 		</property>
 		<property name="gainB">
-			<value>7.75862217</value>
+			<value>-1.55172348</value>
 		</property>
 		<property name="gainC">
 			<value>-2.58620834</value>
@@ -333,7 +330,7 @@
 			<value>0</value>
 		</property>
 		<property name="depth">
-			<value>20</value>
+			<value>17.5</value>
 		</property>
 		<property name="mix">
 			<value>0</value>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{09e6fe61-7e2a-4c06-8b62-f4dde32519d2}">
+		<property name="assetPath">
+			<value>Weapons/BallistaShot/BallistaShot-004.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5514512471655328</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a3a7f355-accb-4f53-b0b8-ab4c51abd2dd}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9028420492113343091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Steps
+  m_EditorClassIdentifier: 
+  Path: event:/Steps
+  Guid:
+    Data1: 554379228
+    Data2: 1154081559
+    Data3: 1140922539
+    Data4: 868982344
+  Banks:
+  - {fileID: 3981902664034627692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 900
+--- !u!114 &-7888083485275189399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Towers/SniperTowerShot
+  m_EditorClassIdentifier: 
+  Path: event:/Towers/SniperTowerShot
+  Guid:
+    Data1: -881494368
+    Data2: 1086464820
+    Data3: -895796598
+    Data4: -842717880
+  Banks:
+  - {fileID: 3981902664034627692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1185
 --- !u!114 &-6966581178442370781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,33 +72,6 @@ MonoBehaviour:
   lastModified: 638870837359869514
   FileSizes: []
   Exists: 1
---- !u!114 &-6854464725517571146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Button Click
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Button Click
-  Guid:
-    Data1: 8739382
-    Data2: 1256896010
-    Data3: 1583952574
-    Data4: -1274691347
-  Banks:
-  - {fileID: 3981902664034627692}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 696
 --- !u!114 &-6773203793056695259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +99,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 9.400001
   Length: 2200
+--- !u!114 &-6518402801939133749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UISounds/ButtonClick
+  m_EditorClassIdentifier: 
+  Path: event:/UISounds/ButtonClick
+  Guid:
+    Data1: -633689687
+    Data2: 1114584044
+    Data3: 19691945
+    Data4: 1384730909
+  Banks:
+  - {fileID: 3981902664034627692}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-6288990695405492384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +153,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 260000
+--- !u!114 &-4333407065520058410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Towers/BallistaShot
+  m_EditorClassIdentifier: 
+  Path: event:/Towers/BallistaShot
+  Guid:
+    Data1: -865132708
+    Data2: 1245333149
+    Data3: 284895383
+    Data4: 1247629793
+  Banks:
+  - {fileID: 3981902664034627692}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1810
 --- !u!114 &-1633978736260021490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,40 +229,46 @@ MonoBehaviour:
   - {fileID: -6288990695405492384}
   - {fileID: 3559997207710989300}
   - {fileID: 4801696171462088782}
-  - {fileID: -6854464725517571146}
-  - {fileID: 5338351146681211655}
-  - {fileID: 4312895768825302203}
   - {fileID: 2739627189612348439}
   - {fileID: -6773203793056695259}
   - {fileID: 2064622673952881649}
+  - {fileID: -6518402801939133749}
+  - {fileID: -9028420492113343091}
+  - {fileID: 6532669916921478075}
+  - {fileID: -4333407065520058410}
+  - {fileID: -7888083485275189399}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3469190953243251257}
   StringsBanks:
   - {fileID: 7422080604626596186}
   cacheVersion: 131847
-  cacheTime: 638870853542949842
+  cacheTime: 638870881375619208
   SerializableEventsDict:
-  - key: event:/Shots
-    index: 0
   - key: event:/Soundtrack/MenuSoundtrack
-    index: 1
-  - key: event:/Boom
-    index: 2
+    index: 0
   - key: event:/Soundtrack/SoundtrackGame
+    index: 1
+  - key: event:/Sounds/Jump
+    index: 2
+  - key: event:/Sounds/GameOver
     index: 3
-  - key: event:/Jump
+  - key: event:/Sounds/Shots
     index: 4
-  - key: event:/GameOver
+  - key: event:/Sounds/RatCharge
     index: 5
-  - key: event:/RatCharge
+  - key: event:/Sounds/LifeLost
     index: 6
-  - key: event:/LifeLost
+  - key: event:/UISounds/ButtonClick
     index: 7
-  - key: event:/Button Click
+  - key: event:/Steps
     index: 8
-  - key: event:/PistolSound
+  - key: event:/Towers/MortarBoom
     index: 9
+  - key: event:/Towers/BallistaShot
+    index: 10
+  - key: event:/Towers/SniperTowerShot
+    index: 11
 --- !u!114 &2064622673952881649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +339,7 @@ MonoBehaviour:
   Path: AudioFMOD/FMOD_Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638870853542374342
+  lastModified: 638870878275906383
   FileSizes: []
   Exists: 1
 --- !u!114 &3559997207710989300
@@ -297,36 +384,9 @@ MonoBehaviour:
   Path: AudioFMOD/FMOD_Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638870853542949842
+  lastModified: 638870881375619208
   FileSizes: []
   Exists: 1
---- !u!114 &4312895768825302203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/PistolSound
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/PistolSound
-  Guid:
-    Data1: -968220076
-    Data2: 1178844084
-    Data3: -1342404675
-    Data4: 8172375
-  Banks:
-  - {fileID: 3981902664034627692}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1600
 --- !u!114 &4801696171462088782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +414,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5338351146681211655
+--- !u!114 &6532669916921478075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -364,9 +424,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Boom
+  m_Name: event:/Towers/MortarBoom
   m_EditorClassIdentifier: 
-  Path: event:/Sounds/Boom
+  Path: event:/Towers/MortarBoom
   Guid:
     Data1: -2031509696
     Data2: 1262221271
@@ -396,10 +456,10 @@ MonoBehaviour:
   Path: AudioFMOD/FMOD_Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638870853542384351
+  lastModified: 638870878275921395
   FileSizes:
   - Name: 
-    Value: 1336
+    Value: 1464
   Exists: 1
 --- !u!114 &7974167385169828067
 MonoBehaviour:
@@ -417,7 +477,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 3
-  Default: 3
+  Default: 1
   ID:
     data1: 288555269
     data2: 4204618156
