@@ -5108,6 +5108,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7980464003038672815}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1147937030}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1147937029}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeSensitivity
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FollowSliderValue, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SettingsButtons, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071013224088451839, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5643858446071154219, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 21.357977
@@ -5166,6 +5202,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1147937029 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2911730096893544215, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+  m_PrefabInstance: {fileID: 1147937025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147937026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdbb090985c450e4b8148ff9b0e3a067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1147937030 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 288818325854877847, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+  m_PrefabInstance: {fileID: 1147937025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29e4e4554d05dd41966b84a9fb22ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1232363785
