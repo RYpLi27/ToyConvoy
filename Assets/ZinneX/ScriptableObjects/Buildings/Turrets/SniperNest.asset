@@ -16,17 +16,17 @@ MonoBehaviour:
   description: Shoots homing bullets at enemies
   price: 200
   turretStats:
-  - damage: 9
+  - damage: 18
     fireRate: 2.6
     range: 12
     projectileSpeed: 28
     upgradePrice: 250
-  - damage: 15
+  - damage: 30
     fireRate: 3
     range: 12
     projectileSpeed: 28
     upgradePrice: 350
-  - damage: 22
+  - damage: 40
     fireRate: 3.5
     range: 14
     projectileSpeed: 40
