@@ -18,6 +18,7 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
     [SerializeField] private GameObject rangeBorder;
     [SerializeField] private TurretPrompt upgradePrompt;
     [SerializeField] private InteractTrigger interactTrigger;
+    [SerializeField] private SoundType soundType;
     [SerializeField] private Animator anim;
     [SerializeField] private List<MeshRenderer> renderers;
     [SerializeField] private List<SkinnedMeshRenderer> skinnedRenderers;
@@ -60,9 +61,31 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
     
     private void Shoot() { // CALLED INSIDE ANIMATOR VIA EVENT
         if (enemiesInRange.Count == 0 || GameManager.gameState != GameManager.GameState.Ongoing) return;
-            turretSO.Shoot(firepoint, currentTarget, turretSO.turretStats[currentLevel]);
+        
+        turretSO.Shoot(firepoint, currentTarget, turretSO.turretStats[currentLevel]);
+        PlayAudio();
     }
 
+    private void PlayAudio() {
+        switch (soundType) {
+            case SoundType.cactus:
+                AudioManager.instance.playOneShot(FMODEvents.instance.cactusShot, transform.position);
+                break;
+            
+            // MORTAR IS PLAYED IN NON-HOMING PROJECTILE WHEN IT EXPLODES
+            // case SoundType.mortar:
+            //     AudioManager.instance.playOneShot(FMODEvents.instance.mortarBoom, transform.position);
+            //     break;
+            
+            case SoundType.ballista:
+                AudioManager.instance.playOneShot(FMODEvents.instance.ballistaShot, transform.position);
+                break;
+            
+            case SoundType.playedOnProjectileHit:
+                break;
+        }
+    }
+    
     private void UpdateTarget() {
         enemiesInRange.RemoveAll(e => e.gameObject.activeInHierarchy == false); // REMOVES ALL 'EMPTY' ENTRIES (DEAD ENEMIES ETC.)
 
@@ -132,5 +155,11 @@ public class TurretBehaviour : MonoBehaviour, IBuilding, IInteractable {
         currentLevel++;
         triggerCol.radius = turretSO.turretStats[currentLevel].range;
         upgradePrompt.UpdatePromptUI(turretSO.turretStats[currentLevel].upgradePrice, currentLevel, GetStatsText());
+    }
+
+    public enum SoundType {
+        playedOnProjectileHit,
+        cactus,
+        ballista
     }
 }

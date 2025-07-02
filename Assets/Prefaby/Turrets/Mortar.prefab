@@ -223,6 +223,7 @@ MonoBehaviour:
   rangeBorder: {fileID: 1104904314023472682}
   upgradePrompt: {fileID: 5898262241769234714}
   interactTrigger: {fileID: 787158417581573091}
+  soundType: 2
   anim: {fileID: 5444526672907316335}
   renderers: []
   skinnedRenderers:

@@ -7010,26 +7010,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
-      propertyPath: <shotFired>k__BackingField.Path
-      value: event:/Shots
-      objectReference: {fileID: 0}
-    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
-      propertyPath: <shotFired>k__BackingField.Guid.Data1
-      value: -2010610333
-      objectReference: {fileID: 0}
-    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
-      propertyPath: <shotFired>k__BackingField.Guid.Data2
-      value: 1291729929
-      objectReference: {fileID: 0}
-    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
-      propertyPath: <shotFired>k__BackingField.Guid.Data3
-      value: -2056271195
-      objectReference: {fileID: 0}
-    - target: {fileID: 1923091281728993115, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
-      propertyPath: <shotFired>k__BackingField.Guid.Data4
-      value: -599617827
-      objectReference: {fileID: 0}
     - target: {fileID: 8146172364249518475, guid: f240cf903e6581f4d815f1157f8e1c7b, type: 3}
       propertyPath: m_Name
       value: AudioManager
