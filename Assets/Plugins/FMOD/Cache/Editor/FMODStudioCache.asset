@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: AudioFMOD/FMOD_Banks/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638870884594274023
+  lastModified: 638870964771766083
   FileSizes: []
   Exists: 1
 --- !u!114 &-6773203793056695259
@@ -216,7 +216,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7422080604626596186}
   cacheVersion: 131847
-  cacheTime: 638870887999368791
+  cacheTime: 638870964771832986
   SerializableEventsDict:
   - key: event:/Soundtrack/MenuSoundtrack
     index: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   Path: AudioFMOD/FMOD_Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638870884593858661
+  lastModified: 638870964771365526
   FileSizes: []
   Exists: 1
 --- !u!114 &3559997207710989300
@@ -357,7 +357,7 @@ MonoBehaviour:
   Path: AudioFMOD/FMOD_Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638870887999368791
+  lastModified: 638870964771832986
   FileSizes: []
   Exists: 1
 --- !u!114 &4801696171462088782
@@ -451,12 +451,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
   Path: AudioFMOD/FMOD_Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638870884593863664
+  lastModified: 638870964771365526
   FileSizes:
   - Name: 
     Value: 1454

@@ -45,6 +45,7 @@ public class NonHomingProjectile : MonoBehaviour {
     }
 
     private void Hit() {
+        AudioManager.instance.playOneShot(FMODEvents.instance.mortarBoom, transform.position);
         Vector3 hitEffectPos = transform.position;
         hitEffectPos.y = .5f;
         ObjectPoolManager.SpawnObject(turretSO.hitEffect, hitEffectPos, Quaternion.identity);

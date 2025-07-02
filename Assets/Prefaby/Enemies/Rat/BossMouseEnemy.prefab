@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 2326234970246017720}
   - component: {fileID: -5707355375030931661}
   - component: {fileID: 2873144091425057269}
+  - component: {fileID: -8825855247387630698}
   m_Layer: 6
   m_Name: BossMouseEnemy
   m_TagString: Enemy
@@ -264,6 +265,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dissolveTime: 1.7
+--- !u!114 &-8825855247387630698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5571514956933692922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabef33383f8fa9418abb4e3cbad074e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9160965140941859628
 GameObject:
   m_ObjectHideFlags: 0

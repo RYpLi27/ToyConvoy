@@ -60,8 +60,7 @@ public class Weapon : MonoBehaviour {
             }
 
             CreateMuzzleFlash();
-            AudioManager.instance.playOneShot(FMODEvents.instance.shotFired, this.transform.position);
-            //Debug.Log("audio");
+            CreateAudio();
         }
 
         WeaponRecoil.instance.ApplyRecoil(weaponSO.cameraVerticalRecoil, weaponSO.cameraHorizontalRecoil);
@@ -102,6 +101,14 @@ public class Weapon : MonoBehaviour {
         LineRenderer trail = ObjectPoolManager.SpawnObject(weaponSO.bulletTrialPrefab, start, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile).GetComponent<LineRenderer>();
         trail.SetPosition(0, start);
         trail.SetPosition(1, end);
+    }
+
+    private void CreateAudio() {
+        EventInstance soundInstance = AudioManager.instance.CreateEventInstance(FMODEvents.instance.shotFired);
+        soundInstance.set3DAttributes(transform.position.To3DAttributes());
+        soundInstance.setParameterByName("Parameter 1", weaponSO.soundID);
+        soundInstance.start();
+        soundInstance.release();
     }
     
     private void OnDrawGizmos() {
