@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4466f4ebdd8b8fa4780c6ae7d4ecc20d, type: 3}
   m_Name: RifleSoldierBasic
   m_EditorClassIdentifier: 
-  maxHealth: 250
+  maxHealth: 125
   defense: 4
-  moveSpeed: 5
+  moveSpeed: 4
   damageToBase: 3
   minGold: 20
   maxGold: 25

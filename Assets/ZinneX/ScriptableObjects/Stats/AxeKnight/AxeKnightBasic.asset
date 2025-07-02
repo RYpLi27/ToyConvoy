@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4466f4ebdd8b8fa4780c6ae7d4ecc20d, type: 3}
   m_Name: AxeKnightBasic
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 200
   defense: 3
   moveSpeed: 3
   damageToBase: 3
