@@ -1328,6 +1328,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3415223066985379860}
     - target: {fileID: 4625565083716694933, guid: 23abd108f088be24e813752fea61a84a, type: 3}
+      propertyPath: waveCount
+      value: 
+      objectReference: {fileID: 2788129747528186279}
+    - target: {fileID: 4625565083716694933, guid: 23abd108f088be24e813752fea61a84a, type: 3}
       propertyPath: spawnWaveButton
       value: 
       objectReference: {fileID: 7277942834500099783}
@@ -2111,6 +2115,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf11649517f27ee4ba682cc5337cd799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2788129747528186279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6201081591440220077, guid: a210daafcd4ede146ac43429c1ac40f0, type: 3}
+  m_PrefabInstance: {fileID: 8124432026211182090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &3415223066985379860 stripped

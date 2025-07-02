@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1.35
   damage: 12
-  weaponRange: 20
+  weaponRange: 30
   verticalRecoil: 0.35
   horizontalRecoil: 0.3
   cameraVerticalRecoil: 35

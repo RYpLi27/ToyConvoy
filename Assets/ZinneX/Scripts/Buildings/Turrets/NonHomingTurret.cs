@@ -7,6 +7,7 @@ public class NonHomingTurret : TurretSO {
     public float hitRadius;
     public AnimationCurve heightCurve;
     public float movementPredictDistance;
+    public GameObject hitEffect;
 
     public override void Shoot(Transform firepoint, Transform target, TurretStats stats) {
         GameObject projectile = ObjectPoolManager.SpawnObject(projectilePrefab, firepoint.position, Quaternion.identity, ObjectPoolManager.PoolingParent.Projectile);

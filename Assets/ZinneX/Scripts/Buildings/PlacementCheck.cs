@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -5,7 +6,8 @@ using UnityEngine;
 public class PlacementCheck : MonoBehaviour {
     [ReadOnly] public bool canPlace;
 
-    [SerializeField] private MeshRenderer mesh;
+    [SerializeField] private List<MeshRenderer> mesh;
+    [SerializeField] private List<SkinnedMeshRenderer> skinnedMesh;
     private BoxCollider col;
 
     private Vector3 colPos;
@@ -40,14 +42,16 @@ public class PlacementCheck : MonoBehaviour {
                 break;
         }
         
-        mesh.material = PlayerBuilding.instance.wrongMaterial;
+        mesh.ForEach(m => m.material = PlayerBuilding.instance.wrongMaterial);
+        if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.wrongMaterial);
         canPlace = false;
     }
 
     private bool PlaceOnTerrain() {
         if (Physics.CheckBox(colPos, colSize / 2, transform.rotation, ~0, QueryTriggerInteraction.Ignore) == false) {
             if (GetComponent<TurretBehaviour>().PriceCheck()) {
-                mesh.material = PlayerBuilding.instance.correctMaterial;
+                mesh.ForEach(m => m.material = PlayerBuilding.instance.correctMaterial);
+                if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.correctMaterial);
                 canPlace = true;
                 return true;
             }
@@ -92,14 +96,16 @@ public class PlacementCheck : MonoBehaviour {
         // CHECKS THE PRICES
         if(TryGetComponent(out Spikes spikes)) {
             if (spikes.PriceCheck() == false) return false;
-            mesh.material = PlayerBuilding.instance.correctMaterial;
+            mesh.ForEach(m => m.material = PlayerBuilding.instance.correctMaterial);
+            if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.correctMaterial);
             canPlace = true;
             return true;
         } 
             
         if (TryGetComponent(out Landmine landmine)) {
             if (landmine.PriceCheck() == false) return false;
-            mesh.material = PlayerBuilding.instance.correctMaterial;
+            mesh.ForEach(m => m.material = PlayerBuilding.instance.correctMaterial);
+            if(skinnedMesh.Count != 0) skinnedMesh.ForEach(smr => smr.material = PlayerBuilding.instance.correctMaterial);
             canPlace = true;
             return true;
         }

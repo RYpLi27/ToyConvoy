@@ -28,4 +28,5 @@ MonoBehaviour:
     explosionRange: 4
     timeToRespawn: 1
     upgradePrice: 0
-  objectMaterial: {fileID: 2100000, guid: 9b6c9c37df8a0fc458c9b785d330664f, type: 2}
+  objectMaterial: {fileID: 2100000, guid: d2a381681ad63aa4a9227d2a1a63c639, type: 2}
+  explosionEffect: {fileID: 7403103098228120956, guid: 513099c3c135b01439895582ca4ec420, type: 3}
