@@ -94,7 +94,7 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params:
   - Name: Parameter 1
-    Value: 2
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
