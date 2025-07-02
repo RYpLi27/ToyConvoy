@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Landmine
   description: Deals AOE damage when enemy steps on it
-  price: 125
+  price: 100
   turretStats:
-  - damage: 35
+  - damage: 40
     explosionRange: 2
-    timeToRespawn: 3
-    upgradePrice: 250
-  - damage: 65
-    explosionRange: 3
     timeToRespawn: 2
+    upgradePrice: 250
+  - damage: 70
+    explosionRange: 3
+    timeToRespawn: 1.5
     upgradePrice: 450
   - damage: 105
     explosionRange: 4
-    timeToRespawn: 1
+    timeToRespawn: 0.7
     upgradePrice: 0
   objectMaterial: {fileID: 2100000, guid: d2a381681ad63aa4a9227d2a1a63c639, type: 2}
   explosionEffect: {fileID: 7403103098228120956, guid: 513099c3c135b01439895582ca4ec420, type: 3}
