@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4466f4ebdd8b8fa4780c6ae7d4ecc20d, type: 3}
   m_Name: ShieldKnightTank
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 250
   defense: 7
-  moveSpeed: 1
+  moveSpeed: 2
   damageToBase: 1
-  minGold: 25
-  maxGold: 30
+  minGold: 50
+  maxGold: 60
