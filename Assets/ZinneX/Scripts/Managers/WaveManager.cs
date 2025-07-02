@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour {
@@ -17,6 +18,7 @@ public class WaveManager : MonoBehaviour {
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private GameObject spawnWaveButton;
     [SerializeField] private Animator bossAlert;
+    [SerializeField] private TMP_Text waveCount;
     private bool bossAlertIsShown;
     
     [SerializeField] [ListDrawerSettings(NumberOfItemsPerPage = 10, ShowIndexLabels = true)]
@@ -34,6 +36,10 @@ public class WaveManager : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        waveCount.text = $"{currentWave+1}/{enemyWaves.Count}";
+    }
+
     private void WaveEnd() {
         //WIN GAME
         if (currentWave == enemyWaves.Count) {
@@ -46,6 +52,9 @@ public class WaveManager : MonoBehaviour {
         
         //BOSS ALERT
         if(enemyWaves[currentWave].isBossWave == true) BossAlert(true);
+        
+        //UPDATE WAVE COUNT
+        waveCount.text = $"{currentWave+1}/{enemyWaves.Count}";
         
         //SHOW BUTTON
         spawnWaveButton.SetActive(true);
