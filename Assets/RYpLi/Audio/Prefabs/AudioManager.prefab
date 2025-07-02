@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7946425813009211933}
   - component: {fileID: 4168610193112843860}
+  - component: {fileID: 5482057321077199757}
+  - component: {fileID: 5936547320745237947}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670827074032135739}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 157.0885, y: 356.06796, z: 1.1334602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,6 +47,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e138bb33a14f91e4e927c8af87949c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5482057321077199757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670827074032135739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Master
+  CollisionTag: 
+  PreloadSamples: 0
+--- !u!114 &5936547320745237947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670827074032135739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1488432880
+      Data2: 1091306216
+      Data3: 2112885906
+      Data4: 1795628572
+    Path: event:/Soundtrack/SoundtrackGame
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  NonRigidbodyVelocity: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &3603737914710960285
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,8 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <shotFired>k__BackingField:
     Guid:
-      Data1: 146903661
-      Data2: 1120066298
-      Data3: -1847021899
-      Data4: -404938279
-    Path: event:/GunShoot
+      Data1: -2010610333
+      Data2: 1291729929
+      Data3: -2056271195
+      Data4: -599617827
+    Path: event:/Sounds/Shots

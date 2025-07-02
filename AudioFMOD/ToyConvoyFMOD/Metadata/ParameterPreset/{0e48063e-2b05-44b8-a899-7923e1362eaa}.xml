@@ -16,15 +16,16 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>4</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Gun</value>
-			<value>Value B</value>
-			<value>Value C</value>
+			<value>Pistol</value>
+			<value>Minigun</value>
+			<value>Sniper</value>
+			<value>Shotgun</value>
 		</property>
 		<property name="initialValue">
-			<value>0</value>
+			<value>1</value>
 		</property>
 	</object>
 </objects>
