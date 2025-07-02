@@ -161,7 +161,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Path
-      value: event:/Shots
+      value: event:/Sounds/Shots
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data1
@@ -5529,7 +5529,7 @@ PrefabInstance:
     - target: {fileID: 1079603820016808055, guid: 617dbb0699308114b97dc47f9d8a1c6c, type: 3}
       propertyPath: heldObject
       value: 
-      objectReference: {fileID: 6642736227883800930, guid: 94fbf4c2e38d0a4448778f437341216a, type: 3}
+      objectReference: {fileID: 8763996918564748226, guid: 94fbf4c2e38d0a4448778f437341216a, type: 3}
     - target: {fileID: 1943126165162820128, guid: 617dbb0699308114b97dc47f9d8a1c6c, type: 3}
       propertyPath: m_text
       value: 2
