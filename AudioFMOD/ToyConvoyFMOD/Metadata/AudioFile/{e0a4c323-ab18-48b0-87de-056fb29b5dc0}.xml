@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e0a4c323-ab18-48b0-87de-056fb29b5dc0}">
+		<property name="assetPath">
+			<value>SFX/Boom/Boom-005.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1356689342403627</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a3a7f355-accb-4f53-b0b8-ab4c51abd2dd}</destination>
+		</relationship>
+	</object>
+</objects>

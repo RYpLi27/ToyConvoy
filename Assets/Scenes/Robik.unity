@@ -161,7 +161,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Path
-      value: event:/Shots
+      value: event:/Sounds/Shots
       objectReference: {fileID: 0}
     - target: {fileID: 312546063325725226, guid: 253bb6d3a4dc8be43bb6273d5e18ef93, type: 3}
       propertyPath: <shotFired>k__BackingField.Guid.Data1

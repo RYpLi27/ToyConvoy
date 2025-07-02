@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f3ddc960-08d1-41f8-a91a-306479f7da9f}">
+		<property name="assetPath">
+			<value>Sounds2/musical_human_beatbox_snare_drum.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.4179591836734694</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a3a7f355-accb-4f53-b0b8-ab4c51abd2dd}</destination>
+		</relationship>
+	</object>
+</objects>
