@@ -33,8 +33,8 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     private void WeaponSwap(int i) {
-        if (i >= weapons.Count) return;
-
+        if (i >= weapons.Count || i == 4) return;
+        
         if (selectedWeapon != null) { // DISABLES PREVIOUS WEAPON
             selectedSlot.DeselectSlot();
             ObjectPoolManager.ReturnObjectToPool(selectedWeapon.gameObject);
