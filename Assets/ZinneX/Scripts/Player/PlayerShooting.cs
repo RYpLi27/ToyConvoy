@@ -6,6 +6,7 @@ public class PlayerShooting : MonoBehaviour {
     [SerializeField] private GameObject shootingCanvas;
     [SerializeField] private List<Slot> weapons;
     [SerializeField] private Transform gunHolder;
+    public RectTransform reticle;
 
     private Slot selectedSlot;
     private Weapon selectedWeapon;
@@ -32,8 +33,8 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     private void WeaponSwap(int i) {
-        if (i >= weapons.Count) return;
-
+        if (i >= weapons.Count || i == 4) return;
+        
         if (selectedWeapon != null) { // DISABLES PREVIOUS WEAPON
             selectedSlot.DeselectSlot();
             ObjectPoolManager.ReturnObjectToPool(selectedWeapon.gameObject);
@@ -42,6 +43,7 @@ public class PlayerShooting : MonoBehaviour {
         //ENABLES SELECTED WEAPON
         selectedSlot = weapons[i];
         selectedWeapon = ObjectPoolManager.SpawnObject(selectedSlot.SelectSlot(), gunHolder).GetComponent<Weapon>();
+        selectedWeapon.SetReticle(reticle);
     }
 
     public void HideWeapon() {

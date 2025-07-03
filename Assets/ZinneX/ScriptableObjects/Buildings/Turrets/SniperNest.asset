@@ -15,9 +15,21 @@ MonoBehaviour:
   buildingName: Sniper Nest
   description: Shoots homing bullets at enemies
   price: 200
-  damage: 7
-  fireRate: 2.3
-  range: 15
-  projectileSpeed: 35
+  turretStats:
+  - damage: 18
+    fireRate: 2.6
+    range: 12
+    projectileSpeed: 28
+    upgradePrice: 250
+  - damage: 30
+    fireRate: 3
+    range: 12
+    projectileSpeed: 28
+    upgradePrice: 350
+  - damage: 40
+    fireRate: 3.5
+    range: 14
+    projectileSpeed: 40
+    upgradePrice: 0
   projectilePrefab: {fileID: 1561201658955599378, guid: 2824d62e4639f99409b00c8b8b1e88da, type: 3}
-  objectMaterial: {fileID: 2100000, guid: e24ff6892cd32aa4b93aa9a5fefec8ad, type: 2}
+  objectMaterial: {fileID: 2100000, guid: c317446c59774574e8d256aad9be66bf, type: 2}

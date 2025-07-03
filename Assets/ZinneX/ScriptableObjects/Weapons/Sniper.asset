@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd25e5b7d4ba4a41bb7de9338f265a0, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  fireRate: 1
-  damage: 35
-  weaponRange: 50
+  fireRate: 0.7
+  damage: 65
+  weaponRange: 150
   verticalRecoil: 0.05
   horizontalRecoil: 0.05
+  cameraVerticalRecoil: 35
+  cameraHorizontalRecoil: 15
   numberOfBullets: 1
   bulletTrialPrefab: {fileID: 8739167977788502119, guid: 8c0ddb2c3bc68904c870651354d47e5c, type: 3}
-  bulletHitPrefab: {fileID: 7464196065622715701, guid: f368a4cebfcadca4ea89fe02784ed2bd, type: 3}
+  bulletHitPrefab: {fileID: 833078818548240088, guid: 86acfcdbc6e4ee442bb039d7b3263cac, type: 3}
+  muzzleFlashPrefab: {fileID: 8429590732139229810, guid: 9a75395734a965145ad8d67f33179c7e, type: 3}
+  soundID: 2

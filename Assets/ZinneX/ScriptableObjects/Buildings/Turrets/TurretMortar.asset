@@ -15,12 +15,24 @@ MonoBehaviour:
   buildingName: Mortar
   description: Shoots explosive projectile that deals AOE damage
   price: 300
-  damage: 21
-  fireRate: 0.55
-  range: 9
-  projectileSpeed: 12
+  turretStats:
+  - damage: 25
+    fireRate: 1.1
+    range: 10
+    projectileSpeed: 18
+    upgradePrice: 350
+  - damage: 40
+    fireRate: 1.2
+    range: 10
+    projectileSpeed: 18
+    upgradePrice: 450
+  - damage: 60
+    fireRate: 1.4
+    range: 12
+    projectileSpeed: 20
+    upgradePrice: 0
   projectilePrefab: {fileID: 3927782703365855098, guid: d54b027c458a31d4f9b26bf64983fd4c, type: 3}
-  objectMaterial: {fileID: 2100000, guid: ed72a8327079e3b4c8d5b60432df5588, type: 2}
+  objectMaterial: {fileID: 2100000, guid: edad5cffe6f44a64093fd05ef2185a30, type: 2}
   arcHeight: 4
   hitRadius: 3.5
   heightCurve:
@@ -29,31 +41,32 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2.7245286
-      outSlope: 2.7245286
+      inSlope: 0.46041352
+      outSlope: 0.46041352
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.065789476
+      outWeight: 0.20942701
     - serializedVersion: 3
-      time: 0.49999994
-      value: 0.99999994
-      inSlope: 0
-      outSlope: 0
+      time: 0.5026245
+      value: 0.1690216
+      inSlope: -0.038136397
+      outSlope: -0.038136397
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0.12631573
+      outWeight: 0.12368427
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: -3.4905527
-      outSlope: -3.4905527
+      inSlope: -0.44205365
+      outSlope: -0.44205365
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.050000183
+      inWeight: 0.16666444
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   movementPredictDistance: 1.5
+  hitEffect: {fileID: 7403103098228120956, guid: 513099c3c135b01439895582ca4ec420, type: 3}

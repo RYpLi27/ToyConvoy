@@ -16,10 +16,8 @@ public class PlayerBuilding : MonoBehaviour {
 
     [SerializeField] private GameObject buildingCanvas;
     [SerializeField] private List<Slot> turrets;
-    [SerializeField] private Transform placePoint;
     // [SerializeField] private TMP_Text priceText;
     [SerializeField] private TMP_Text descriptionText;
-
 
     public Material wrongMaterial;
     public Material correctMaterial;
@@ -27,12 +25,43 @@ public class PlayerBuilding : MonoBehaviour {
     private GameObject selectedTurret;
     private Slot selectedSlot;
     private int selectedIndex;
+
+    [SerializeField] private Transform placePoint;
+    [SerializeField] private float placePointRotationStep;
+    private float placePointRotation;
+
+    private LayerMask turretPlacePointMask;
     
     private void Start() {
         SelectTurret(0);
         HideBuilding();
+        turretPlacePointMask = LayerMask.GetMask("Ground", "Wall");
     }
 
+    private void LateUpdate() {
+        MoveTurretPlacePoint();
+        RotateTurretPlacePoint();
+    }
+
+    private void MoveTurretPlacePoint() {
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit,  15f, turretPlacePointMask, QueryTriggerInteraction.Ignore)) {
+            placePoint.position = new Vector3(hit.point.x, 0f, hit.point.z);
+            // return;
+        }
+
+        // placePoint.localPosition = new Vector3(placePoint.localPosition.x, placePoint.localPosition.y, 8f);
+    }
+
+    private void RotateTurretPlacePoint() {
+        placePoint.rotation = Quaternion.Euler(0, placePointRotation, 0);
+    }
+
+    public void RotateTurretPlacePointInput(InputAction.CallbackContext context) {
+        if (context.performed && CanMakeAction() == true) {
+            placePointRotation += context.ReadValue<float>() * placePointRotationStep;
+        }
+    }
+    
     public void SelectTurretInput(InputAction.CallbackContext context) {
         if (CanMakeAction() == false) return;
 

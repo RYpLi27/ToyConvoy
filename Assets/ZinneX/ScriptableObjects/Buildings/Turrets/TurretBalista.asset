@@ -15,38 +15,50 @@ MonoBehaviour:
   buildingName: Balista
   description: Shoots piercing projectile
   price: 250
-  damage: 16
-  fireRate: 0.65
-  range: 10
-  projectileSpeed: 65
+  turretStats:
+  - damage: 22
+    fireRate: 0.9
+    range: 10
+    projectileSpeed: 90
+    upgradePrice: 350
+  - damage: 42
+    fireRate: 1
+    range: 10
+    projectileSpeed: 90
+    upgradePrice: 500
+  - damage: 65
+    fireRate: 1.1
+    range: 12
+    projectileSpeed: 120
+    upgradePrice: 0
   projectilePrefab: {fileID: 1458909556012865288, guid: 6de9f7f85b414564197b29e7710bba8e, type: 3}
-  objectMaterial: {fileID: 2100000, guid: b6bf256d7f2c9a44885681329372bb28, type: 2}
+  objectMaterial: {fileID: 2100000, guid: 96801c261512504429eeeb8a7d353b3f, type: 2}
   arcHeight: 1
   heightCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.000000059604645
-      value: 1
-      inSlope: -0.080259226
-      outSlope: -0.080259226
+      time: 0
+      value: 0
+      inSlope: -0.055043083
+      outSlope: -0.055043083
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.0882741
+      outWeight: 0.27614766
     - serializedVersion: 3
-      time: 1.000027
-      value: 0.007075472
-      inSlope: -1.970349
-      outSlope: -1.970349
+      time: 1
+      value: -0.4
+      inSlope: -1.4421078
+      outSlope: -1.4421078
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.039499648
+      inWeight: 0.057894826
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   movementPredictDistance: 0.3
-  lifetimeAfterReachingEnd: 1
-  maxRotation: 35
+  lifetimeAfterReachingEnd: 20
+  maxRotation: 20
   overshootDistance: 2

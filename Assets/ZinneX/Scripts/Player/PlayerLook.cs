@@ -2,37 +2,68 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerLook : MonoBehaviour
-{
-    [SerializeField] private float sensitivity;
+{   
+    [SerializeField] private float zoomSensitivityMult;
     [SerializeField] private Transform cameraFollowTransform;
+    private float sensitivity; // is set in menu
+    public float Sensitivity { set => sensitivity = value; }
 
     private float yRotation, xRotation;
 
     private bool isCursorLocked;
+    public static bool isZoomed;
 
     private Rigidbody rb;
 
     private HealthManager currentTarget;
+    private InteractTrigger currentBuilding;
+
     
     private void Awake() {
         rb = GetComponent<Rigidbody>();
         
         isCursorLocked = true;
+        ApplySens();
         
         yRotation = transform.rotation.eulerAngles.y;
         xRotation = transform.rotation.eulerAngles.x;
     }
 
-    private void Update() {
-        IsLookingAtEnemy();
+    public void ApplySens() {
+        sensitivity = PlayerPrefs.GetFloat("sens", .5f);
+    }
+    
+    private void FixedUpdate() {
+        HandleLook();
     }
 
-    private void IsLookingAtEnemy() {
+    private void HandleLook() {
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, StaticVariables.whatIsEnemy))
-        {
-            HealthManager enemy = hit.collider.GetComponent<HealthManager>();
+        if (BuildingLook(ray) == true) return;
+        EnemyLook(ray);
+    }
+
+    private bool BuildingLook(Ray ray) {
+        if (Physics.Raycast(ray, out RaycastHit buildingHit, 15f, StaticVariables.whatIsInteractable, QueryTriggerInteraction.Collide)) {
+            InteractTrigger building = buildingHit.collider.GetComponent<InteractTrigger>();
+            if (building != null && currentBuilding != building) {
+                currentBuilding?.ShowPrompt(false);
+                currentBuilding = building;
+                currentBuilding.ShowPrompt(true);
+                return true;
+            }
+        } else {
+            currentBuilding?.ShowPrompt(false);
+            currentBuilding = null;
+        }
+
+        return false;
+    }
+
+    private void EnemyLook(Ray ray) {
+        if (Physics.Raycast(ray, out RaycastHit enemyHit, Mathf.Infinity, StaticVariables.whatIsEnemy, QueryTriggerInteraction.Ignore)) {
+            HealthManager enemy = enemyHit.collider.GetComponentInParent<HealthManager>();
             if (enemy != null && currentTarget != enemy)
             {
                 if (currentTarget != null)
@@ -41,9 +72,7 @@ public class PlayerLook : MonoBehaviour
                 currentTarget = enemy;
                 currentTarget.ShowBar(true);
             }
-        }
-        else if (currentTarget != null)
-        {
+        } else if (currentTarget != null) {
             currentTarget.ShowBar(false);
             currentTarget = null;
         }
@@ -55,6 +84,11 @@ public class PlayerLook : MonoBehaviour
 
             float mouseX = mouseInput.x * sensitivity;
             float mouseY = mouseInput.y * sensitivity;
+
+            if (isZoomed == true) {
+                mouseY *= zoomSensitivityMult;
+                mouseX *= zoomSensitivityMult;
+            }
             
             Rotate(mouseX, mouseY);
         }
@@ -66,7 +100,7 @@ public class PlayerLook : MonoBehaviour
         
         yRotation += xRot;
         xRotation -= yRot;
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
+        xRotation = Mathf.Clamp(xRotation, -85, 85);
 
         rb.MoveRotation(Quaternion.Euler(0f, yRotation, 0f)); // HORIZONTAL ROTATION
         cameraFollowTransform.rotation = Quaternion.Euler(xRotation, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z); // VERTICAL ROTATION
@@ -86,5 +120,9 @@ public class PlayerLook : MonoBehaviour
             Cursor.visible = false;
             isCursorLocked = true;
         }
+    }
+
+    public void UpgradeTurret(InputAction.CallbackContext context) {
+        if (context.performed && currentBuilding != null) currentBuilding.Interact();
     }
 }

@@ -2,12 +2,11 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class DropGold : MonoBehaviour {
-    [SerializeField] [HorizontalGroup("Gold")] private int minGold;
-    [SerializeField] [HorizontalGroup("Gold")] private int maxGold;
+    [SerializeField] private EnemyStatsSO stats;
 
     public void AddGold() {
-        int amount = Random.Range(minGold, maxGold);
+        int amount = Random.Range(stats.minGold, stats.maxGold);
         GoldManager.instance.UpdateGoldAmount(amount);
-        GoldManager.instance.CollectedGoldPopup(amount);
+        GoldManager.instance.AddPopupToQueue(amount);
     }
 }

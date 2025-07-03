@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NonHomingProjectile : MonoBehaviour {
@@ -7,15 +8,17 @@ public class NonHomingProjectile : MonoBehaviour {
     private float entireFlightLength;
     private float currentFlightLength;
     private NonHomingTurret  turretSO;
+    private TurretSO.TurretStats stats;
     
-    public void SetupProjectile(NonHomingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict) {
+    public void SetupProjectile(NonHomingTurret newTurretSO, Vector3 newTarget, Vector3 movePredict, TurretSO.TurretStats newStats) {
         turretSO = newTurretSO;
+        stats = newStats;
         
         startPos = transform.position;
         targetPos = newTarget + movePredict * turretSO.movementPredictDistance;
         
         distance = Vector3.Distance(startPos, targetPos);
-        entireFlightLength = distance / turretSO.projectileSpeed;
+        entireFlightLength = distance / stats.projectileSpeed;
         
         transform.rotation = Quaternion.LookRotation(targetPos);
     }
@@ -42,12 +45,21 @@ public class NonHomingProjectile : MonoBehaviour {
     }
 
     private void Hit() {
+        AudioManager.instance.playOneShot(FMODEvents.instance.mortarBoom, transform.position);
+        Vector3 hitEffectPos = transform.position;
+        hitEffectPos.y = .5f;
+        ObjectPoolManager.SpawnObject(turretSO.hitEffect, hitEffectPos, Quaternion.identity);
+        
         currentFlightLength = 0;
         Collider[] enemiesInRadius = Physics.OverlapSphere(transform.position, turretSO.hitRadius, StaticVariables.whatIsEnemy);
         if (enemiesInRadius.Length == 0) { return; }
 
+        List<Transform> enemiesHit = new();
+        
         foreach (Collider other in enemiesInRadius) {
-            other.GetComponent<HealthManager>().TakeDamage(turretSO.damage, transform.position);
+            if (other.gameObject.activeInHierarchy == false || enemiesHit.Contains(other.transform.parent)) continue;
+            enemiesHit.Add(other.transform.parent);
+            other.GetComponentInParent<HealthManager>().TakeDamage(stats.damage, transform.position);
         }
         
         ObjectPoolManager.ReturnObjectToPool(gameObject);

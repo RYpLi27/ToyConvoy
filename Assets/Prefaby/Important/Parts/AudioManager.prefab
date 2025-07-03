@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8146172364249518475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606430963578507987}
+  - component: {fileID: 2700444625620392761}
+  - component: {fileID: 1923091281728993115}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606430963578507987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146172364249518475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4549568, y: 2.964775, z: 11.639377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2700444625620392761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146172364249518475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e138bb33a14f91e4e927c8af87949c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1923091281728993115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146172364249518475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef93cdfe41e716847bdd17d0eefa6358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <menuMusic>k__BackingField:
+    Guid:
+      Data1: 439644180
+      Data2: 1179519386
+      Data3: 1508321165
+      Data4: -1702022889
+    Path: event:/Soundtrack/SoundtrackMenu
+  <gameMusic>k__BackingField:
+    Guid:
+      Data1: -1488432880
+      Data2: 1091306216
+      Data3: 2112885906
+      Data4: 1795628572
+    Path: event:/Soundtrack/SoundtrackGame
+  <shotFired>k__BackingField:
+    Guid:
+      Data1: -2010610333
+      Data2: 1291729929
+      Data3: -2056271195
+      Data4: -599617827
+    Path: event:/Sounds/Shots
+  <gameOver>k__BackingField:
+    Guid:
+      Data1: 12555049
+      Data2: 1234816240
+      Data3: 277850248
+      Data4: 761446934
+    Path: event:/Sounds/GameOver
+  <jump>k__BackingField:
+    Guid:
+      Data1: -487664110
+      Data2: 1152281185
+      Data3: -832769116
+      Data4: 1181040939
+    Path: event:/Sounds/Jump
+  <lifeLost>k__BackingField:
+    Guid:
+      Data1: 1484287189
+      Data2: 1249193011
+      Data3: 875373754
+      Data4: -126161670
+    Path: event:/Sounds/LifeLost
+  <ratCharge>k__BackingField:
+    Guid:
+      Data1: -1992775486
+      Data2: 1090131723
+      Data3: 2017505184
+      Data4: 1524403376
+    Path: event:/Sounds/RatCharge
+  <ballistaShot>k__BackingField:
+    Guid:
+      Data1: -865132708
+      Data2: 1245333149
+      Data3: 284895383
+      Data4: 1247629793
+    Path: event:/Towers/BallistaShot
+  <mortarBoom>k__BackingField:
+    Guid:
+      Data1: -2031509696
+      Data2: 1262221271
+      Data3: 1997982849
+      Data4: -211037722
+    Path: event:/Towers/MortarBoom
+  <cactusShot>k__BackingField:
+    Guid:
+      Data1: -881494368
+      Data2: 1086464820
+      Data3: -895796598
+      Data4: -842717880
+    Path: event:/Towers/SniperTowerShot
+  <steps>k__BackingField:
+    Guid:
+      Data1: 554379228
+      Data2: 1154081559
+      Data3: 1140922539
+      Data4: 868982344
+    Path: event:/Steps

@@ -13,12 +13,20 @@ MonoBehaviour:
   m_Name: Landmine
   m_EditorClassIdentifier: 
   buildingName: Landmine
-  description: 'Deals AOE damage when enemy steps on it
-
-    (Works only once per
-    wave)'
-  price: 125
-  damage: 55
-  explosionRange: 2
-  objectMaterial: {fileID: 2100000, guid: a2fb9ff50c220904c8f22fa2c6615f45, type: 2}
-  usedMat: {fileID: 2100000, guid: 79fd36ad941a363449947531740060d5, type: 2}
+  description: Deals AOE damage when enemy steps on it
+  price: 100
+  turretStats:
+  - damage: 40
+    explosionRange: 2
+    timeToRespawn: 2
+    upgradePrice: 250
+  - damage: 70
+    explosionRange: 3
+    timeToRespawn: 1.5
+    upgradePrice: 450
+  - damage: 105
+    explosionRange: 4
+    timeToRespawn: 0.7
+    upgradePrice: 0
+  objectMaterial: {fileID: 2100000, guid: d2a381681ad63aa4a9227d2a1a63c639, type: 2}
+  explosionEffect: {fileID: 7403103098228120956, guid: 513099c3c135b01439895582ca4ec420, type: 3}
