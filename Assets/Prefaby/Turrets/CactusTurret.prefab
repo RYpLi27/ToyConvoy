@@ -105,6 +105,7 @@ MonoBehaviour:
   rangeBorder: {fileID: 2508902851322716361}
   upgradePrompt: {fileID: 8867326022168712772}
   interactTrigger: {fileID: 4528942308922849706}
+  soundType: 1
   anim: {fileID: 3429217714432606882}
   renderers:
   - {fileID: 2535389858171928992}

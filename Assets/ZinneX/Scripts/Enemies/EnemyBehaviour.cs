@@ -62,6 +62,7 @@ public class EnemyBehaviour : MonoBehaviour {
     
     private void ReachPlayerBase() {
         GameManager.instance.DealDamageToBase(statsSO.damageToBase);
+        AudioManager.instance.playOneShot(FMODEvents.instance.lifeLost, transform.position);
         WaveManager.instance.EnemyCount--;
         ObjectPoolManager.ReturnObjectToPool(gameObject);
     }

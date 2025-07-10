@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour {
         if (staminaManager.isExhausted || canJump == false) return;
         
         // runTrail.EnableTrail();
-        
+        AudioManager.instance.playOneShot(FMODEvents.instance.jump, transform.position);
         canJump = false;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         if(staminaManager.DrainStamina(jumpStaminaCost) == true) isRunning = false;

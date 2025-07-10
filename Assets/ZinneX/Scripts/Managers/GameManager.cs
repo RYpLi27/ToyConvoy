@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour {
         if (gameState != GameState.Ongoing) yield break;
         
         gameState = state;
+        AudioManager.instance.playOneShot(FMODEvents.instance.gameOver, transform.position);
         
         yield return new WaitForSeconds(1f);
         

@@ -15,4 +15,5 @@ public class WeaponSO : ScriptableObject
     public GameObject bulletTrialPrefab;
     public GameObject bulletHitPrefab;
     public GameObject muzzleFlashPrefab;
+    public int soundID;
 }
